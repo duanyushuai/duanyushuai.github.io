@@ -17,7 +17,7 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Hive分析搜狗用户搜索日志-数据预处理(解决乱码问题) | Hexo</title>
+  <title>Hive分析搜狗用户搜索日志-数据预处理(解决乱码问题) | Duan</title>
   <meta name="description" content="环境 MacOS 单机hadoop集群 Hive (内嵌模式)  预处理1. 查看数据1head Sougou.reduced 结果如下 可以发现有许多乱码 2. 查看文件编码1file Sougou.reduced 结果如下 网上查询得知Non-ISO extended-ASCII text代表gb18030 3. 使用iconv转换文件编码格式1iconv -f gb18030 -t utf-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hive分析搜狗用户搜索日志-数据预处理(解决乱码问题)">
@@ -63,11 +63,11 @@
       
       <div class="profile-block text-center">
         <a id="avatar" href="https://github.com/cofess" target="_blank">
-          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+          <img class="img-circle img-rotate" src="/images/1.png" width="200" height="200">
         </a>
-        <h2 id="name" class="hidden-xs hidden-sm">昵称</h2>
-        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
-        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
+        <h2 id="name" class="hidden-xs hidden-sm">段某人</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">目标Java强者</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Hangzhou , China</small>
       </div>
       
       <div class="search" id="search-form-wrap">
@@ -444,11 +444,11 @@ sed -i "" "s/ /,/g" SogouQ.reduced.new
     <figure class="media">
       <div class="media-left">
         <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+          <img src="/images/1.png" class="img-rounded w-full" alt="">
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">昵称</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">段某人</span><small class="ml-1x">目标Java强者</small></a></h3>
         <div>个人简介。</div>
       </div>
     </figure>
