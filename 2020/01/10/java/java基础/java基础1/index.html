@@ -17,25 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Mac OS VMware Fusion Centos6.5虚拟机网络设置 | Duan</title>
-  <meta name="description" content="1. 安装vmware虚拟机安装vmware虚拟机，并新建一个centos 64位的虚拟机 2. 设置虚拟机网络模式 3. 查看vmware的网关和掩码在Mac电脑的终端输入： 1cat &#x2F;Library&#x2F;Preferences&#x2F;VMware\ Fusion&#x2F;vmnet8&#x2F;nat.conf 输出结果如下：这里的ip和netmask即为vmware虚拟机的网关和掩码 123# NAT gateway">
+  <title>ArrayList和LinkedList | Duan</title>
+  <meta name="description" content="#ArrayList和LinkedList 数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS VMware Fusion Centos6.5虚拟机网络设置">
-<meta property="og:url" content="http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/index.html">
+<meta property="og:title" content="ArrayList和LinkedList">
+<meta property="og:url" content="http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1. 安装vmware虚拟机安装vmware虚拟机，并新建一个centos 64位的虚拟机 2. 设置虚拟机网络模式 3. 查看vmware的网关和掩码在Mac电脑的终端输入： 1cat &#x2F;Library&#x2F;Preferences&#x2F;VMware\ Fusion&#x2F;vmnet8&#x2F;nat.conf 输出结果如下：这里的ip和netmask即为vmware虚拟机的网关和掩码 123# NAT gateway">
+<meta property="og:description" content="#ArrayList和LinkedList 数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200210222413551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0pXb3N3aW4=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200210222624261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0pXb3N3aW4=,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-02-29T15:25:00.000Z">
-<meta property="article:modified_time" content="2020-10-23T12:27:08.000Z">
+<meta property="article:published_time" content="2020-01-10T02:52:00.000Z">
+<meta property="article:modified_time" content="2020-11-07T13:13:41.478Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="macos">
-<meta property="article:tag" content="vmware">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200210222413551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0pXb3N3aW4=,size_16,color_FFFFFF,t_70">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/index.html">
+  <link rel="canonical" href="http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -45,8 +41,6 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-  
-    <link href="//cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" rel="stylesheet">
   
   
   
@@ -346,21 +340,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">Catalogue</h3>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85vmware%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">1.</span> <span class="toc-text">1. 安装vmware虚拟机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E8%AE%BE%E7%BD%AE%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">2. 设置虚拟机网络模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%9F%A5%E7%9C%8Bvmware%E7%9A%84%E7%BD%91%E5%85%B3%E5%92%8C%E6%8E%A9%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">3. 查看vmware的网关和掩码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AEcentos%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E7%BD%91%E7%BB%9C"><span class="toc-number">4.</span> <span class="toc-text">4. 配置centos虚拟机的网络</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9B%B4%E6%96%B0%E5%92%8C%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text">数据的更新和查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A2%9E%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">2.</span> <span class="toc-text">数据的增加和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">3.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList-%E6%98%AF%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89"><span class="toc-number">3.0.1.</span> <span class="toc-text">ArrayList 是线性表（数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList-%E6%98%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">3.0.2.</span> <span class="toc-text">LinkedList 是链表的操作</span></a></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-bigdata/environment/vmware" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-java/java基础/java基础1" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Mac OS VMware Fusion Centos6.5虚拟机网络设置
+      ArrayList和LinkedList
     </h1>
   
 
@@ -368,20 +362,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/02/29/bigdata/environment/vmware/" class="article-date">
-	  <time datetime="2020-02-29T15:25:00.000Z" itemprop="datePublished">2020-02-29</time>
+	<a href="/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/" class="article-date">
+	  <time datetime="2020-01-10T02:52:00.000Z" itemprop="datePublished">2020-01-10</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a>
+    <a class="article-category-link" href="/categories/java%E5%9F%BA%E7%A1%80/">java基础</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/macos/" rel="tag">macos</a>, <a class="article-tag-link-link" href="/tags/vmware/" rel="tag">vmware</a>
+	<a class="article-tag-link-link" href="/tags/java/" rel="tag">java</a>
   </span>
 
 
@@ -394,35 +388,28 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/02/29/bigdata/environment/vmware/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/#comments" class="article-comment-link">Comments</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="1-安装vmware虚拟机"><a href="#1-安装vmware虚拟机" class="headerlink" title="1. 安装vmware虚拟机"></a>1. 安装vmware虚拟机</h1><p>安装vmware虚拟机，并新建一个centos 64位的虚拟机</p>
-<h1 id="2-设置虚拟机网络模式"><a href="#2-设置虚拟机网络模式" class="headerlink" title="2. 设置虚拟机网络模式"></a>2. 设置虚拟机网络模式</h1><p><img src="https://img-blog.csdnimg.cn/20200210222413551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0pXb3N3aW4=,size_16,color_FFFFFF,t_70"></p>
-<h1 id="3-查看vmware的网关和掩码"><a href="#3-查看vmware的网关和掩码" class="headerlink" title="3. 查看vmware的网关和掩码"></a>3. 查看vmware的网关和掩码</h1><p>在Mac电脑的终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /Library/Preferences/VMware\ Fusion/vmnet8/nat.conf</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：<br><img src="https://img-blog.csdnimg.cn/20200210222624261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0pXb3N3aW4=,size_16,color_FFFFFF,t_70"><br>这里的ip和netmask即为vmware虚拟机的网关和掩码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NAT gateway address</span></span><br><span class="line">ip = 172.16.143.2</span><br><span class="line">netmask = 255.255.255.0</span><br></pre></td></tr></table></figure>
-<p>ip和netmask后面配置centos虚拟机的网络时分别对于网关和掩码。</p>
-<h1 id="4-配置centos虚拟机的网络"><a href="#4-配置centos虚拟机的网络" class="headerlink" title="4. 配置centos虚拟机的网络"></a>4. 配置centos虚拟机的网络</h1><p>在centos虚拟机的终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-eth0</span><br></pre></td></tr></table></figure>
-<p>然后：</p>
-<ul>
-<li>删除UUID和MAC地址</li>
-<li>ONBOOT=yes</li>
-<li>BOOTPROTO=static</li>
-<li>IPADDR=172.16.143.101</li>
-<li>NETMASK=255.255.255.0</li>
-<li>GATEWAY=172.16.143.2</li>
-<li>DNS1=172.16.143.2</li>
+        <p>#ArrayList和LinkedList</p>
+<h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p>
+<h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul>
+<li>get() 复杂度 O(1)</li>
+<li>add(E) 添加元素，直接在后面添加，复杂度O（1）</li>
+<li>add(index, E) 添加元素，在第几个元素后面插入，后面的元素需要向后移动，复杂度O（n）</li>
+<li>remove（）删除元素，后面的元素需要逐个移动，复杂度O（n）</li>
 </ul>
-<p>保存并退出，然后在centos虚拟机的终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
-<p>ping 一下百度看是否能ping通：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure>
+<h4 id="LinkedList-是链表的操作"><a href="#LinkedList-是链表的操作" class="headerlink" title="LinkedList 是链表的操作"></a>LinkedList 是链表的操作</h4><ul>
+<li>get() 获取第几个元素，依次遍历，复杂度O(n)</li>
+<li>add(E) 添加到末尾，复杂度O(1)</li>
+<li>add(index, E) 添加第几个元素后，需要先查找到第几个元素，直接指针指向操作，复杂度O(n)</li>
+<li>remove（）删除元素，直接指针指向操作，复杂度O(1)</li>
+</ul>
+
       
     </div>
     <div class="article-footer">
@@ -431,7 +418,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/" title="Mac OS VMware Fusion Centos6.5虚拟机网络设置" target="_blank" rel="external">http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/</a>
+      <a href="http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/" title="ArrayList和LinkedList" target="_blank" rel="external">http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -476,13 +463,9 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/03/01/deep-learning/capsule/" title="胶囊间的动态路由-论文解读"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+      <a href="/2020/02/29/deep-learning/torchtext_use/" title="Torchtext使用教程"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
-    
-    <li class="next">
-      <a href="/2020/02/29/deep-learning/torchtext_use/" title="Torchtext使用教程"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
     
     
     <li class="toggle-toc">

@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://duanyushuai.github.io/"/>
   <updated>2020-11-07T07:56:07.726Z</updated>
-  <id>http://example.com/</id>
+  <id>http://duanyushuai.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2020/11/07/hello-world/"/>
-    <id>http://example.com/2020/11/07/hello-world/</id>
+    <link href="http://duanyushuai.github.io/2020/11/07/hello-world/"/>
+    <id>http://duanyushuai.github.io/2020/11/07/hello-world/</id>
     <published>2020-11-07T07:56:07.726Z</published>
     <updated>2020-11-07T07:56:07.726Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>查看kafka分区偏移量文件报错：NoSuchElementException</title>
-    <link href="http://example.com/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/"/>
-    <id>http://example.com/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/</id>
+    <link href="http://duanyushuai.github.io/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/"/>
+    <id>http://duanyushuai.github.io/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/</id>
     <published>2020-11-01T02:40:00.000Z</published>
     <updated>2020-11-01T02:50:26.000Z</updated>
     
@@ -54,17 +54,17 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    <category term="kafka" scheme="http://duanyushuai.github.io/tags/kafka/"/>
     
   </entry>
   
   <entry>
     <title>kafka主题的分区分配策略（二）</title>
-    <link href="http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition2/"/>
-    <id>http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition2/</id>
+    <link href="http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition2/"/>
+    <id>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition2/</id>
     <published>2020-10-26T14:04:00.000Z</published>
     <updated>2020-10-26T14:08:55.000Z</updated>
     
@@ -78,21 +78,21 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    <category term="kafka" scheme="http://duanyushuai.github.io/tags/kafka/"/>
     
-    <category term="topic" scheme="http://example.com/tags/topic/"/>
+    <category term="topic" scheme="http://duanyushuai.github.io/tags/topic/"/>
     
-    <category term="partition" scheme="http://example.com/tags/partition/"/>
+    <category term="partition" scheme="http://duanyushuai.github.io/tags/partition/"/>
     
   </entry>
   
   <entry>
     <title>kafka主题的分区分配策略（一）</title>
-    <link href="http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition1/"/>
-    <id>http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition1/</id>
+    <link href="http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition1/"/>
+    <id>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition1/</id>
     <published>2020-10-26T13:40:00.000Z</published>
     <updated>2020-10-26T14:09:17.000Z</updated>
     
@@ -106,21 +106,21 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    <category term="kafka" scheme="http://duanyushuai.github.io/tags/kafka/"/>
     
-    <category term="topic" scheme="http://example.com/tags/topic/"/>
+    <category term="topic" scheme="http://duanyushuai.github.io/tags/topic/"/>
     
-    <category term="partition" scheme="http://example.com/tags/partition/"/>
+    <category term="partition" scheme="http://duanyushuai.github.io/tags/partition/"/>
     
   </entry>
   
   <entry>
     <title>kafka主题与分区管理</title>
-    <link href="http://example.com/2020/10/26/bigdata/kafka/topic-partition/"/>
-    <id>http://example.com/2020/10/26/bigdata/kafka/topic-partition/</id>
+    <link href="http://duanyushuai.github.io/2020/10/26/bigdata/kafka/topic-partition/"/>
+    <id>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/topic-partition/</id>
     <published>2020-10-26T13:36:00.000Z</published>
     <updated>2020-10-27T02:57:18.000Z</updated>
     
@@ -134,21 +134,21 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    <category term="kafka" scheme="http://duanyushuai.github.io/tags/kafka/"/>
     
-    <category term="topic" scheme="http://example.com/tags/topic/"/>
+    <category term="topic" scheme="http://duanyushuai.github.io/tags/topic/"/>
     
-    <category term="partition" scheme="http://example.com/tags/partition/"/>
+    <category term="partition" scheme="http://duanyushuai.github.io/tags/partition/"/>
     
   </entry>
   
   <entry>
     <title>Hive分析搜狗用户搜索日志-数据预处理(解决乱码问题)</title>
-    <link href="http://example.com/2020/10/22/bigdata/hive/hive-Sougou/"/>
-    <id>http://example.com/2020/10/22/bigdata/hive/hive-Sougou/</id>
+    <link href="http://duanyushuai.github.io/2020/10/22/bigdata/hive/hive-Sougou/"/>
+    <id>http://duanyushuai.github.io/2020/10/22/bigdata/hive/hive-Sougou/</id>
     <published>2020-10-22T11:34:00.000Z</published>
     <updated>2020-10-23T12:26:55.000Z</updated>
     
@@ -167,19 +167,19 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="hive" scheme="http://example.com/tags/hive/"/>
+    <category term="hive" scheme="http://duanyushuai.github.io/tags/hive/"/>
     
-    <category term="macos" scheme="http://example.com/tags/macos/"/>
+    <category term="macos" scheme="http://duanyushuai.github.io/tags/macos/"/>
     
   </entry>
   
   <entry>
     <title>Mac 单机集群使用hadoop jar 运行jar包出现的问题</title>
-    <link href="http://example.com/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/"/>
-    <id>http://example.com/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/</id>
+    <link href="http://duanyushuai.github.io/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/"/>
+    <id>http://duanyushuai.github.io/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/</id>
     <published>2020-10-21T03:19:00.000Z</published>
     <updated>2020-10-23T12:26:45.000Z</updated>
     
@@ -194,19 +194,19 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="macos" scheme="http://example.com/tags/macos/"/>
+    <category term="macos" scheme="http://duanyushuai.github.io/tags/macos/"/>
     
-    <category term="mapreduce" scheme="http://example.com/tags/mapreduce/"/>
+    <category term="mapreduce" scheme="http://duanyushuai.github.io/tags/mapreduce/"/>
     
   </entry>
   
   <entry>
     <title>使用fastjson时堆溢出</title>
-    <link href="http://example.com/2020/10/21/fastjson-heap-oom/"/>
-    <id>http://example.com/2020/10/21/fastjson-heap-oom/</id>
+    <link href="http://duanyushuai.github.io/2020/10/21/java/jvm/fastjson-heap-oom/"/>
+    <id>http://duanyushuai.github.io/2020/10/21/java/jvm/fastjson-heap-oom/</id>
     <published>2020-10-21T02:52:00.000Z</published>
     <updated>2020-10-23T12:26:28.000Z</updated>
     
@@ -220,21 +220,21 @@
     
     
     
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    <category term="JVM" scheme="http://duanyushuai.github.io/categories/JVM/"/>
     
     
-    <category term="java" scheme="http://example.com/tags/java/"/>
+    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
     
-    <category term="OutOfMemoryError" scheme="http://example.com/tags/OutOfMemoryError/"/>
+    <category term="OutOfMemoryError" scheme="http://duanyushuai.github.io/tags/OutOfMemoryError/"/>
     
-    <category term="heap" scheme="http://example.com/tags/heap/"/>
+    <category term="heap" scheme="http://duanyushuai.github.io/tags/heap/"/>
     
   </entry>
   
   <entry>
     <title>使用fastjson时堆溢出</title>
-    <link href="http://example.com/2020/10/21/java/jvm/fastjson-heap-oom/"/>
-    <id>http://example.com/2020/10/21/java/jvm/fastjson-heap-oom/</id>
+    <link href="http://duanyushuai.github.io/2020/10/21/fastjson-heap-oom/"/>
+    <id>http://duanyushuai.github.io/2020/10/21/fastjson-heap-oom/</id>
     <published>2020-10-21T02:52:00.000Z</published>
     <updated>2020-10-23T12:26:28.000Z</updated>
     
@@ -248,21 +248,21 @@
     
     
     
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    <category term="JVM" scheme="http://duanyushuai.github.io/categories/JVM/"/>
     
     
-    <category term="java" scheme="http://example.com/tags/java/"/>
+    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
     
-    <category term="OutOfMemoryError" scheme="http://example.com/tags/OutOfMemoryError/"/>
+    <category term="OutOfMemoryError" scheme="http://duanyushuai.github.io/tags/OutOfMemoryError/"/>
     
-    <category term="heap" scheme="http://example.com/tags/heap/"/>
+    <category term="heap" scheme="http://duanyushuai.github.io/tags/heap/"/>
     
   </entry>
   
   <entry>
     <title>DBeaver连接hive需要的驱动jar包</title>
-    <link href="http://example.com/2020/10/20/bigdata/hive/dbeaver-hive-connect/"/>
-    <id>http://example.com/2020/10/20/bigdata/hive/dbeaver-hive-connect/</id>
+    <link href="http://duanyushuai.github.io/2020/10/20/bigdata/hive/dbeaver-hive-connect/"/>
+    <id>http://duanyushuai.github.io/2020/10/20/bigdata/hive/dbeaver-hive-connect/</id>
     <published>2020-10-20T03:46:00.000Z</published>
     <updated>2020-10-23T12:26:52.000Z</updated>
     
@@ -277,17 +277,17 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="hive" scheme="http://example.com/tags/hive/"/>
+    <category term="hive" scheme="http://duanyushuai.github.io/tags/hive/"/>
     
   </entry>
   
   <entry>
     <title>循环神经网络pytorch实现</title>
-    <link href="http://example.com/2020/04/20/deep-learning/rnn-pytorch/"/>
-    <id>http://example.com/2020/04/20/deep-learning/rnn-pytorch/</id>
+    <link href="http://duanyushuai.github.io/2020/04/20/deep-learning/rnn-pytorch/"/>
+    <id>http://duanyushuai.github.io/2020/04/20/deep-learning/rnn-pytorch/</id>
     <published>2020-04-20T05:17:00.000Z</published>
     <updated>2020-10-23T12:26:10.000Z</updated>
     
@@ -302,23 +302,23 @@
     
     
     
-    <category term="深度学习" scheme="http://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="pytorch" scheme="http://example.com/tags/pytorch/"/>
+    <category term="pytorch" scheme="http://duanyushuai.github.io/tags/pytorch/"/>
     
-    <category term="RNN" scheme="http://example.com/tags/RNN/"/>
+    <category term="RNN" scheme="http://duanyushuai.github.io/tags/RNN/"/>
     
-    <category term="GRU" scheme="http://example.com/tags/GRU/"/>
+    <category term="GRU" scheme="http://duanyushuai.github.io/tags/GRU/"/>
     
-    <category term="LSTM" scheme="http://example.com/tags/LSTM/"/>
+    <category term="LSTM" scheme="http://duanyushuai.github.io/tags/LSTM/"/>
     
   </entry>
   
   <entry>
     <title>矩阵求导方法</title>
-    <link href="http://example.com/2020/04/18/deep-learning/matrix-partial/"/>
-    <id>http://example.com/2020/04/18/deep-learning/matrix-partial/</id>
+    <link href="http://duanyushuai.github.io/2020/04/18/deep-learning/matrix-partial/"/>
+    <id>http://duanyushuai.github.io/2020/04/18/deep-learning/matrix-partial/</id>
     <published>2020-04-18T05:17:00.000Z</published>
     <updated>2020-10-23T12:26:17.000Z</updated>
     
@@ -333,17 +333,17 @@
     
     
     
-    <category term="深度学习" scheme="http://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="矩阵求导" scheme="http://example.com/tags/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/"/>
+    <category term="矩阵求导" scheme="http://duanyushuai.github.io/tags/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/"/>
     
   </entry>
   
   <entry>
     <title>Hbase创建表出错</title>
-    <link href="http://example.com/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/"/>
-    <id>http://example.com/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/</id>
+    <link href="http://duanyushuai.github.io/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/"/>
+    <id>http://duanyushuai.github.io/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/</id>
     <published>2020-03-30T09:14:00.000Z</published>
     <updated>2020-10-23T12:27:01.000Z</updated>
     
@@ -357,19 +357,19 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="hbase" scheme="http://example.com/tags/hbase/"/>
+    <category term="hbase" scheme="http://duanyushuai.github.io/tags/hbase/"/>
     
-    <category term="ntpdate" scheme="http://example.com/tags/ntpdate/"/>
+    <category term="ntpdate" scheme="http://duanyushuai.github.io/tags/ntpdate/"/>
     
   </entry>
   
   <entry>
     <title>安装hive时jline版本不一致问题</title>
-    <link href="http://example.com/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/"/>
-    <id>http://example.com/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</id>
+    <link href="http://duanyushuai.github.io/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/"/>
+    <id>http://duanyushuai.github.io/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</id>
     <published>2020-03-17T07:14:00.000Z</published>
     <updated>2020-10-23T12:26:49.000Z</updated>
     
@@ -383,21 +383,21 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="hive" scheme="http://example.com/tags/hive/"/>
+    <category term="hive" scheme="http://duanyushuai.github.io/tags/hive/"/>
     
-    <category term="hadoop" scheme="http://example.com/tags/hadoop/"/>
+    <category term="hadoop" scheme="http://duanyushuai.github.io/tags/hadoop/"/>
     
-    <category term="centos" scheme="http://example.com/tags/centos/"/>
+    <category term="centos" scheme="http://duanyushuai.github.io/tags/centos/"/>
     
   </entry>
   
   <entry>
     <title>本地运行mapred问题</title>
-    <link href="http://example.com/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/"/>
-    <id>http://example.com/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/</id>
+    <link href="http://duanyushuai.github.io/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/"/>
+    <id>http://duanyushuai.github.io/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/</id>
     <published>2020-03-17T06:58:00.000Z</published>
     <updated>2020-10-23T12:26:41.000Z</updated>
     
@@ -412,23 +412,23 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="java" scheme="http://example.com/tags/java/"/>
+    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
     
-    <category term="macos" scheme="http://example.com/tags/macos/"/>
+    <category term="macos" scheme="http://duanyushuai.github.io/tags/macos/"/>
     
-    <category term="hadoop" scheme="http://example.com/tags/hadoop/"/>
+    <category term="hadoop" scheme="http://duanyushuai.github.io/tags/hadoop/"/>
     
-    <category term="mapreduce" scheme="http://example.com/tags/mapreduce/"/>
+    <category term="mapreduce" scheme="http://duanyushuai.github.io/tags/mapreduce/"/>
     
   </entry>
   
   <entry>
     <title>胶囊间的动态路由-论文解读</title>
-    <link href="http://example.com/2020/03/01/deep-learning/capsule/"/>
-    <id>http://example.com/2020/03/01/deep-learning/capsule/</id>
+    <link href="http://duanyushuai.github.io/2020/03/01/deep-learning/capsule/"/>
+    <id>http://duanyushuai.github.io/2020/03/01/deep-learning/capsule/</id>
     <published>2020-03-01T05:25:00.000Z</published>
     <updated>2020-10-27T06:48:55.000Z</updated>
     
@@ -443,19 +443,19 @@
     
     
     
-    <category term="深度学习" scheme="http://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="cpasule" scheme="http://example.com/tags/cpasule/"/>
+    <category term="cpasule" scheme="http://duanyushuai.github.io/tags/cpasule/"/>
     
-    <category term="paper" scheme="http://example.com/tags/paper/"/>
+    <category term="paper" scheme="http://duanyushuai.github.io/tags/paper/"/>
     
   </entry>
   
   <entry>
     <title>Mac OS VMware Fusion Centos6.5虚拟机网络设置</title>
-    <link href="http://example.com/2020/02/29/bigdata/environment/vmware/"/>
-    <id>http://example.com/2020/02/29/bigdata/environment/vmware/</id>
+    <link href="http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/"/>
+    <id>http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/</id>
     <published>2020-02-29T15:25:00.000Z</published>
     <updated>2020-10-23T12:27:08.000Z</updated>
     
@@ -469,19 +469,19 @@
     
     
     
-    <category term="大数据" scheme="http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    <category term="大数据" scheme="http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="macos" scheme="http://example.com/tags/macos/"/>
+    <category term="macos" scheme="http://duanyushuai.github.io/tags/macos/"/>
     
-    <category term="vmware" scheme="http://example.com/tags/vmware/"/>
+    <category term="vmware" scheme="http://duanyushuai.github.io/tags/vmware/"/>
     
   </entry>
   
   <entry>
     <title>Torchtext使用教程</title>
-    <link href="http://example.com/2020/02/29/deep-learning/torchtext_use/"/>
-    <id>http://example.com/2020/02/29/deep-learning/torchtext_use/</id>
+    <link href="http://duanyushuai.github.io/2020/02/29/deep-learning/torchtext_use/"/>
+    <id>http://duanyushuai.github.io/2020/02/29/deep-learning/torchtext_use/</id>
     <published>2020-02-29T13:25:00.000Z</published>
     <updated>2020-10-23T12:25:49.000Z</updated>
     
@@ -495,14 +495,39 @@
     
     
     
-    <category term="深度学习" scheme="http://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="nlp" scheme="http://example.com/tags/nlp/"/>
+    <category term="nlp" scheme="http://duanyushuai.github.io/tags/nlp/"/>
     
-    <category term="torchtext" scheme="http://example.com/tags/torchtext/"/>
+    <category term="torchtext" scheme="http://duanyushuai.github.io/tags/torchtext/"/>
     
-    <category term="python" scheme="http://example.com/tags/python/"/>
+    <category term="python" scheme="http://duanyushuai.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArrayList和LinkedList</title>
+    <link href="http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/"/>
+    <id>http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/</id>
+    <published>2020-01-10T02:52:00.000Z</published>
+    <updated>2020-11-07T13:13:41.478Z</updated>
+    
+    <content type="html"><![CDATA[<p>#ArrayList和LinkedList</p><h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p><h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul><li>get() 复杂度 O(1)</li><li>add(E) 添加元素，直接在后面添加，复杂度O（1）</li><li>add(index, E) 添加元素，在第几个元素后面插入，后面的元素需要向后移动，复杂度O（n）</li><li>remove（）删除元素，后面的元素需要逐个移动，复杂度O（n）</li></ul><h4 id="LinkedList-是链表的操作"><a href="#LinkedList-是链表的操作" class="headerlink" title="LinkedList 是链表的操作"></a>LinkedList 是链表的操作</h4><ul><li>get() 获取第几个元素，依次遍历，复杂度O(n)</li><li>add(E) 添加到末尾，复杂度O(1)</li><li>add(index, E) 添加第几个元素后，需要先查找到第几个元素，直接指针指向操作，复杂度O(n)</li><li>remove（）删除元素，直接指针指向操作，复杂度O(1)</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#ArrayList和LinkedList&lt;/p&gt;
+&lt;h2 id=&quot;数据的更新和查找&quot;&gt;&lt;a href=&quot;#数据的更新和查找&quot; class=&quot;headerlink&quot; title=&quot;数据的更新和查找&quot;&gt;&lt;/a&gt;数据的更新和查找&lt;/h2&gt;&lt;p&gt;ArrayList的所有数据是在同</summary>
+      
+    
+    
+    
+    <category term="java基础" scheme="http://duanyushuai.github.io/categories/java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
     
   </entry>
   

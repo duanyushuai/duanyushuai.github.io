@@ -2,175 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/repository/index.html</loc>
+    <loc>http://duanyushuai.github.io/tags/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>http://duanyushuai.github.io/repository/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/links/index.html</loc>
+    <loc>http://duanyushuai.github.io/categories/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://duanyushuai.github.io/links/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/books/index.html</loc>
+    <loc>http://duanyushuai.github.io/about/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/404.html</loc>
+    <loc>http://duanyushuai.github.io/books/index.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/11/07/hello-world/</loc>
+    <loc>http://duanyushuai.github.io/404.html</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/</loc>
+    <loc>http://duanyushuai.github.io/2020/11/07/hello-world/</loc>
+    
+    <lastmod>2020-11-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/</loc>
     
     <lastmod>2020-11-01</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/03/01/deep-learning/capsule/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/01/deep-learning/capsule/</loc>
     
     <lastmod>2020-10-27</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/26/bigdata/kafka/topic-partition/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/topic-partition/</loc>
     
     <lastmod>2020-10-27</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition1/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition1/</loc>
     
     <lastmod>2020-10-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition2/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition2/</loc>
     
     <lastmod>2020-10-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/02/29/bigdata/environment/vmware/</loc>
+    <loc>http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/22/bigdata/hive/hive-Sougou/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/22/bigdata/hive/hive-Sougou/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/20/bigdata/hive/dbeaver-hive-connect/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/20/bigdata/hive/dbeaver-hive-connect/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/21/fastjson-heap-oom/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/21/fastjson-heap-oom/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/10/21/java/jvm/fastjson-heap-oom/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/21/java/jvm/fastjson-heap-oom/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/04/18/deep-learning/matrix-partial/</loc>
+    <loc>http://duanyushuai.github.io/2020/04/18/deep-learning/matrix-partial/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/04/20/deep-learning/rnn-pytorch/</loc>
+    <loc>http://duanyushuai.github.io/2020/04/20/deep-learning/rnn-pytorch/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://example.com/2020/02/29/deep-learning/torchtext_use/</loc>
+    <loc>http://duanyushuai.github.io/2020/02/29/deep-learning/torchtext_use/</loc>
     
     <lastmod>2020-10-23</lastmod>
     
@@ -178,7 +185,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://duanyushuai.github.io/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -186,168 +193,168 @@
 
   
   <url>
-    <loc>http://example.com/tags/java/</loc>
+    <loc>http://duanyushuai.github.io/tags/java/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/OutOfMemoryError/</loc>
+    <loc>http://duanyushuai.github.io/tags/OutOfMemoryError/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/heap/</loc>
+    <loc>http://duanyushuai.github.io/tags/heap/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/hive/</loc>
+    <loc>http://duanyushuai.github.io/tags/hive/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/macos/</loc>
+    <loc>http://duanyushuai.github.io/tags/macos/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/hadoop/</loc>
+    <loc>http://duanyushuai.github.io/tags/hadoop/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/centos/</loc>
+    <loc>http://duanyushuai.github.io/tags/centos/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/hbase/</loc>
+    <loc>http://duanyushuai.github.io/tags/hbase/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/ntpdate/</loc>
+    <loc>http://duanyushuai.github.io/tags/ntpdate/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/vmware/</loc>
+    <loc>http://duanyushuai.github.io/tags/vmware/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/mapreduce/</loc>
+    <loc>http://duanyushuai.github.io/tags/mapreduce/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</loc>
+    <loc>http://duanyushuai.github.io/tags/%E7%9F%A9%E9%98%B5%E6%B1%82%E5%AF%BC/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/pytorch/</loc>
+    <loc>http://duanyushuai.github.io/tags/pytorch/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/RNN/</loc>
+    <loc>http://duanyushuai.github.io/tags/RNN/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/GRU/</loc>
+    <loc>http://duanyushuai.github.io/tags/GRU/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/LSTM/</loc>
+    <loc>http://duanyushuai.github.io/tags/LSTM/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/nlp/</loc>
+    <loc>http://duanyushuai.github.io/tags/nlp/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/torchtext/</loc>
+    <loc>http://duanyushuai.github.io/tags/torchtext/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/python/</loc>
+    <loc>http://duanyushuai.github.io/tags/python/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/kafka/</loc>
+    <loc>http://duanyushuai.github.io/tags/kafka/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/topic/</loc>
+    <loc>http://duanyushuai.github.io/tags/topic/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/partition/</loc>
+    <loc>http://duanyushuai.github.io/tags/partition/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/cpasule/</loc>
+    <loc>http://duanyushuai.github.io/tags/cpasule/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/paper/</loc>
+    <loc>http://duanyushuai.github.io/tags/paper/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -356,21 +363,28 @@
 
   
   <url>
-    <loc>http://example.com/categories/JVM/</loc>
+    <loc>http://duanyushuai.github.io/categories/JVM/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <loc>http://duanyushuai.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/categories/java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

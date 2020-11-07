@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://example.com/2020/11/07/hello-world/</loc>
+    <loc>http://duanyushuai.github.io/2020/01/10/java/java%E5%9F%BA%E7%A1%80/java%E5%9F%BA%E7%A1%801/</loc>
     <lastmod>2020-11-07</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/</loc>
+    <loc>http://duanyushuai.github.io/2020/11/07/hello-world/</loc>
+    <lastmod>2020-11-07</lastmod>
+  </url>
+  <url>
+    <loc>http://duanyushuai.github.io/2020/11/01/bigdata/kafka/kafka-dump-log-NoSuchElementException/</loc>
     <lastmod>2020-11-01</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/03/01/deep-learning/capsule/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/01/deep-learning/capsule/</loc>
     <lastmod>2020-10-27</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/26/bigdata/kafka/topic-partition/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/topic-partition/</loc>
     <lastmod>2020-10-27</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition1/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition1/</loc>
     <lastmod>2020-10-26</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/26/bigdata/kafka/kafka-topic-partition2/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/26/bigdata/kafka/kafka-topic-partition2/</loc>
     <lastmod>2020-10-26</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/02/29/bigdata/environment/vmware/</loc>
+    <loc>http://duanyushuai.github.io/2020/02/29/bigdata/environment/vmware/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/30/bigdata/hbase/Hbase%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%87%BA%E9%94%99/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/22/bigdata/hive/hive-Sougou/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/22/bigdata/hive/hive-Sougou/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/20/bigdata/hive/dbeaver-hive-connect/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/20/bigdata/hive/dbeaver-hive-connect/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/17/bigdata/hive/%E5%AE%89%E8%A3%85hive%E6%97%B6jline%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/21/bigdata/mapreduce/mac-hadoop-jar-problem/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/</loc>
+    <loc>http://duanyushuai.github.io/2020/03/17/bigdata/mapreduce/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cmapred%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/21/fastjson-heap-oom/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/21/fastjson-heap-oom/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/10/21/java/jvm/fastjson-heap-oom/</loc>
+    <loc>http://duanyushuai.github.io/2020/10/21/java/jvm/fastjson-heap-oom/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/04/18/deep-learning/matrix-partial/</loc>
+    <loc>http://duanyushuai.github.io/2020/04/18/deep-learning/matrix-partial/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/04/20/deep-learning/rnn-pytorch/</loc>
+    <loc>http://duanyushuai.github.io/2020/04/20/deep-learning/rnn-pytorch/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
   <url>
-    <loc>http://example.com/2020/02/29/deep-learning/torchtext_use/</loc>
+    <loc>http://duanyushuai.github.io/2020/02/29/deep-learning/torchtext_use/</loc>
     <lastmod>2020-10-23</lastmod>
   </url>
 </urlset> 
