@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://duanyushuai.github.io/2020/03/21/algorithm/Binary%20tree/binaryTree/</loc>
+    
+    <lastmod>2020-11-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/</loc>
     
     <lastmod>2020-11-08</lastmod>
@@ -101,6 +108,20 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://duanyushuai.github.io/tags/Tree/</loc>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/tags/algorithm/</loc>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -112,6 +133,13 @@
   
   <url>
     <loc>http://duanyushuai.github.io/categories/java-basics/</loc>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/categories/algorithm/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
