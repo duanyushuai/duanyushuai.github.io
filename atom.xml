@@ -66,10 +66,10 @@
   
   <entry>
     <title>ArrayList和LinkedList</title>
-    <link href="http://duanyushuai.github.io/2020/01/10/java/java-basics/java-basics-1/"/>
-    <id>http://duanyushuai.github.io/2020/01/10/java/java-basics/java-basics-1/</id>
+    <link href="http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/"/>
+    <id>http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/</id>
     <published>2020-01-10T02:52:00.000Z</published>
-    <updated>2020-11-07T13:13:41.478Z</updated>
+    <updated>2020-11-08T11:00:41.217Z</updated>
     
     <content type="html"><![CDATA[<p>#ArrayList和LinkedList</p><h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p><h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul><li>get() 复杂度 O(1)</li><li>add(E) 添加元素，直接在后面添加，复杂度O（1）</li><li>add(index, E) 添加元素，在第几个元素后面插入，后面的元素需要向后移动，复杂度O（n）</li><li>remove（）删除元素，后面的元素需要逐个移动，复杂度O（n）</li></ul><h4 id="LinkedList-是链表的操作"><a href="#LinkedList-是链表的操作" class="headerlink" title="LinkedList 是链表的操作"></a>LinkedList 是链表的操作</h4><ul><li>get() 获取第几个元素，依次遍历，复杂度O(n)</li><li>add(E) 添加到末尾，复杂度O(1)</li><li>add(index, E) 添加第几个元素后，需要先查找到第几个元素，直接指针指向操作，复杂度O(n)</li><li>remove（）删除元素，直接指针指向操作，复杂度O(1)</li></ul>]]></content>
     
@@ -82,7 +82,7 @@
     
     
     
-    <category term="java基础" scheme="http://duanyushuai.github.io/categories/java%E5%9F%BA%E7%A1%80/"/>
+    <category term="java_basics" scheme="http://duanyushuai.github.io/categories/java-basics/"/>
     
     
     <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>

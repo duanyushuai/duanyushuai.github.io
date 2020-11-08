@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://duanyushuai.github.io/2020/01/10/java/java-basics/java-basics-1/</loc>
+    <loc>http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/</loc>
     
-    <lastmod>2020-11-07</lastmod>
+    <lastmod>2020-11-08</lastmod>
     
   </url>
   
@@ -111,7 +111,7 @@
   </url>
   
   <url>
-    <loc>http://duanyushuai.github.io/categories/java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>http://duanyushuai.github.io/categories/java-basics/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

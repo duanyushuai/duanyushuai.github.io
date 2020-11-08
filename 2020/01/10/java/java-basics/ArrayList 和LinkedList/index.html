@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Category: java基础 | Duan</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://duanyushuai.github.io/categories/java%E5%9F%BA%E7%A1%80/index.html">
+  <title>ArrayList和LinkedList | Duan</title>
+  <meta name="description" content="#ArrayList和LinkedList 数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArrayList和LinkedList">
+<meta property="og:url" content="http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#ArrayList和LinkedList 数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-10T02:52:00.000Z">
+<meta property="article:modified_time" content="2020-11-08T11:00:41.217Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://duanyushuai.github.io/categories/java%E5%9F%BA%E7%A1%80/index.html">
+  <link rel="canonical" href="http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -204,7 +209,7 @@
   <div class="widget">
     <h3 class="widget-title">Categories</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%9F%BA%E7%A1%80/">java基础</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java-basics/">java_basics</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -279,10 +284,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                <a class="category-link" href="/categories/java%E5%9F%BA%E7%A1%80/">java基础</a>
+                <a class="category-link" href="/categories/java-basics/">java_basics</a>
               </p>
               <p class="item-title">
-                <a href="/2020/01/10/java/java-basics/java-basics-1/" class="title">ArrayList和LinkedList</a>
+                <a href="/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/" class="title">ArrayList和LinkedList</a>
               </p>
               <p class="item-date">
                 <time datetime="2020-01-10T02:52:00.000Z" itemprop="datePublished">2020-01-10</time>
@@ -300,53 +305,162 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-categories article-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">Category: java基础</h1>
-      <p class="hidden-xs">Total 1 articles</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/categories">All</a></li>
-          
-          <li><a href="/categories/JVM/">JVM</a></li>
-          
-          <li><a href="/categories/java基础/">java基础</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="panel panel-default b-no">
-    <div class="panel-heading" role="tab">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" href="#collapsejava基础" aria-expanded="true">
-              <i class="icon icon-folder text-active"></i><i class="icon icon-folder-open text"></i>
-              java基础
-            </a>
-            <small class="text-muted">(Total 1 articles)</small>
-        </h4>
-    </div>
-    <div id="collapsejava基础" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingjava基础">
-        <div class="panel-body">
-            <div class="collection">
-              
-                
-<a href="/2020/01/10/java/java-basics/java-basics-1/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-01-10T02:52:00.000Z" itemprop="datePublished">2020-01-10</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> ArrayList和LinkedList
-</a>
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">Catalogue</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9B%B4%E6%96%B0%E5%92%8C%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text">数据的更新和查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A2%9E%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">2.</span> <span class="toc-text">数据的增加和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">3.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList-%E6%98%AF%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89"><span class="toc-number">3.0.1.</span> <span class="toc-text">ArrayList 是线性表（数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList-%E6%98%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">3.0.2.</span> <span class="toc-text">LinkedList 是链表的操作</span></a></li></ol></li></ol></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-java/java-basics/ArrayList 和LinkedList" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ArrayList和LinkedList
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/" class="article-date">
+	  <time datetime="2020-01-10T02:52:00.000Z" itemprop="datePublished">2020-01-10</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/java-basics/">java_basics</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/java/" rel="tag">java</a>
+  </span>
 
 
-              
-            </div>
-        </div>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
     </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>#ArrayList和LinkedList</p>
+<h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p>
+<h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul>
+<li>get() 复杂度 O(1)</li>
+<li>add(E) 添加元素，直接在后面添加，复杂度O（1）</li>
+<li>add(index, E) 添加元素，在第几个元素后面插入，后面的元素需要向后移动，复杂度O（n）</li>
+<li>remove（）删除元素，后面的元素需要逐个移动，复杂度O（n）</li>
+</ul>
+<h4 id="LinkedList-是链表的操作"><a href="#LinkedList-是链表的操作" class="headerlink" title="LinkedList 是链表的操作"></a>LinkedList 是链表的操作</h4><ul>
+<li>get() 获取第几个元素，依次遍历，复杂度O(n)</li>
+<li>add(E) 添加到末尾，复杂度O(1)</li>
+<li>add(index, E) 添加第几个元素后，需要先查找到第几个元素，直接指针指向操作，复杂度O(n)</li>
+<li>remove（）删除元素，直接指针指向操作，复杂度O(1)</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/" title="ArrayList和LinkedList" target="_blank" rel="external">http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/1.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">段某人</span><small class="ml-1x">目标Java强者</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
 </div>
+
+
     </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/10/21/java/jvm/fastjson-heap-oom/" title="使用fastjson时堆溢出"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="Catalogue" role="button">
+        <span>[&nbsp;</span><span>Catalogue</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -408,6 +522,14 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
 
 
 
