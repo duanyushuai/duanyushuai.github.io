@@ -18,15 +18,15 @@
   
   
   <title>ArrayList和LinkedList | Duan</title>
-  <meta name="description" content="#ArrayList和LinkedList 数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢">
+  <meta name="description" content="ArrayList和LinkedList数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArrayList和LinkedList">
 <meta property="og:url" content="http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#ArrayList和LinkedList 数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢">
+<meta property="og:description" content="ArrayList和LinkedList数据的更新和查找ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-10T02:52:00.000Z">
-<meta property="article:modified_time" content="2020-11-08T11:00:41.217Z">
+<meta property="article:modified_time" content="2020-11-09T07:10:55.699Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -209,7 +209,7 @@
   <div class="widget">
     <h3 class="widget-title">Categories</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java-basics/">java_basics</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JVM/">JVM</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java-basics/">java_basics</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -219,7 +219,7 @@
   <div class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OutOfMemoryError/" rel="tag">OutOfMemoryError</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/heap/" rel="tag">heap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">3</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OutOfMemoryError/" rel="tag">OutOfMemoryError</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tree/" rel="tag">Tree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/heap/" rel="tag">heap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -238,7 +238,7 @@
   <div class="widget">
     <h3 class="widget-title">Archive</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -310,6 +310,21 @@
             </div>
           </li>
           
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/java-basics/">java_basics</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/01/10/java/java-basics/HashMap/" class="title">ArrayList和LinkedList</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-01-10T02:52:00.000Z" itemprop="datePublished">2020-01-10</time>
+              </p>
+            </div>
+          </li>
+          
       </ul>
     </div>
   </div>
@@ -325,7 +340,7 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">Catalogue</h3>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9B%B4%E6%96%B0%E5%92%8C%E6%9F%A5%E6%89%BE"><span class="toc-number">1.</span> <span class="toc-text">数据的更新和查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A2%9E%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">2.</span> <span class="toc-text">数据的增加和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">3.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList-%E6%98%AF%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89"><span class="toc-number">3.0.1.</span> <span class="toc-text">ArrayList 是线性表（数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList-%E6%98%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">3.0.2.</span> <span class="toc-text">LinkedList 是链表的操作</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ArrayList%E5%92%8CLinkedList"><span class="toc-number">1.</span> <span class="toc-text">ArrayList和LinkedList</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9B%B4%E6%96%B0%E5%92%8C%E6%9F%A5%E6%89%BE"><span class="toc-number">1.1.</span> <span class="toc-text">数据的更新和查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A2%9E%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4"><span class="toc-number">1.2.</span> <span class="toc-text">数据的增加和删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">1.3.</span> <span class="toc-text">时间复杂度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList-%E6%98%AF%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88%E6%95%B0%E7%BB%84%EF%BC%89"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">ArrayList 是线性表（数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList-%E6%98%AF%E9%93%BE%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">LinkedList 是链表的操作</span></a></li></ol></li></ol></li></ol></li></ol>
     </nav>
   </div>
 </aside>
@@ -379,8 +394,7 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>#ArrayList和LinkedList</p>
-<h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p>
+        <h1 id="ArrayList和LinkedList"><a href="#ArrayList和LinkedList" class="headerlink" title="ArrayList和LinkedList"></a>ArrayList和LinkedList</h1><h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p>
 <h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p>
 <h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul>
 <li>get() 复杂度 O(1)</li>
@@ -453,6 +467,10 @@
       <a href="/2020/03/21/algorithm/Binary%20tree/binaryTree/" title="二叉树"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
     </li>
     
+    
+    <li class="next">
+      <a href="/2020/01/10/java/java-basics/HashMap/" title="ArrayList和LinkedList"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
     <li class="toggle-toc">

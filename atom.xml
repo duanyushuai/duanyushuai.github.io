@@ -97,15 +97,38 @@
     <link href="http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/"/>
     <id>http://duanyushuai.github.io/2020/01/10/java/java-basics/ArrayList%20%E5%92%8CLinkedList/</id>
     <published>2020-01-10T02:52:00.000Z</published>
-    <updated>2020-11-08T11:00:41.217Z</updated>
+    <updated>2020-11-09T07:10:55.699Z</updated>
     
-    <content type="html"><![CDATA[<p>#ArrayList和LinkedList</p><h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p><h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul><li>get() 复杂度 O(1)</li><li>add(E) 添加元素，直接在后面添加，复杂度O（1）</li><li>add(index, E) 添加元素，在第几个元素后面插入，后面的元素需要向后移动，复杂度O（n）</li><li>remove（）删除元素，后面的元素需要逐个移动，复杂度O（n）</li></ul><h4 id="LinkedList-是链表的操作"><a href="#LinkedList-是链表的操作" class="headerlink" title="LinkedList 是链表的操作"></a>LinkedList 是链表的操作</h4><ul><li>get() 获取第几个元素，依次遍历，复杂度O(n)</li><li>add(E) 添加到末尾，复杂度O(1)</li><li>add(index, E) 添加第几个元素后，需要先查找到第几个元素，直接指针指向操作，复杂度O(n)</li><li>remove（）删除元素，直接指针指向操作，复杂度O(1)</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="ArrayList和LinkedList"><a href="#ArrayList和LinkedList" class="headerlink" title="ArrayList和LinkedList"></a>ArrayList和LinkedList</h1><h2 id="数据的更新和查找"><a href="#数据的更新和查找" class="headerlink" title="数据的更新和查找"></a>数据的更新和查找</h2><p>ArrayList的所有数据是在同一个地址上,而LinkedList的每个数据都拥有自己的地址.所以在对数据进行查找的时候，由于LinkedList的每个数据地址不一样，get数据的时候ArrayList的速度会优于LinkedList，而更新数据的时候，虽然都是通过循环循环到指定节点修改数据，Arraylist快，LinkedList慢，需要改指针。</p><h2 id="数据的增加和删除"><a href="#数据的增加和删除" class="headerlink" title="数据的增加和删除"></a>数据的增加和删除</h2><p>数组增加，后面的都需要+1 ，删除-1<br>链表只需要改节点<br>单一元素的增删，尤其是在List末端增删一个元素，二者效率不相上下</p><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><h4 id="ArrayList-是线性表（数组）"><a href="#ArrayList-是线性表（数组）" class="headerlink" title="ArrayList 是线性表（数组）"></a>ArrayList 是线性表（数组）</h4><ul><li>get() 复杂度 O(1)</li><li>add(E) 添加元素，直接在后面添加，复杂度O（1）</li><li>add(index, E) 添加元素，在第几个元素后面插入，后面的元素需要向后移动，复杂度O（n）</li><li>remove（）删除元素，后面的元素需要逐个移动，复杂度O（n）</li></ul><h4 id="LinkedList-是链表的操作"><a href="#LinkedList-是链表的操作" class="headerlink" title="LinkedList 是链表的操作"></a>LinkedList 是链表的操作</h4><ul><li>get() 获取第几个元素，依次遍历，复杂度O(n)</li><li>add(E) 添加到末尾，复杂度O(1)</li><li>add(index, E) 添加第几个元素后，需要先查找到第几个元素，直接指针指向操作，复杂度O(n)</li><li>remove（）删除元素，直接指针指向操作，复杂度O(1)</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;#ArrayList和LinkedList&lt;/p&gt;
-&lt;h2 id=&quot;数据的更新和查找&quot;&gt;&lt;a href=&quot;#数据的更新和查找&quot; class=&quot;headerlink&quot; title=&quot;数据的更新和查找&quot;&gt;&lt;/a&gt;数据的更新和查找&lt;/h2&gt;&lt;p&gt;ArrayList的所有数据是在同</summary>
+    <summary type="html">&lt;h1 id=&quot;ArrayList和LinkedList&quot;&gt;&lt;a href=&quot;#ArrayList和LinkedList&quot; class=&quot;headerlink&quot; title=&quot;ArrayList和LinkedList&quot;&gt;&lt;/a&gt;ArrayList和LinkedList&lt;/h1&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="java_basics" scheme="http://duanyushuai.github.io/categories/java-basics/"/>
+    
+    
+    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArrayList和LinkedList</title>
+    <link href="http://duanyushuai.github.io/2020/01/10/java/java-basics/HashMap/"/>
+    <id>http://duanyushuai.github.io/2020/01/10/java/java-basics/HashMap/</id>
+    <published>2020-01-10T02:52:00.000Z</published>
+    <updated>2020-11-09T07:10:34.218Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HashMap的理解"><a href="#HashMap的理解" class="headerlink" title="HashMap的理解"></a>HashMap的理解</h1><p>基本：底层数据结构, 数组 + 链表，长度超过8变为红黑树，非线程安全<br>加分：HashMap在put时, 经过了两次hash，一个是JDK自带的对对象key的hash，一个是内部扰动函数hash，做高16位与低16位异或，加大散列的效果<br>加分：HashMap 的长度为什么是2的幂次方。1. 散列值用之前要对数组长度取模，求桶位(n - 1) &amp; hash 更高效；2. 扩容的时候也可以用 hash值与扩容后的最高位 &amp; 判断节点是在高位还是低位，更高效。<br>加分：HashMap 非线程安全，多线程操作导致死循环问题，1.7 并发下头插形成循环链表，1.8 用尾插修复， 但仍可能造成丢失数据。</p><p>白话：hashmap是非线程安全的集合。底层是数组+链表，链表长度超过8会转成红黑树。hashmap中table的长度总是2的幂次方，这样可以使用&amp;运算代替取余运算(%)来提高效率，在求桶位和扩容时获取节点新位置在左边还是右边的时候。</p><h2 id="扩容条件"><a href="#扩容条件" class="headerlink" title="扩容条件"></a>扩容条件</h2><p>当前数据存储数量大小必须大于阈值</p><p>插入的table[bucketIndex] !=null，发生冲突</p><h2 id="链表转换红黑树"><a href="#链表转换红黑树" class="headerlink" title="链表转换红黑树"></a>链表转换红黑树</h2><p>链表长度大于等于8</p><p>table数据长度大于等于64</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;HashMap的理解&quot;&gt;&lt;a href=&quot;#HashMap的理解&quot; class=&quot;headerlink&quot; title=&quot;HashMap的理解&quot;&gt;&lt;/a&gt;HashMap的理解&lt;/h1&gt;&lt;p&gt;基本：底层数据结构, 数组 + 链表，长度超过8变为红黑树，非线程安全&lt;br</summary>
       
     
     
