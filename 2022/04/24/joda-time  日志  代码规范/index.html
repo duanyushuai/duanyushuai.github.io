@@ -18,19 +18,19 @@
   
   
   <title>Duan</title>
-  <meta name="description" content="Duantest">
+  <meta name="description" content="joda-time  日志  代码规范jode-time1234567891011121314@Test    public void dateDemo()&amp;#123;        DateTime dt &#x3D; new DateTime(2015,9,1,12,30,0);        Date d &#x3D; dt.toDate();        &#x2F;&#x2F;当天起始日期        DateTime t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://duanyushuai.github.io/2022/06/12/Duan/index.html">
+<meta property="og:url" content="http://duanyushuai.github.io/2022/04/24/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Duantest">
+<meta property="og:description" content="joda-time  日志  代码规范jode-time1234567891011121314@Test    public void dateDemo()&amp;#123;        DateTime dt &#x3D; new DateTime(2015,9,1,12,30,0);        Date d &#x3D; dt.toDate();        &#x2F;&#x2F;当天起始日期        DateTime t">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-12T09:02:04.255Z">
-<meta property="article:modified_time" content="2022-06-13T00:32:33.427Z">
+<meta property="article:published_time" content="2022-04-24T07:35:54.000Z">
+<meta property="article:modified_time" content="2021-07-21T11:37:36.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://duanyushuai.github.io/2022/06/12/Duan/index.html">
+  <link rel="canonical" href="http://duanyushuai.github.io/2022/04/24/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -326,15 +326,15 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Duan" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-joda-time  日志  代码规范" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2022/06/12/Duan/" class="article-date">
-	  <time datetime="2022-06-12T09:02:04.255Z" itemprop="datePublished">2022-06-12</time>
+	<a href="/2022/04/24/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" class="article-date">
+	  <time datetime="2022-04-24T07:35:54.000Z" itemprop="datePublished">2022-04-24</time>
 	</a>
 </span>
         
@@ -342,13 +342,72 @@
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/06/12/Duan/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/04/24/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="Duan"><a href="#Duan" class="headerlink" title="Duan"></a>Duan</h2><p>test</p>
+        <h4 id="joda-time-日志-代码规范"><a href="#joda-time-日志-代码规范" class="headerlink" title="joda-time  日志  代码规范"></a>joda-time  日志  代码规范</h4><h5 id="jode-time"><a href="#jode-time" class="headerlink" title="jode-time"></a>jode-time</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">dateDemo</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">DateTime</span> <span class="variable">dt</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="number">2015</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">12</span>,<span class="number">30</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d</span> <span class="operator">=</span> dt.toDate();</span><br><span class="line">        <span class="comment">//当天起始日期</span></span><br><span class="line">        <span class="type">DateTime</span> <span class="variable">today</span> <span class="operator">=</span> DateTime.now().withTimeAtStartOfDay();</span><br><span class="line">        <span class="comment">//三天后的日期</span></span><br><span class="line">        <span class="type">DateTime</span> <span class="variable">dateTime</span> <span class="operator">=</span> today.plusDays(<span class="number">3</span>).plusMonths(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//入住时间和离店时间的差值</span></span><br><span class="line">        <span class="type">DateTime</span> <span class="variable">checkIn</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="number">2015</span>,<span class="number">8</span>,<span class="number">29</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="type">DateTime</span> <span class="variable">checkOut</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="number">2015</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">        System.out.println(Days.daysBetween(checkIn,checkOut).getDays());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>日期格式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DateTimeExample1</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">DateTimeFormatter</span> <span class="variable">DATE_TIME_FORMATTER</span> <span class="operator">=</span> DateTimeFormat.forPattern(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(DATE_TIME_FORMATTER.print(<span class="keyword">new</span> <span class="title class_">DateTime</span>()));</span><br><span class="line">        System.out.println(DATE_TIME_FORMATTER.parseDateTime(<span class="string">&quot;2000-01-01 12:12:12&quot;</span>).toDate());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="日志规范"><a href="#日志规范" class="headerlink" title="日志规范"></a>日志规范</h5><p>配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.slf4j&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">1.7</span><span class="number">.25</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;logback-core&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">1.1</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;runtime&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;ch.qos.logback&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;logback-classic&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">1.1</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">    &lt;scope&gt;runtime&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LogTest</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">logger</span> <span class="operator">=</span> LoggerFactory.getLogger(LogTest.class);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        logger.trace(<span class="string">&quot;log in trace level,args:&#123;&#125;&quot;</span>,args);</span><br><span class="line">        logger.debug(<span class="string">&quot;log in trace level,args:&#123;&#125;&quot;</span>,args);</span><br><span class="line">        logger.info(<span class="string">&quot;log in trace level,args:&#123;&#125;&quot;</span>,args);</span><br><span class="line">        logger.warn(<span class="string">&quot;log in trace level,args:&#123;&#125;&quot;</span>,args);</span><br><span class="line">        logger.error(<span class="string">&quot;log in trace level,args:&#123;&#125;&quot;</span>,args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>查看日志</strong></p>
+<ol>
+<li>登录跳板机</li>
+<li>在跳板机登录服务器</li>
+<li>进入应用目录，一般为&#x2F;home&#x2F;q&#x2F;www&#x2F;&lt;应用名&gt;&#x2F;</li>
+<li>该目录下有logs目录，其中存放了Tomcat日志，catalina.out记录了打印到控制台的日志，一般来说，查看改日志即可。</li>
+</ol>
+<p><strong>日志规范</strong></p>
+<ul>
+<li><p>禁止使用System.out.print()</p>
+</li>
+<li><p>在异常处理中打印关键信息</p>
+<ul>
+<li>入参</li>
+<li>关键变量值</li>
+</ul>
+</li>
+<li><p>注意数据保密</p>
+<ul>
+<li>与用户相关的信息保密</li>
+<li>打码到日志</li>
+</ul>
+</li>
+<li><p>不能影响正常业务</p>
+<ul>
+<li>打印日志不能抛出异常，不能影响正常业务</li>
+<li>日志影响性能，高QPS业务，控制日志输出量。</li>
+</ul>
+</li>
+<li><p>使用占位符代替字符串拼接</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LogTest</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">logger</span> <span class="operator">=</span> LoggerFactory.getLogger(LogTest.class);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;111&quot;</span>;</span><br><span class="line">        logger.info(<span class="string">&quot;log in trace level,args: &#123;&#125;&quot;</span>,args);</span><br><span class="line">        logger.info(<span class="string">&quot;log in trace level,args: &#123;&#125; , &#123;&#125;&quot;</span>,s,s.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>代码规范</strong></p>
+<ul>
+<li>代码给以后的自己看</li>
+<li>强迫症</li>
+</ul>
+<p>书《编写可读代码的艺术》</p>
+<ul>
+<li>类名：形容词或动词</li>
+<li>方法名：动词</li>
+</ul>
+<p><strong>注释</strong></p>
+<ul>
+<li>使用Javadoc格式编写注释</li>
+<li>接口必须有注释，对参数，返回值有说明。例如参数限制，返回值是否为空，接口调用频率。</li>
+</ul>
 
       
     </div>
@@ -358,7 +417,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://duanyushuai.github.io/2022/06/12/Duan/" title="" target="_blank" rel="external">http://duanyushuai.github.io/2022/06/12/Duan/</a>
+      <a href="http://duanyushuai.github.io/2022/04/24/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" title="" target="_blank" rel="external">http://duanyushuai.github.io/2022/04/24/joda-time  日志  代码规范/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -404,9 +463,13 @@
   
   <ul class="pager pull-left">
     
+    <li class="prev">
+      <a href="/2022/06/12/Duan/" title="(no title)"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
     
     <li class="next">
-      <a href="/2022/04/24/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" title="(no title)"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2022/04/24/Java%E9%AB%98%E5%B9%B6%E5%8F%91%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="(no title)"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
