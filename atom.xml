@@ -126,4 +126,32 @@
     
   </entry>
   
+  <entry>
+    <title>基于胶囊网络的肽段预测</title>
+    <link href="http://duanyushuai.github.io/2020/09/10/%E5%9F%BA%E4%BA%8E%E8%83%B6%E5%9B%8A%E7%BD%91%E7%BB%9C%E7%9A%84%E8%82%BD%E6%AE%B5%E9%A2%84%E6%B5%8B/"/>
+    <id>http://duanyushuai.github.io/2020/09/10/%E5%9F%BA%E4%BA%8E%E8%83%B6%E5%9B%8A%E7%BD%91%E7%BB%9C%E7%9A%84%E8%82%BD%E6%AE%B5%E9%A2%84%E6%B5%8B/</id>
+    <published>2020-09-10T02:00:21.000Z</published>
+    <updated>2022-06-13T14:50:44.873Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Prediction-of-Peptide-Detectability-Based-on-CapsNet-and-Convolutional-Block-Attention-Module"><a href="#Prediction-of-Peptide-Detectability-Based-on-CapsNet-and-Convolutional-Block-Attention-Module" class="headerlink" title="Prediction of Peptide Detectability Based on CapsNet and Convolutional Block Attention Module"></a>Prediction of Peptide Detectability Based on CapsNet and Convolutional Block Attention Module</h2><p><a href="https://www.mdpi.com/1422-0067/22/21/12080">https://www.mdpi.com/1422-0067/22/21/12080</a></p><p><img src="/picture/0001.jpg" alt="0001"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Prediction-of-Peptide-Detectability-Based-on-CapsNet-and-Convolutional-Block-Attention-Module&quot;&gt;&lt;a href=&quot;#Prediction-of-Peptide-Detec</summary>
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="算法" scheme="http://duanyushuai.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="python" scheme="http://duanyushuai.github.io/tags/python/"/>
+    
+    <category term="深度学习" scheme="http://duanyushuai.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
 </feed>
