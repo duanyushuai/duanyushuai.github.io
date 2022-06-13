@@ -6,4 +6,5 @@ http://example.com/books/index.html
 http://example.com/categories/index.html
 http://example.com/repository/index.html
 http://example.com/2022/06/12/hello-world/
+http://example.com/2022/04/24/CompletableFuture/
 http://example.com/
