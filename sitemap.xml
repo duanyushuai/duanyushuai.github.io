@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://duanyushuai.github.io/categories/index.html</loc>
+    <loc>http://duanyushuai.github.io/2021/04/05/CompletableFuture/</loc>
     
     <lastmod>2022-06-13</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://duanyushuai.github.io/2022/04/24/CompletableFuture/</loc>
+    <loc>http://duanyushuai.github.io/categories/index.html</loc>
     
     <lastmod>2022-06-13</lastmod>
     
@@ -109,6 +109,27 @@
   </url>
 
   
+  <url>
+    <loc>http://duanyushuai.github.io/tags/java/</loc>
+    <lastmod>2022-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/tags/CompletableFuture/</loc>
+    <lastmod>2022-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>http://duanyushuai.github.io/categories/java/</loc>
+    <lastmod>2022-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
