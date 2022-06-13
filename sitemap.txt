@@ -2,8 +2,8 @@ http://duanyushuai.github.io/2021/04/05/CompletableFuture/
 http://duanyushuai.github.io/categories/index.html
 http://duanyushuai.github.io/2022/06/12/Duan/
 http://duanyushuai.github.io/tags/index.html
-http://duanyushuai.github.io/books/index.html
 http://duanyushuai.github.io/about/index.html
+http://duanyushuai.github.io/books/index.html
 http://duanyushuai.github.io/links/index.html
 http://duanyushuai.github.io/repository/index.html
 http://duanyushuai.github.io/2022/04/24/Java%E9%AB%98%E5%B9%B6%E5%8F%91%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%BA%8C%E7%AB%A0/
