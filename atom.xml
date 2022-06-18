@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2022-06-13T00:32:33.427Z</updated>
+  <updated>2022-06-18T07:16:02.959Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://duanyushuai.github.io/2022/06/15/HashMap/"/>
+    <id>http://duanyushuai.github.io/2022/06/15/HashMap/</id>
+    <published>2022-06-15T13:04:43.035Z</published>
+    <updated>2022-06-18T07:16:02.959Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Title: HashMap</span><br><span class="line">date: 2022.1.1</span><br><span class="line">Categories: java</span><br><span class="line">Tags: [java,HashMap]</span><br></pre></td></tr></table></figure><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><p>jdk1.7  数组+链表</p><p>jdk1.8 数组+ 链表&#x2F;红黑树</p><ul><li><code>DEFAULT_INITIAL_CAPACITY</code> Table数组的初始化长度： <code>1 &lt;&lt; 4``2^4=16</code>（为什么要是 2的n次方？）</li><li><code>MAXIMUM_CAPACITY</code> Table数组的最大长度： <code>1&lt;&lt;30``2^30=1073741824</code></li><li><code>DEFAULT_LOAD_FACTOR</code> 负载因子：默认值为<code>0.75</code>。 当元素的总个数&gt;当前数组的长度 * 负载因子。数组会进行扩容，扩容为原来的两倍（todo：为什么是两倍？）</li><li><code>TREEIFY_THRESHOLD</code> 链表树化阙值： 默认值为 <code>8</code> 。表示在一个node（Table）节点下的值的个数大于8时候，会将链表转换成为红黑树。</li><li><code>UNTREEIFY_THRESHOLD</code> 红黑树链化阙值： 默认值为 <code>6</code> 。 表示在进行扩容期间，单个Node节点下的红黑树节点的个数小于6时候，会将红黑树转化成为链表。</li><li><code>MIN_TREEIFY_CAPACITY = 64</code> 最小树化阈值，当Table所有元素超过改值，才会进行树化（为了防止前期阶段频繁扩容和树化过程冲突）</li></ul><p>HashMap是线程不安全的</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
