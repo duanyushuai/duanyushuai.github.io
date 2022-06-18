@@ -1,4 +1,4 @@
-http://duanyushuai.github.io/2022/06/15/HashMap/
+http://duanyushuai.github.io/2021/07/08/HashMap/
 http://duanyushuai.github.io/2020/09/10/%E5%9F%BA%E4%BA%8E%E8%83%B6%E5%9B%8A%E7%BD%91%E7%BB%9C%E7%9A%84%E8%82%BD%E6%AE%B5%E9%A2%84%E6%B5%8B/
 http://duanyushuai.github.io/2021/04/07/joda-time%20%20%E6%97%A5%E5%BF%97%20%20%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/
 http://duanyushuai.github.io/2021/06/07/Java%E9%AB%98%E5%B9%B6%E5%8F%91%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%AC%E4%BA%8C%E7%AB%A0/
@@ -17,5 +17,6 @@ http://duanyushuai.github.io/tags/CompletableFuture/
 http://duanyushuai.github.io/tags/%E7%AE%97%E6%B3%95/
 http://duanyushuai.github.io/tags/python/
 http://duanyushuai.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
+http://duanyushuai.github.io/tags/HashMap/
 http://duanyushuai.github.io/categories/java/
 http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
