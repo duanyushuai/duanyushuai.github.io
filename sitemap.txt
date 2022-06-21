@@ -19,5 +19,8 @@ http://duanyushuai.github.io/tags/%E7%AE%97%E6%B3%95/
 http://duanyushuai.github.io/tags/python/
 http://duanyushuai.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
 http://duanyushuai.github.io/tags/HashMap/
+http://duanyushuai.github.io/tags/docker/
 http://duanyushuai.github.io/categories/java/
 http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
+http://duanyushuai.github.io/categories/docker/
+http://duanyushuai.github.io/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/
