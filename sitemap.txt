@@ -1,3 +1,6 @@
+http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/
+http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/
+http://duanyushuai.github.io/2021/01/03/mysql%E4%B8%ADjoin%E7%9A%84%E4%BD%BF%E7%94%A8/
 http://duanyushuai.github.io/2022/03/02/docker/
 http://duanyushuai.github.io/about/index.html
 http://duanyushuai.github.io/2021/07/08/HashMap/
@@ -20,7 +23,9 @@ http://duanyushuai.github.io/tags/python/
 http://duanyushuai.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
 http://duanyushuai.github.io/tags/HashMap/
 http://duanyushuai.github.io/tags/docker/
+http://duanyushuai.github.io/tags/%E8%B7%A8%E5%9F%9F/
 http://duanyushuai.github.io/categories/java/
 http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
 http://duanyushuai.github.io/categories/docker/
 http://duanyushuai.github.io/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/
+http://duanyushuai.github.io/categories/%E8%B7%A8%E5%9F%9F/
