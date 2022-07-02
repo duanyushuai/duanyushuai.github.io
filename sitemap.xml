@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</loc>
+    <loc>http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/</loc>
     
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/2022/06/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%EF%BC%88%E6%A0%A1%E9%AA%8C%E5%92%8C%E6%97%A5%E5%BF%97%EF%BC%89/</loc>
+    
+    <lastmod>2022-07-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +22,16 @@
   <url>
     <loc>http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</loc>
     
-    <lastmod>2022-06-26</lastmod>
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</loc>
+    
+    <lastmod>2022-06-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,7 +175,7 @@
 
   <url>
     <loc>http://duanyushuai.github.io/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,56 +183,56 @@
   
   <url>
     <loc>http://duanyushuai.github.io/tags/java/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/CompletableFuture/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/python/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/HashMap/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/docker/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/tags/%E8%B7%A8%E5%9F%9F/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -223,35 +241,35 @@
   
   <url>
     <loc>http://duanyushuai.github.io/categories/java/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/categories/docker/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://duanyushuai.github.io/categories/%E8%B7%A8%E5%9F%9F/</loc>
-    <lastmod>2022-06-29</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2022-06-26T10:50:59.536Z</updated>
+  <updated>2022-07-02T07:45:28.785Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -21,8 +21,35 @@
     <link href="http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
     <id>http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</id>
     <published>2022-06-26T10:50:48.206Z</published>
-    <updated>2022-06-26T10:50:59.536Z</updated>
+    <updated>2022-07-02T07:45:28.785Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="sku和spu数据库设计"><a href="#sku和spu数据库设计" class="headerlink" title="sku和spu数据库设计"></a>sku和spu数据库设计</h2><p><img src="/../img/skuspu1"></p><p><img src="/../img/skuspu2"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;sku和spu数据库设计&quot;&gt;&lt;a href=&quot;#sku和spu数据库设计&quot; class=&quot;headerlink&quot; title=&quot;sku和spu数据库设计&quot;&gt;&lt;/a&gt;sku和spu数据库设计&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/../img/skuspu1&quot;&gt;&lt;/p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>自定义注解</title>
+    <link href="http://duanyushuai.github.io/2022/06/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%EF%BC%88%E6%A0%A1%E9%AA%8C%E5%92%8C%E6%97%A5%E5%BF%97%EF%BC%89/"/>
+    <id>http://duanyushuai.github.io/2022/06/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%EF%BC%88%E6%A0%A1%E9%AA%8C%E5%92%8C%E6%97%A5%E5%BF%97%EF%BC%89/</id>
+    <published>2022-06-26T03:34:51.020Z</published>
+    <updated>2022-07-02T07:51:02.580Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="自定义注解（校验和日志）"><a href="#自定义注解（校验和日志）" class="headerlink" title="自定义注解（校验和日志）"></a>自定义注解（校验和日志）</h2><h2 id="JSR303-自定义校验"><a href="#JSR303-自定义校验" class="headerlink" title="JSR303 自定义校验"></a>JSR303 自定义校验</h2><h4 id="创建ListValue校验注解"><a href="#创建ListValue校验注解" class="headerlink" title="创建ListValue校验注解"></a>创建ListValue校验注解</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yxj.gulimall.common.valid;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.validation.Constraint;</span><br><span class="line"><span class="keyword">import</span> javax.validation.Payload;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 自定义校验注解</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Constraint(</span></span><br><span class="line"><span class="meta">        validatedBy = &#123;ListValueConstraintValidator.class&#125;</span></span><br><span class="line"><span class="meta">)</span></span><br><span class="line"><span class="meta">@Target(&#123;ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> ListValue &#123;</span><br><span class="line">    String <span class="title function_">message</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;&#123;com.chenxin.gulimail.common.valid.ListValue.message&#125;&quot;</span>;</span><br><span class="line"></span><br><span class="line">    Class&lt;?&gt;[] groups() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    Class&lt;? <span class="keyword">extends</span> <span class="title class_">Payload</span>&gt;[] payload() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span>[] vals() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="ListValueConstraintValidator校验器"><a href="#ListValueConstraintValidator校验器" class="headerlink" title="ListValueConstraintValidator校验器"></a>ListValueConstraintValidator校验器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    Set&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 初始化</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> constraintAnnotation</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">initialize</span><span class="params">(ListValue constraintAnnotation)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] vals = constraintAnnotation.vals();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> val : vals) &#123;</span><br><span class="line">            set.add(val);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 真正的校验规则</span></span><br><span class="line"><span class="comment">     * 判断是否校验成功</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> integer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> constraintValidatorContext</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(Integer integer, ConstraintValidatorContext constraintValidatorContext)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> set.contains(integer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;自定义注解（校验和日志）&quot;&gt;&lt;a href=&quot;#自定义注解（校验和日志）&quot; class=&quot;headerlink&quot; title=&quot;自定义注解（校验和日志）&quot;&gt;&lt;/a&gt;自定义注解（校验和日志）&lt;/h2&gt;&lt;h2 id=&quot;JSR303-自定义校验&quot;&gt;&lt;a href=&quot;#J</summary>
+      
     
     
     
@@ -100,6 +127,26 @@
     
     
     <category term="docker" scheme="http://duanyushuai.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>全局异常</title>
+    <link href="http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
+    <id>http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/</id>
+    <published>2021-10-11T02:00:00.000Z</published>
+    <updated>2022-07-02T07:51:27.539Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="全局异常"><a href="#全局异常" class="headerlink" title="全局异常"></a>全局异常</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RestControllerAdvice(basePackages = &quot;com.yxj.gulimall.product.controller&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GulimallExceptionControllerAdvice</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(value = MethodArgumentNotValidException.class)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">handleValidException</span><span class="params">(MethodArgumentNotValidException e)</span> &#123;</span><br><span class="line">        log.error(<span class="string">&quot;数据校验出现问题&#123;&#125;,异常类型: &#123;&#125;&quot;</span>,e.getMessage(),e.getClass());</span><br><span class="line">        <span class="type">BindingResult</span> <span class="variable">bindingResult</span> <span class="operator">=</span> e.getBindingResult();</span><br><span class="line">        Map&lt;String, String&gt; errorMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        bindingResult.getFieldErrors().forEach((fieldError -&gt; &#123;</span><br><span class="line">            errorMap.put(fieldError.getField(),fieldError.getDefaultMessage());</span><br><span class="line">        &#125;));</span><br><span class="line">        <span class="keyword">return</span> R.error(BizCodeEnum.VALID_EXCEPTION.getCode(),BizCodeEnum.VALID_EXCEPTION.getMsg()).put(<span class="string">&quot;data&quot;</span>,errorMap);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(value = Throwable.class)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">handleException</span><span class="params">(Throwable throwable)</span> &#123;</span><br><span class="line">        log.error(<span class="string">&quot;错误:&quot;</span>, throwable);</span><br><span class="line">        <span class="keyword">return</span> R.error(BizCodeEnum.UNKNOWN_EXCEPTION.getCode(),BizCodeEnum.UNKNOWN_EXCEPTION.getMsg());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;全局异常&quot;&gt;&lt;a href=&quot;#全局异常&quot; class=&quot;headerlink&quot; title=&quot;全局异常&quot;&gt;&lt;/a&gt;全局异常&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre</summary>
+      
+    
+    
+    
     
   </entry>
   
