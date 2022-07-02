@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2022-07-02T07:45:28.785Z</updated>
+  <updated>2022-07-02T07:52:16.948Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
     <id>http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</id>
     <published>2022-06-26T10:50:48.206Z</published>
-    <updated>2022-07-02T07:45:28.785Z</updated>
+    <updated>2022-07-02T07:52:16.948Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="sku和spu数据库设计"><a href="#sku和spu数据库设计" class="headerlink" title="sku和spu数据库设计"></a>sku和spu数据库设计</h2><p><img src="/../img/skuspu1"></p><p><img src="/../img/skuspu2"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="sku和spu数据库设计"><a href="#sku和spu数据库设计" class="headerlink" title="sku和spu数据库设计"></a>sku和spu数据库设计</h2><p><img src="/../img/skuspu1.png"></p><p><img src="/../img/skuspu2.png"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;sku和spu数据库设计&quot;&gt;&lt;a href=&quot;#sku和spu数据库设计&quot; class=&quot;headerlink&quot; title=&quot;sku和spu数据库设计&quot;&gt;&lt;/a&gt;sku和spu数据库设计&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/../img/skuspu1&quot;&gt;&lt;/p</summary>
+    <summary type="html">&lt;h2 id=&quot;sku和spu数据库设计&quot;&gt;&lt;a href=&quot;#sku和spu数据库设计&quot; class=&quot;headerlink&quot; title=&quot;sku和spu数据库设计&quot;&gt;&lt;/a&gt;sku和spu数据库设计&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/../img/skuspu1.png&quot;</summary>
       
     
     
@@ -61,9 +61,9 @@
     <link href="http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/"/>
     <id>http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</id>
     <published>2022-06-25T09:57:38.465Z</published>
-    <updated>2022-06-29T14:11:17.481Z</updated>
+    <updated>2022-07-02T09:48:55.861Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="解决跨域"><a href="#解决跨域" class="headerlink" title="解决跨域"></a>解决跨域</h2><ol><li>使用nginx部署为同一域</li></ol><p><img src="/../kuayu1.png" alt=" "></p><ol start="2"><li>请求返回可跨域</li></ol><p><img src="/../kuayu2">   </p>]]></content>
+    <content type="html"><![CDATA[<h2 id="解决跨域"><a href="#解决跨域" class="headerlink" title="解决跨域"></a>解决跨域</h2><ol><li>使用nginx部署为同一域</li></ol><p><img src="/../img/kuayu1.png" alt=" "></p><ol start="2"><li>请求返回可跨域</li></ol><p><img src="/../img/kuayu2.png">   </p>]]></content>
     
     
       
@@ -71,7 +71,7 @@
     <summary type="html">&lt;h2 id=&quot;解决跨域&quot;&gt;&lt;a href=&quot;#解决跨域&quot; class=&quot;headerlink&quot; title=&quot;解决跨域&quot;&gt;&lt;/a&gt;解决跨域&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;使用nginx部署为同一域&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;/../kuayu1.png&quot; al</summary>
+&lt;p&gt;&lt;img src=&quot;/../img/kuayu1.png</summary>
       
     
     
