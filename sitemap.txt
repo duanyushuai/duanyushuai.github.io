@@ -1,5 +1,10 @@
-http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/
+http://duanyushuai.github.io/2021/03/10/Jvisualvm/
+http://duanyushuai.github.io/2021/03/09/maven_20220711_172008/
+http://duanyushuai.github.io/2022/06/26/redis-Guava-%E7%BC%93%E5%AD%98/
+http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/
 http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/
+http://duanyushuai.github.io/2022/07/02/nginx%E4%BD%BF%E7%94%A8/
+http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/
 http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/
 http://duanyushuai.github.io/2022/06/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%EF%BC%88%E6%A0%A1%E9%AA%8C%E5%92%8C%E6%97%A5%E5%BF%97%EF%BC%89/
 http://duanyushuai.github.io/2021/01/03/mysql%E4%B8%ADjoin%E7%9A%84%E4%BD%BF%E7%94%A8/
@@ -26,8 +31,15 @@ http://duanyushuai.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
 http://duanyushuai.github.io/tags/HashMap/
 http://duanyushuai.github.io/tags/docker/
 http://duanyushuai.github.io/tags/%E8%B7%A8%E5%9F%9F/
+http://duanyushuai.github.io/tags/maven/
+http://duanyushuai.github.io/tags/Guava/
+http://duanyushuai.github.io/tags/redis/
 http://duanyushuai.github.io/categories/java/
 http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
 http://duanyushuai.github.io/categories/docker/
 http://duanyushuai.github.io/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/
 http://duanyushuai.github.io/categories/%E8%B7%A8%E5%9F%9F/
+http://duanyushuai.github.io/categories/java/Jvisualvm/
+http://duanyushuai.github.io/categories/maven/
+http://duanyushuai.github.io/categories/Guava/
+http://duanyushuai.github.io/categories/Guava/redis/

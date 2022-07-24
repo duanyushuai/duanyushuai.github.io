@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2022-07-02T07:52:16.948Z</updated>
+  <updated>2022-07-12T13:52:10.751Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>redis 缓存</title>
+    <link href="http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/"/>
+    <id>http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/</id>
+    <published>2022-07-11T13:46:55.260Z</published>
+    <updated>2022-07-12T13:52:10.751Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="redis-缓存"><a href="#redis-缓存" class="headerlink" title="redis 缓存"></a>redis 缓存</h1><h4 id="那些数据适合缓存"><a href="#那些数据适合缓存" class="headerlink" title="那些数据适合缓存"></a>那些数据适合缓存</h4><ol><li><p>即时性和数据一致性要求不高的</p></li><li><p>读多写少</p></li></ol><p>使用redis</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line"> &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line"> &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><p>简单的分布式锁</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Map&lt;String, List&lt;Catelog2Vo&gt;&gt; <span class="title function_">getCatalogJsonFromDbWithRedislock</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1 占分布式锁，去redis占坑</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">uuid</span> <span class="operator">=</span> UUID.randomUUID().toString();</span><br><span class="line">        <span class="type">Boolean</span> <span class="variable">lock</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(<span class="string">&quot;lock&quot;</span>, uuid, <span class="number">300</span>, TimeUnit.SECONDS);</span><br><span class="line">        <span class="keyword">if</span> (lock) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;获取分布式锁成功&quot;</span>);</span><br><span class="line">            <span class="comment">// 加锁成功...执行业务</span></span><br><span class="line">            <span class="comment">// 2 设置过期时间</span></span><br><span class="line"><span class="comment">//            redisTemplate.expire(&quot;lock&quot;, 30, TimeUnit.SECONDS);</span></span><br><span class="line">            Map&lt;String, List&lt;Catelog2Vo&gt;&gt; dataFromDB;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                dataFromDB = getDataFromDB();</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">script</span> <span class="operator">=</span> <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">                <span class="comment">// 删除锁</span></span><br><span class="line">                <span class="type">Long</span> <span class="variable">lock1</span> <span class="operator">=</span> redisTemplate.execute(<span class="keyword">new</span> <span class="title class_">DefaultRedisScript</span>&lt;Long&gt;(script, Long.class), Arrays.asList(<span class="string">&quot;lock&quot;</span>), uuid);</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//            redisTemplate.delete(&quot;lock&quot;);</span></span><br><span class="line">            <span class="comment">// 获取值对比 + 对比成功删除 = 原子操作  lua脚本解锁</span></span><br><span class="line"><span class="comment">//            String lockValue = redisTemplate.opsForValue().get(&quot;lock&quot;);</span></span><br><span class="line"><span class="comment">//            if (uuid.equals(lockValue)) &#123;</span></span><br><span class="line"><span class="comment">//                // 删除我自己的锁</span></span><br><span class="line"><span class="comment">//                redisTemplate.delete(&quot;lock&quot;);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> dataFromDB;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 加锁失败</span></span><br><span class="line">            <span class="comment">// 休眠100ms重试</span></span><br><span class="line">            System.out.println(<span class="string">&quot;获取分布式锁失败...等待重试&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">200</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> getCatalogJsonFromDbWithRedislock(); <span class="comment">// 自旋的方式</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;redis-缓存&quot;&gt;&lt;a href=&quot;#redis-缓存&quot; class=&quot;headerlink&quot; title=&quot;redis 缓存&quot;&gt;&lt;/a&gt;redis 缓存&lt;/h1&gt;&lt;h4 id=&quot;那些数据适合缓存&quot;&gt;&lt;a href=&quot;#那些数据适合缓存&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nginx使用</title>
+    <link href="http://duanyushuai.github.io/2022/07/02/nginx%E4%BD%BF%E7%94%A8/"/>
+    <id>http://duanyushuai.github.io/2022/07/02/nginx%E4%BD%BF%E7%94%A8/</id>
+    <published>2022-07-02T10:30:26.308Z</published>
+    <updated>2022-07-02T10:34:50.961Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="nginx使用"><a href="#nginx使用" class="headerlink" title="nginx使用"></a>nginx使用</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;nginx使用&quot;&gt;&lt;a href=&quot;#nginx使用&quot; class=&quot;headerlink&quot; title=&quot;nginx使用&quot;&gt;&lt;/a&gt;nginx使用&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sku和spu数据库设计</title>
     <link href="http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
     <id>http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</id>
     <published>2022-06-26T10:50:48.206Z</published>
-    <updated>2022-07-02T07:52:16.948Z</updated>
+    <updated>2022-07-03T02:56:31.206Z</updated>
     
     <content type="html"><![CDATA[<h2 id="sku和spu数据库设计"><a href="#sku和spu数据库设计" class="headerlink" title="sku和spu数据库设计"></a>sku和spu数据库设计</h2><p><img src="/../img/skuspu1.png"></p><p><img src="/../img/skuspu2.png"></p>]]></content>
     
@@ -53,6 +93,34 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>redis Guava 缓存</title>
+    <link href="http://duanyushuai.github.io/2022/06/26/redis-Guava-%E7%BC%93%E5%AD%98/"/>
+    <id>http://duanyushuai.github.io/2022/06/26/redis-Guava-%E7%BC%93%E5%AD%98/</id>
+    <published>2022-06-26T02:00:00.000Z</published>
+    <updated>2022-07-24T13:18:01.257Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="redis-Guava-缓存"><a href="#redis-Guava-缓存" class="headerlink" title="redis Guava 缓存"></a>redis Guava 缓存</h2><h3 id="redis-懒加载"><a href="#redis-懒加载" class="headerlink" title="redis 懒加载"></a>redis 懒加载</h3><p>数据在新增到 MySQL 不进行缓存，在精确查找进行缓存，做到查询即缓存，不查询不缓存。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 伪代码示例 Xx代表你的的业务对象 如User Goods等等</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">XxLazyCache</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedisTemplate&lt;String, Xx&gt; redisTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> XxService xxService;<span class="comment">// 你的业务service</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 查询 通过查询缓存是否存在驱动缓存加载 建议在前置业务保证id对应数据是绝对存在于数据库中的</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Xx <span class="title function_">getXx</span><span class="params">(<span class="type">int</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 1.查询缓存里面有没有数据</span></span><br><span class="line">        <span class="type">Xx</span> <span class="variable">xxCache</span> <span class="operator">=</span> getXxFromCache(id);</span><br><span class="line">        <span class="keyword">if</span>(xxCache != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> xxCache;<span class="comment">// 卫语句使代码更有利于阅读</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 2.查询数据库获取数据 我们假定到业务这一步，传过来的id都在数据库中有对应数据</span></span><br><span class="line">        <span class="type">Xx</span> <span class="variable">xx</span> <span class="operator">=</span> xxService.getXxById(id);</span><br><span class="line">        <span class="comment">// 3.设置缓存、这一步相当于Redis缓存懒加载，下次再查询此id，则会走缓存</span></span><br><span class="line">        setXxFromCache(xx);</span><br><span class="line">        <span class="keyword">return</span> xx;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 对xx数据进行修改或者删除操作 操作数据库成功后 删除缓存</span></span><br><span class="line"><span class="comment">     * 删除请求 - 删除数据库数据 删除缓存</span></span><br><span class="line"><span class="comment">     * 修改请求 - 更新数据库数据 删除缓存 下次在查询时候就会从数据库拉取新的数据到缓存中</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteXxFromCache</span><span class="params">(<span class="type">long</span> id)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;Xx:&quot;</span> + xx.getId();</span><br><span class="line">        redisTemplate.delete(key);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">setXxFromCache</span><span class="params">(Xx xx)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;Xx:&quot;</span> + xx.getId();</span><br><span class="line">        redisTemplate.opsForValue().set(key, xx);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Xx <span class="title function_">getXxFromCache</span><span class="params">(<span class="type">int</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 通过缓存前缀拼装唯一主键作为缓存Key 如Xxx信息 就是Xxx:id</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;Xx:&quot;</span> + id;</span><br><span class="line">        <span class="keyword">return</span> redisTemplate.opsForValue().get(key);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 业务类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">XxServie</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> XxLazyCache xxLazyCache;</span><br><span class="line">    <span class="comment">// 查询数据库</span></span><br><span class="line">    <span class="keyword">public</span> Xx <span class="title function_">getXxById</span><span class="params">(<span class="type">long</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 省略实现</span></span><br><span class="line">        <span class="keyword">return</span> xx;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">updateXx</span><span class="params">(Xx xx)</span> &#123;</span><br><span class="line">        <span class="comment">// 更新MySQL数据 省略</span></span><br><span class="line">        <span class="comment">// 删除缓存</span></span><br><span class="line">        xxLazyCache.deleteXxFromCache(xx.getId());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteXx</span><span class="params">(<span class="type">long</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 删除MySQL数据 省略</span></span><br><span class="line">        <span class="comment">// 删除缓存</span></span><br><span class="line">        xxLazyCache.deleteXxFromCache(xx.getId());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 实体类</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Xx</span> &#123;</span><br><span class="line">    <span class="comment">// 业务主键</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="comment">// ...省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;redis-Guava-缓存&quot;&gt;&lt;a href=&quot;#redis-Guava-缓存&quot; class=&quot;headerlink&quot; title=&quot;redis Guava 缓存&quot;&gt;&lt;/a&gt;redis Guava 缓存&lt;/h2&gt;&lt;h3 id=&quot;redis-懒加载&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    <category term="Guava" scheme="http://duanyushuai.github.io/categories/Guava/"/>
+    
+    <category term="redis" scheme="http://duanyushuai.github.io/categories/Guava/redis/"/>
+    
+    
+    <category term="Guava" scheme="http://duanyushuai.github.io/tags/Guava/"/>
+    
+    <category term="redis" scheme="http://duanyushuai.github.io/tags/redis/"/>
     
   </entry>
   
@@ -276,6 +344,56 @@
     <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
     
     <category term="CompletableFuture" scheme="http://duanyushuai.github.io/tags/CompletableFuture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jvisualvm</title>
+    <link href="http://duanyushuai.github.io/2021/03/10/Jvisualvm/"/>
+    <id>http://duanyushuai.github.io/2021/03/10/Jvisualvm/</id>
+    <published>2021-03-10T02:00:00.000Z</published>
+    <updated>2022-07-24T13:18:06.389Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Jvisualvm"><a href="#Jvisualvm" class="headerlink" title="Jvisualvm"></a>Jvisualvm</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://visualvm.github.io/download.html">https://visualvm.github.io/download.html</a></p><h3 id="打开扩大字体"><a href="#打开扩大字体" class="headerlink" title="打开扩大字体"></a>打开扩大字体</h3><p>打开bin</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visualvm.exe --fontsize 20</span><br></pre></td></tr></table></figure><p>下载</p><p>visual GC</p><p><img src="/../img/jvisualvm1.jpg"></p><p>在GC开始的时候，对象只会存在于Eden区和名为“From”的Survivor区，Survivor区“To”是空的。紧接着进行GC，Eden区中所有存活的对象都会被复制到“To”，而在“From”区中，仍存活的对象会根据他们的年龄值来决定去向。年龄达到一定值(年龄阈值，可以通过-XX:MaxTenuringThreshold来设置)的对象会被移动到年老代中，没有达到阈值的对象会被复制到“To”区域。经过这次GC后，Eden区和From区已经被清空。这个时候，“From”和“To”会交换他们的角色，也就是新的“To”就是上次GC前的“From”，新的“From”就是上次GC前的“To”。不管怎样，都会保证名为To的Survivor区域是空的。Minor GC会一直重复这样的过程，直到“To”区被填满，“To”区被填满之后，会将所有对象移动到年老代中。</p><p><img src="/../img/jvisualvm2.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Jvisualvm&quot;&gt;&lt;a href=&quot;#Jvisualvm&quot; class=&quot;headerlink&quot; title=&quot;Jvisualvm&quot;&gt;&lt;/a&gt;Jvisualvm&lt;/h2&gt;&lt;h3 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; </summary>
+      
+    
+    
+    
+    <category term="java" scheme="http://duanyushuai.github.io/categories/java/"/>
+    
+    <category term="Jvisualvm" scheme="http://duanyushuai.github.io/categories/java/Jvisualvm/"/>
+    
+    
+    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maven</title>
+    <link href="http://duanyushuai.github.io/2021/03/09/maven_20220711_172008/"/>
+    <id>http://duanyushuai.github.io/2021/03/09/maven_20220711_172008/</id>
+    <published>2021-03-09T02:00:00.000Z</published>
+    <updated>2022-07-24T13:18:04.266Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h1><h3 id="maven-私服配置"><a href="#maven-私服配置" class="headerlink" title="maven 私服配置"></a>maven 私服配置</h3><h4 id="setting配置"><a href="#setting配置" class="headerlink" title="setting配置"></a>setting配置</h4><p><img src="/../img/maven1.png"></p><h4 id="项目-pom-xml配置maven私服访问地址"><a href="#项目-pom-xml配置maven私服访问地址" class="headerlink" title="项目 pom.xml配置maven私服访问地址"></a>项目 pom.xml配置maven私服访问地址</h4><p>因为maven默认会有一个下载地址，我们要重写下载地址，改写成自己的私服地址</p><p><img src="/../img/maven2.png"></p><h4 id="如果需要打包到私服，需要配置打包私服相关参数"><a href="#如果需要打包到私服，需要配置打包私服相关参数" class="headerlink" title="如果需要打包到私服，需要配置打包私服相关参数"></a>如果需要打包到私服，需要配置打包私服相关参数</h4><p><img src="/../img/maven3.png"></p><h4 id="reository和mirror加载顺序"><a href="#reository和mirror加载顺序" class="headerlink" title="reository和mirror加载顺序"></a>reository和mirror加载顺序</h4><p>1、在mirrorOf与repositoryId相同的时候优先是使用mirror的地址</p><p>2、mirrorOf等于*的时候覆盖所有repository配置</p><p>3、存在多个mirror配置的时候mirrorOf等于*放到最后</p><p>4、只配置mirrorOf为central的时候可以不用配置repository</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;maven&quot;&gt;&lt;a href=&quot;#maven&quot; class=&quot;headerlink&quot; title=&quot;maven&quot;&gt;&lt;/a&gt;maven&lt;/h1&gt;&lt;h3 id=&quot;maven-私服配置&quot;&gt;&lt;a href=&quot;#maven-私服配置&quot; class=&quot;headerlink&quot; </summary>
+      
+    
+    
+    
+    <category term="maven" scheme="http://duanyushuai.github.io/categories/maven/"/>
+    
+    
+    <category term="maven" scheme="http://duanyushuai.github.io/tags/maven/"/>
     
   </entry>
   
