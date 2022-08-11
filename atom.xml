@@ -70,26 +70,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://duanyushuai.github.io/2022/07/29/rabbitMQ/"/>
-    <id>http://duanyushuai.github.io/2022/07/29/rabbitMQ/</id>
-    <published>2022-07-29T02:50:51.349Z</published>
-    <updated>2022-07-29T09:31:45.704Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="rabbitMQ"><a href="#rabbitMQ" class="headerlink" title="rabbitMQ"></a>rabbitMQ</h1><p><img src="/../img/rabbitMQ1.jpeg" alt="image-20220729112858465"></p><p><img src="/../img/rabbitMQ3.png" alt="image-20220729113148829"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;rabbitMQ&quot;&gt;&lt;a href=&quot;#rabbitMQ&quot; class=&quot;headerlink&quot; title=&quot;rabbitMQ&quot;&gt;&lt;/a&gt;rabbitMQ&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/../img/rabbitMQ1.jpeg&quot; alt=&quot;image-2</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>redis 缓存</title>
     <link href="http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/"/>
     <id>http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/</id>
@@ -268,6 +248,30 @@
     
     
     <category term="docker" scheme="http://duanyushuai.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rabbitMQ</title>
+    <link href="http://duanyushuai.github.io/2022/02/20/rabbitMQ/"/>
+    <id>http://duanyushuai.github.io/2022/02/20/rabbitMQ/</id>
+    <published>2022-02-20T02:00:00.000Z</published>
+    <updated>2022-08-11T14:11:58.877Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="rabbitMQ"><a href="#rabbitMQ" class="headerlink" title="rabbitMQ"></a>rabbitMQ</h1><p><img src="/../img/rabbitMQ1.jpeg" alt="image-20220729112858465"></p><p><img src="/../img/rabbitMQ3.png" alt="image-20220729113148829"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;rabbitMQ&quot;&gt;&lt;a href=&quot;#rabbitMQ&quot; class=&quot;headerlink&quot; title=&quot;rabbitMQ&quot;&gt;&lt;/a&gt;rabbitMQ&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/../img/rabbitMQ1.jpeg&quot; alt=&quot;image-2</summary>
+      
+    
+    
+    
+    <category term="rabbitMQ" scheme="http://duanyushuai.github.io/categories/rabbitMQ/"/>
+    
+    
+    <category term="rabbitMQ" scheme="http://duanyushuai.github.io/tags/rabbitMQ/"/>
     
   </entry>
   
