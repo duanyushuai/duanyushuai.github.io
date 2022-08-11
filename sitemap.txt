@@ -1,6 +1,6 @@
 http://duanyushuai.github.io/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/
-http://duanyushuai.github.io/2022/07/29/rabbitMQ/
 http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/
+http://duanyushuai.github.io/2022/07/29/rabbitMQ/
 http://duanyushuai.github.io/2021/03/10/Jvisualvm/
 http://duanyushuai.github.io/2021/03/09/maven_20220711_172008/
 http://duanyushuai.github.io/2022/06/26/redis-Guava-%E7%BC%93%E5%AD%98/
@@ -38,6 +38,7 @@ http://duanyushuai.github.io/tags/maven/
 http://duanyushuai.github.io/tags/Guava/
 http://duanyushuai.github.io/tags/redis/
 http://duanyushuai.github.io/tags/%E5%B7%A5%E5%85%B7/
+http://duanyushuai.github.io/tags/java-web/
 http://duanyushuai.github.io/categories/java/
 http://duanyushuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/
 http://duanyushuai.github.io/categories/docker/
@@ -47,3 +48,5 @@ http://duanyushuai.github.io/categories/java/Jvisualvm/
 http://duanyushuai.github.io/categories/maven/
 http://duanyushuai.github.io/categories/Guava/
 http://duanyushuai.github.io/categories/Guava/redis/
+http://duanyushuai.github.io/categories/%E5%B7%A5%E5%85%B7/
+http://duanyushuai.github.io/categories/java-web/

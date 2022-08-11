@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2022-08-11T13:56:22.870Z</updated>
+  <updated>2022-08-11T14:06:32.123Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>接口幂等性</title>
     <link href="http://duanyushuai.github.io/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/"/>
     <id>http://duanyushuai.github.io/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/</id>
     <published>2022-08-10T02:00:00.000Z</published>
-    <updated>2022-08-11T13:56:22.870Z</updated>
+    <updated>2022-08-11T14:06:32.123Z</updated>
     
     <content type="html"><![CDATA[<h1 id="接口幂等性"><a href="#接口幂等性" class="headerlink" title="接口幂等性"></a>接口幂等性</h1><p>问题出现</p><ol><li>用户多次点击</li><li>用户回退在提交</li><li>feign触发重试</li></ol><h3 id="1-token"><a href="#1-token" class="headerlink" title="1.token"></a>1.token</h3><p> token 的获取、比较和删除必须是原子性的</p><p>使用redis和lua脚本</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> redis.call(<span class="string">&#x27;get&#x27;</span>,KEYS[<span class="number">1</span>]==ARGV[<span class="number">1</span>] <span class="keyword">then</span> <span class="keyword">return</span> is.call(<span class="string">&#x27;del&#x27;</span>,KEYS[<span class="number">1</span>])) <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span> <span class="keyword">end</span></span><br></pre></td></tr></table></figure><h3 id="2-各种锁机制"><a href="#2-各种锁机制" class="headerlink" title="2. 各种锁机制"></a>2. 各种锁机制</h3><h4 id="1-数据库悲观锁"><a href="#1-数据库悲观锁" class="headerlink" title="1. 数据库悲观锁"></a>1. 数据库悲观锁</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from xxxx where id=1 for update</span><br></pre></td></tr></table></figure><p>id一定是主键和唯一索引，不然可能造成锁表</p><h4 id="2-数据库乐观锁"><a href="#2-数据库乐观锁" class="headerlink" title="2. 数据库乐观锁"></a>2. 数据库乐观锁</h4><p>首先获取这条数据的版本号version，然后操作的时候带上版本号</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update goods <span class="type">set</span> <span class="variable">count</span> <span class="operator">=</span> count -<span class="number">1</span> ,version = version + <span class="number">1</span> <span class="type">where</span> <span class="variable">id</span> <span class="operator">=</span> <span class="number">2</span> <span class="type">and</span> <span class="variable">version</span> <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure><p>乐观锁处理读多写少问题</p><h3 id="3-业务分布式锁"><a href="#3-业务分布式锁" class="headerlink" title="3. 业务分布式锁"></a>3. 业务分布式锁</h3><h3 id="4-各种唯一索引"><a href="#4-各种唯一索引" class="headerlink" title="4. 各种唯一索引"></a>4. 各种唯一索引</h3><h4 id="数据库的唯一约束"><a href="#数据库的唯一约束" class="headerlink" title="数据库的唯一约束"></a>数据库的唯一约束</h4><p>插入数据按照唯一索引，比如订单号，相同的订单号就不能重复插入。需要不是自增主键，代码生成全局唯一id。</p><p>在分库分表下，根据路由规则，要路由到同一张表，才能是唯一索引有意义。</p><h4 id="redis防重"><a href="#redis防重" class="headerlink" title="redis防重"></a>redis防重</h4><p>我们可以计算上传数据的MD5值，存到redis set，每次处理数据，去和redis进行匹配</p><h4 id="防重表"><a href="#防重表" class="headerlink" title="防重表"></a>防重表</h4><p>把orderNo作为去重表的唯一索引插入mysql，去重表和业务表处在同一数据库，处于同一事务，方便回滚</p><h3 id="5-全局请求唯一id"><a href="#5-全局请求唯一id" class="headerlink" title="5.全局请求唯一id"></a>5.全局请求唯一id</h3><p>调用接口生成唯一id，保存在redis的集合中。</p><p>可以使用nginx设置请求的唯一id</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxy_set_header  X-Request-Id $request_id;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -37,15 +37,19 @@
     
     
     
+    <category term="java web" scheme="http://duanyushuai.github.io/categories/java-web/"/>
+    
+    
+    <category term="java web" scheme="http://duanyushuai.github.io/tags/java-web/"/>
     
   </entry>
   
   <entry>
-    <title></title>
+    <title>白嫖</title>
     <link href="http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/"/>
     <id>http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/</id>
     <published>2022-07-29T06:11:08.153Z</published>
-    <updated>2022-07-29T06:21:46.060Z</updated>
+    <updated>2022-08-11T14:06:17.307Z</updated>
     
     <content type="html"><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？</p><p>无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。</p><ul><li><strong>视频解析</strong></li></ul><p>找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。</p><p>不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。</p><p>注意：一定要在http或https前面添加。</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWqjMCHy81nYbMico1WQ8dXehfPLGJeeWc7icRxeHLEE78uULa114aOE9g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p><p>然后按下回车，就会跳转至一个名为万能命令的新页面。</p><p>在下方【相关视频播放】这一栏里，就是你想观看的视频的解析结果。</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWMMXbNNVkx1ts1Siasricg9hEUt0CWItXVAvdUzRJib4k90E5JP4wxfOhw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p><p>任选一个解析网站打开，就可以全屏观看该视频了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>文库下载</strong></li></ul><p>对于工作党和学生党来说，最痛苦的事情，莫过于找到了急需的资料，却没有文库VIP了。</p><p>在某度文库上，如果没有开通VIP的话，既无法复制文字，也无法下载文档，几乎是寸步难行。</p><p>这时候，我们只需要在所需文档地址前加上wn.run&#x2F;前缀。</p><p>按下回车，就可以找到文库在线下载的解析结果了。</p><p>点击上述结果，即会自动跳转至一个名为网页转换助手的页面。</p><p>在这里，你可以选择【转为Word】或【转为PDF】。</p><p>然后点击【下载】按钮，就能成功下载该会员文档的源文件了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>音乐下载</strong></li></ul><p>如果想要下载网易云音乐、QQ音乐、酷狗音乐上的歌曲，只需在播放地址前加上wn.run&#x2F;。</p><p>然后选择其中一个解析源，就能下载歌曲了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>视频下载</strong></li></ul><p>当然，这个小技巧不仅能用于下载音乐，同时也可以用来下载各个视频网站上的视频。</p><p>以B站为例，在网址前输入wn.run&#x2F;。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><p>然后回车，选择其中一个解析结果，就可以成功下载该视频了。</p><p>除了上面介绍的功能，通过wn.run&#x2F;这个命令还能实现许许多多的效果，比如网页翻译、网页截图、网页二维码生成等等。</p><p>每个功能都无需下载、即用即走，且没有平台限制，pc、android、ios等都可使用。</p><p>另外，在万能命令网站里，还收录了很多高质量的工具，大家感兴趣的话，也可以直接收藏这个地址。</p><p>鉴于这个工具比较敏感，如果大家有需要的话，就赶紧试试吧！</p>]]></content>
     
@@ -57,6 +61,8 @@
       
     
     
+    
+    <category term="工具" scheme="http://duanyushuai.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="工具" scheme="http://duanyushuai.github.io/tags/%E5%B7%A5%E5%85%B7/"/>

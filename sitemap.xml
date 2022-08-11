@@ -11,16 +11,16 @@
   </url>
   
   <url>
-    <loc>http://duanyushuai.github.io/2022/07/29/rabbitMQ/</loc>
+    <loc>http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/</loc>
     
-    <lastmod>2022-07-29</lastmod>
+    <lastmod>2022-08-11</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/</loc>
+    <loc>http://duanyushuai.github.io/2022/07/29/rabbitMQ/</loc>
     
     <lastmod>2022-07-29</lastmod>
     
@@ -337,6 +337,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://duanyushuai.github.io/tags/java-web/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -397,6 +404,20 @@
   
   <url>
     <loc>http://duanyushuai.github.io/categories/Guava/redis/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/categories/java-web/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
