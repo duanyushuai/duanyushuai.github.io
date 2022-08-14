@@ -182,7 +182,7 @@
     <link href="http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/"/>
     <id>http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</id>
     <published>2022-06-25T09:57:38.465Z</published>
-    <updated>2022-07-02T09:48:55.861Z</updated>
+    <updated>2022-08-14T04:28:49.153Z</updated>
     
     <content type="html"><![CDATA[<h2 id="解决跨域"><a href="#解决跨域" class="headerlink" title="解决跨域"></a>解决跨域</h2><ol><li>使用nginx部署为同一域</li></ol><p><img src="/../img/kuayu1.png" alt=" "></p><ol start="2"><li>请求返回可跨域</li></ol><p><img src="/../img/kuayu2.png">   </p>]]></content>
     
@@ -197,10 +197,10 @@
     
     
     
-    <category term="跨域" scheme="http://duanyushuai.github.io/categories/%E8%B7%A8%E5%9F%9F/"/>
+    <category term="java web" scheme="http://duanyushuai.github.io/categories/java-web/"/>
     
     
-    <category term="跨域" scheme="http://duanyushuai.github.io/tags/%E8%B7%A8%E5%9F%9F/"/>
+    <category term="java web" scheme="http://duanyushuai.github.io/tags/java-web/"/>
     
   </entry>
   
@@ -230,7 +230,7 @@
     <link href="http://duanyushuai.github.io/2022/06/07/api%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/"/>
     <id>http://duanyushuai.github.io/2022/06/07/api%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/</id>
     <published>2022-06-07T02:00:00.000Z</published>
-    <updated>2022-08-13T15:02:36.512Z</updated>
+    <updated>2022-08-14T04:29:34.848Z</updated>
     
     <content type="html"><![CDATA[<h1 id="api-接口调优"><a href="#api-接口调优" class="headerlink" title="api 接口调优"></a>api 接口调优</h1><h3 id="慢查询"><a href="#慢查询" class="headerlink" title="慢查询"></a>慢查询</h3><h4 id="1-深度分页"><a href="#1-深度分页" class="headerlink" title="1.深度分页"></a>1.深度分页</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name,code from student limit 1000,20</span><br></pre></td></tr></table></figure><p>会查出来前1000条数据</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name,code from student where id &gt; 1000 limit 20</span><br></pre></td></tr></table></figure><p>走索引，但需要上次查询出来的最大id</p><h4 id="2-未加索引"><a href="#2-未加索引" class="headerlink" title="2.未加索引"></a>2.未加索引</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table xxxx (表名)</span><br></pre></td></tr></table></figure><p>查看表索引</p><p>加索引表可能引起锁表，要在mysql使用低峰期</p><h4 id="3-索引失效"><a href="#3-索引失效" class="headerlink" title="3.索引失效"></a>3.索引失效</h4><p><strong>索引失效的几个原因</strong></p><ol><li>索引字段的区分度不大</li><li>索引语句在or中</li><li>模糊匹配 %xxx</li><li>索引发生隐式变换</li><li>不满足最左前缀规则</li><li>where条件里，索引有计算</li></ol><h4 id="4-join-过多or子查询过多"><a href="#4-join-过多or子查询过多" class="headerlink" title="4.join 过多or子查询过多"></a>4.join 过多or子查询过多</h4><p>一般不建议用子查询，可以把子查询改成join，join的表也不宜过多，具体问题具体分析，看数据量</p><h4 id="5-in的元素过多"><a href="#5-in的元素过多" class="headerlink" title="5.in的元素过多"></a>5.in的元素过多</h4><p>如果一个查询有in ，in条件加了合适的索引，还是慢，就高度怀疑是in的元素过多。可以分组查询，再快可以引用多线程</p><p>in元素过多可以在代码层做限制</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ids.size() &gt; <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;单次查询数据量太多&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="6-单纯数据量过大"><a href="#6-单纯数据量过大" class="headerlink" title="6.单纯数据量过大"></a>6.单纯数据量过大</h4><p>分库分表</p><h3 id="业务复杂"><a href="#业务复杂" class="headerlink" title="业务复杂"></a>业务复杂</h3><h4 id="1-循环调用"><a href="#1-循环调用" class="headerlink" title="1.循环调用"></a>1.循环调用</h4><p>循环调用同一段代码，每次的循环逻辑一致，前后不关联。比如我们要初始化一个列表。</p><p>可采用多线程的方式去获取数据</p><h4 id="2-顺序调用"><a href="#2-顺序调用" class="headerlink" title="2. 顺序调用"></a>2. 顺序调用</h4><p><img src="/../img/api%E8%B0%83%E4%BC%981.png"></p><p>使用CompletableFuture解决</p><h4 id="3-线程池设置不合理"><a href="#3-线程池设置不合理" class="headerlink" title="3. 线程池设置不合理"></a>3. 线程池设置不合理</h4><p>调整线程池参数，查看时候是io任务还是cpu任务，根据业务来拆分线程池。</p><h4 id="4-锁设置并不合理"><a href="#4-锁设置并不合理" class="headerlink" title="4. 锁设置并不合理"></a>4. 锁设置并不合理</h4><p>锁类型使用不合理，就是读写锁。锁粒度太大</p><h4 id="5-机器问题（fullGC，机器重启，线程打满）"><a href="#5-机器问题（fullGC，机器重启，线程打满）" class="headerlink" title="5.机器问题（fullGC，机器重启，线程打满）"></a>5.机器问题（fullGC，机器重启，线程打满）</h4><p>造成这个问题的原因非常多，笔者就遇到了定时任务过大引起fullGC，代码存在线程泄露引起RSS内存占用过高进而引起机器重启等待诸多原因。需要结合各种监控和具体场景具体分析，进而进行大事务拆分、重新规划线程池等等工作</p><h4 id="6-万金油解决方式"><a href="#6-万金油解决方式" class="headerlink" title="6. 万金油解决方式"></a>6. 万金油解决方式</h4><p> <strong>缓存</strong></p><ul><li>简单的map</li><li>guava等本地缓存工具包</li><li>缓存中间件：redis、tair或memcached</li></ul><p><strong>回调和反查</strong></p><p>​       这种方式往往是业务上的解决方式，在订单或者付款系统中应用的比较多。举个例子：当我们付款的时候，需要调用一个专门的付款系统接口，该系统经过一系列验证、存储工作后还要调用银行接口以执行付款。由于付款这个动作要求十分严谨，银行侧接口执行可能比较缓慢，进而拖累整个付款接口性能。</p><p>​       这个时候我们就可以采用fast success的方式：当必要的校验和存储完成后，立即返回success，同时告诉调用方一个中间态“付款中”。而后调用银行接口，当获得支付结果后再调用上游系统的回调接口返回付款的最终结果“成果”or“失败”。</p>]]></content>
     
@@ -242,10 +242,10 @@
     
     
     
-    <category term="接口优化" scheme="http://duanyushuai.github.io/categories/%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/"/>
+    <category term="java web" scheme="http://duanyushuai.github.io/categories/java-web/"/>
     
     
-    <category term="接口优化" scheme="http://duanyushuai.github.io/tags/%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/"/>
+    <category term="java web" scheme="http://duanyushuai.github.io/tags/java-web/"/>
     
   </entry>
   
@@ -304,7 +304,7 @@
     <link href="http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
     <id>http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/</id>
     <published>2021-10-11T02:00:00.000Z</published>
-    <updated>2022-07-02T07:51:27.539Z</updated>
+    <updated>2022-08-14T04:29:18.719Z</updated>
     
     <content type="html"><![CDATA[<h2 id="全局异常"><a href="#全局异常" class="headerlink" title="全局异常"></a>全局异常</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RestControllerAdvice(basePackages = &quot;com.yxj.gulimall.product.controller&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GulimallExceptionControllerAdvice</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(value = MethodArgumentNotValidException.class)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">handleValidException</span><span class="params">(MethodArgumentNotValidException e)</span> &#123;</span><br><span class="line">        log.error(<span class="string">&quot;数据校验出现问题&#123;&#125;,异常类型: &#123;&#125;&quot;</span>,e.getMessage(),e.getClass());</span><br><span class="line">        <span class="type">BindingResult</span> <span class="variable">bindingResult</span> <span class="operator">=</span> e.getBindingResult();</span><br><span class="line">        Map&lt;String, String&gt; errorMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        bindingResult.getFieldErrors().forEach((fieldError -&gt; &#123;</span><br><span class="line">            errorMap.put(fieldError.getField(),fieldError.getDefaultMessage());</span><br><span class="line">        &#125;));</span><br><span class="line">        <span class="keyword">return</span> R.error(BizCodeEnum.VALID_EXCEPTION.getCode(),BizCodeEnum.VALID_EXCEPTION.getMsg()).put(<span class="string">&quot;data&quot;</span>,errorMap);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(value = Throwable.class)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">handleException</span><span class="params">(Throwable throwable)</span> &#123;</span><br><span class="line">        log.error(<span class="string">&quot;错误:&quot;</span>, throwable);</span><br><span class="line">        <span class="keyword">return</span> R.error(BizCodeEnum.UNKNOWN_EXCEPTION.getCode(),BizCodeEnum.UNKNOWN_EXCEPTION.getMsg());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     

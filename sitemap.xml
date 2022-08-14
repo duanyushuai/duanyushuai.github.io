@@ -4,7 +4,25 @@
   <url>
     <loc>http://duanyushuai.github.io/2022/06/07/api%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/</loc>
     
-    <lastmod>2022-08-13</lastmod>
+    <lastmod>2022-08-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/</loc>
+    
+    <lastmod>2022-08-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</loc>
+    
+    <lastmod>2022-08-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -84,24 +102,6 @@
   
   <url>
     <loc>http://duanyushuai.github.io/2022/07/02/nginx%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2022-07-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://duanyushuai.github.io/2022/06/25/%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F/</loc>
-    
-    <lastmod>2022-07-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://duanyushuai.github.io/2021/10/11/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/</loc>
     
     <lastmod>2022-07-02</lastmod>
     
@@ -312,13 +312,6 @@
   </url>
   
   <url>
-    <loc>http://duanyushuai.github.io/tags/%E8%B7%A8%E5%9F%9F/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://duanyushuai.github.io/tags/maven/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -360,13 +353,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://duanyushuai.github.io/tags/%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -392,13 +378,6 @@
   
   <url>
     <loc>http://duanyushuai.github.io/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://duanyushuai.github.io/categories/%E8%B7%A8%E5%9F%9F/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -448,13 +427,6 @@
   
   <url>
     <loc>http://duanyushuai.github.io/categories/rabbitMQ/</loc>
-    <lastmod>2022-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://duanyushuai.github.io/categories/%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2022-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
