@@ -17,28 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>白嫖 | Duan</title>
-  <meta name="description" content="工具你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？ 无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。  视频解析  找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。 不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。 注意：一定要在http或https前面添加。">
+  <title>分布式事务 | Duan</title>
+  <meta name="description" content="事务数据库事务特性原子性 一致性 隔离性 持久性 事务的隔离级别 Read uncommitted  读未提交读 ，读到其他事务未提交的数据，脏读  Read committed  读提交读，读到另一个事务的提交数据，在一个事务中，读取的数据不一样，形成不可重复读  Repeatable read mysql 默认的隔离级别，在同一个事务里，select 的结果是事务开始时时间点的状态，因此，同样">
 <meta property="og:type" content="article">
-<meta property="og:title" content="白嫖">
-<meta property="og:url" content="http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/index.html">
+<meta property="og:title" content="分布式事务">
+<meta property="og:url" content="http://duanyushuai.github.io/2022/08/14/%E4%BA%8B%E5%8A%A1/index.html">
 <meta property="og:site_name" content="Duan">
-<meta property="og:description" content="工具你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？ 无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。  视频解析  找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。 不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。 注意：一定要在http或https前面添加。">
+<meta property="og:description" content="事务数据库事务特性原子性 一致性 隔离性 持久性 事务的隔离级别 Read uncommitted  读未提交读 ，读到其他事务未提交的数据，脏读  Read committed  读提交读，读到另一个事务的提交数据，在一个事务中，读取的数据不一样，形成不可重复读  Repeatable read mysql 默认的隔离级别，在同一个事务里，select 的结果是事务开始时时间点的状态，因此，同样">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWqjMCHy81nYbMico1WQ8dXehfPLGJeeWc7icRxeHLEE78uULa114aOE9g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWMMXbNNVkx1ts1Siasricg9hEUt0CWItXVAvdUzRJib4k90E5JP4wxfOhw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-<meta property="article:published_time" content="2022-07-29T06:11:08.153Z">
-<meta property="article:modified_time" content="2022-08-11T14:06:17.307Z">
+<meta property="article:published_time" content="2022-08-14T09:48:41.791Z">
+<meta property="article:modified_time" content="2022-08-19T14:13:16.002Z">
 <meta property="article:author" content="小段">
-<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWqjMCHy81nYbMico1WQ8dXehfPLGJeeWc7icRxeHLEE78uULa114aOE9g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/index.html">
+  <link rel="canonical" href="http://duanyushuai.github.io/2022/08/14/%E4%BA%8B%E5%8A%A1/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Duan" type="application/atom+xml">
   
@@ -255,7 +247,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -267,6 +259,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/08/14/%E4%BA%8B%E5%8A%A1/" class="title">分布式事务</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-08-14T09:48:41.791Z" itemprop="datePublished">2022-08-14</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -289,7 +296,7 @@
                 <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
               </p>
               <p class="item-title">
-                <a href="/2022/07/29/%E7%99%BD%E5%AB%96/" class="title">白嫖</a>
+                <a href="/2022/07/29/%E5%B7%A5%E5%85%B7/" class="title">白嫖</a>
               </p>
               <p class="item-date">
                 <time datetime="2022-07-29T06:11:08.153Z" itemprop="datePublished">2022-07-29</time>
@@ -327,21 +334,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" class="title">sku和spu数据库设计</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2022-06-26T10:50:48.206Z" itemprop="datePublished">2022-06-26</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -355,14 +347,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-白嫖" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-事务" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      白嫖
+      分布式事务
     </h1>
   
 
@@ -370,22 +362,12 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2022/07/29/%E7%99%BD%E5%AB%96/" class="article-date">
-	  <time datetime="2022-07-29T06:11:08.153Z" itemprop="datePublished">2022-07-29</time>
+	<a href="/2022/08/14/%E4%BA%8B%E5%8A%A1/" class="article-date">
+	  <time datetime="2022-08-14T09:48:41.791Z" itemprop="datePublished">2022-08-14</time>
 	</a>
 </span>
         
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
-  </span>
-
         
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>
-  </span>
-
 
         
 	<span class="article-read hidden-xs">
@@ -396,61 +378,98 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/07/29/%E7%99%BD%E5%AB%96/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/08/14/%E4%BA%8B%E5%8A%A1/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 682(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.5k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？</p>
-<p>无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。</p>
+        <h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h3 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h3><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><p>原子性 一致性 隔离性 持久性</p>
+<h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><ol>
+<li><strong>Read uncommitted</strong></li>
+</ol>
+<p>读未提交读 ，读到其他事务未提交的数据，脏读</p>
+<ol start="2">
+<li><strong>Read committed</strong></li>
+</ol>
+<p>读提交读，读到另一个事务的提交数据，在一个事务中，读取的数据不一样，形成不可重复读</p>
+<ol start="3">
+<li><p><strong>Repeatable read</strong></p>
+<p>mysql 默认的隔离级别，在同一个事务里，select 的结果是事务开始时时间点的状态，因此，同样的 select 操作读到的结果会是一致的，但是，会有幻读现象。MySQL 的 InnoDB 引擎可以通过 next-key locks 机制来避免幻读。</p>
+</li>
+<li><p><strong>Serializable</strong></p>
+</li>
+</ol>
+<p>序列化</p>
+<h4 id="事务的传播行为"><a href="#事务的传播行为" class="headerlink" title="事务的传播行为"></a>事务的传播行为</h4><p><strong>1</strong>、<strong>PROPAGATION_REQUIRED</strong>：如果当前没有事务，就创建一个新事务，如果当前存在事务， </p>
+<p>就加入该事务，该设置是最常用的设置。 </p>
+<p><strong>2</strong>、<strong>PROPAGATION_SUPPORTS</strong>：支持当前事务，如果当前存在事务，就加入该事务，如果当 </p>
+<p>前不存在事务，就以非事务执行。 </p>
+<p><strong>3</strong>、<strong>PROPAGATION_MANDATORY</strong>：支持当前事务，如果当前存在事务，就加入该事务，如果 </p>
+<p>当前不存在事务，就抛出异常。 </p>
+<p><strong>4</strong>、<strong>PROPAGATION_REQUIRES_NEW</strong>：创建新事务，无论当前存不存在事务，都创建新事务。 </p>
+<p><strong>5</strong>、<strong>PROPAGATION_NOT_SUPPORTED</strong>：以非事务方式执行操作，如果当前存在事务，就把当 </p>
+<p>前事务挂起。 </p>
+<p><strong>6</strong>、<strong>PROPAGATION_NEVER</strong>：以非事务方式执行，如果当前存在事务，则抛出异常。 </p>
+<p><strong>7</strong>、<strong>PROPAGATION_NESTED</strong>：如果当前存在事务，则在嵌套事务内执行。如果当前没有事务， </p>
+<p>则执行与 PROPAGATION_REQUIRED 类似的操作。</p>
+<p><strong>同一个对象内事务方法互相调失效，原因绕过了代理对象</strong></p>
+<p>解决：使用代理对象来调用事务方法</p>
+<p> 1）、引入aop-starter;spring-boot-starter-aop; 引入aspectj</p>
+<p> 2）、@EnableAspectJAutoProxy; 开启 aspectj 动态代理功能，以后的代理对象都是aspectj </p>
+<p>0）、导入 spring-boot-starter-aop </p>
+<p>1）、@EnableTransactionManagement(proxyTargetClass &#x3D; true) </p>
+<p>2）、@EnableAspectJAutoProxy(exposeProxy&#x3D;true) </p>
+<p>3）、AopContext.currentProxy() 调用方法 </p>
+<h3 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h3><h4 id="CAP-原理"><a href="#CAP-原理" class="headerlink" title="CAP 原理"></a>CAP 原理</h4><p>CAP 原则又称 CAP 定理，指的是在一个分布式系统中 </p>
+<p>一致性（Consistency）： </p>
+<p>在分布式系统中的所有数据备份，在同一时刻是否同样的值。（等同于所有节点访问同一份最新的数据副本） </p>
+<p>可用性（Availability） </p>
+<p>在集群中一部分节点故障后，集群整体是否还能响应客户端的读写请求。（对数据 更新具备高可用性） </p>
+<p>分区容错性（Partition tolerance） </p>
+<p>大多数分布式系统都分布在多个子网络。每个子网络就叫做一个区（</p>
+<p>partition）。 分区容错的意思是，区间通信可能失败。比如，一台服务器放在中国，另一台服务器放在美国，这就是两个区，它们之间可能无法通信。 </p>
+<p>CAP 原则指的是，这三个要素最多只能同时实现两点，<strong>不可能三者兼顾</strong>。</p>
+<p>一般来说，分区容错无法避免，因此可以认为 CAP 的 P 总是成立。CAP 定理告诉我们， </p>
+<p>剩下的 C 和 A 无法同时做到。</p>
+<p>分布式系统中实现一致性的 raft 算法、paxos </p>
+<p><a target="_blank" rel="noopener" href="http://thesecretlivesofdata.com/raft/">http://thesecretlivesofdata.com/raft/</a></p>
+<h3 id="分布式事务解决方案"><a href="#分布式事务解决方案" class="headerlink" title="分布式事务解决方案"></a>分布式事务解决方案</h3><h5 id="2PC模式"><a href="#2PC模式" class="headerlink" title="2PC模式"></a>2PC模式</h5><p>数据库支持的 2PC【2 phase commit 二阶提交】，又叫做 XA Transactions。 </p>
+<p>MySQL 从 5.5 版本开始支持，SQL Server 2005 开始支持，Oracle 7 开始支持。 </p>
+<p>其中，XA 是一个两阶段提交协议，该协议分为以下两个阶段： </p>
+<p>第一阶段：事务协调器要求每个涉及到事务的数据库预提交(precommit)此操作，并反映是 </p>
+<p>否可以提交. </p>
+<p>第二阶段：事务协调器要求每个数据库提交数据。 </p>
+<p>其中，如果有任何一个数据库否决此次提交，那么所有数据库都会被要求回滚它们在此事务 </p>
+<p>中的那部分信息。</p>
 <ul>
-<li><strong>视频解析</strong></li>
+<li>XA 协议比较简单，而且一旦商业数据库实现了 XA 协议，使用分布式事务的成本也比较</li>
 </ul>
-<p>找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。</p>
-<p>不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。</p>
-<p>注意：一定要在http或https前面添加。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWqjMCHy81nYbMico1WQ8dXehfPLGJeeWc7icRxeHLEE78uULa114aOE9g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
-<p>然后按下回车，就会跳转至一个名为万能命令的新页面。</p>
-<p>在下方【相关视频播放】这一栏里，就是你想观看的视频的解析结果。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/Oy6E1oydbSibAbcDz4HSHsUGMk8iczLnSWMMXbNNVkx1ts1Siasricg9hEUt0CWItXVAvdUzRJib4k90E5JP4wxfOhw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
-<p>任选一个解析网站打开，就可以全屏观看该视频了。</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
+<p>低。 </p>
 <ul>
-<li><strong>文库下载</strong></li>
+<li><strong>XA</strong> <strong>性能不理想</strong>，特别是在交易下单链路，往往并发量很高，XA 无法满足高并发场景 </li>
+<li>XA 目前在商业数据库支持的比较理想，<strong>在</strong> <strong>mysql</strong> <strong>数据库中支持的不太理想</strong>，mysql 的 XA 实现，没有记录 prepare 阶段日志，主备切换回导致主库与备库数据不一致。 许多 nosql 也没有支持 XA，这让 XA 的应用场景变得非常狭隘。 </li>
+<li>也有 3PC，引入了超时机制（无论协调者还是参与者，在向对方发送请求后，若长时间 未收到回应则做出相应处理）</li>
 </ul>
-<p>对于工作党和学生党来说，最痛苦的事情，莫过于找到了急需的资料，却没有文库VIP了。</p>
-<p>在某度文库上，如果没有开通VIP的话，既无法复制文字，也无法下载文档，几乎是寸步难行。</p>
-<p>这时候，我们只需要在所需文档地址前加上wn.run&#x2F;前缀。</p>
-<p>按下回车，就可以找到文库在线下载的解析结果了。</p>
-<p>点击上述结果，即会自动跳转至一个名为网页转换助手的页面。</p>
-<p>在这里，你可以选择【转为Word】或【转为PDF】。</p>
-<p>然后点击【下载】按钮，就能成功下载该会员文档的源文件了。</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
-<ul>
-<li><strong>音乐下载</strong></li>
-</ul>
-<p>如果想要下载网易云音乐、QQ音乐、酷狗音乐上的歌曲，只需在播放地址前加上wn.run&#x2F;。</p>
-<p>然后选择其中一个解析源，就能下载歌曲了。</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
-<ul>
-<li><strong>视频下载</strong></li>
-</ul>
-<p>当然，这个小技巧不仅能用于下载音乐，同时也可以用来下载各个视频网站上的视频。</p>
-<p>以B站为例，在网址前输入wn.run&#x2F;。</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p>
-<p>然后回车，选择其中一个解析结果，就可以成功下载该视频了。</p>
-<p>除了上面介绍的功能，通过wn.run&#x2F;这个命令还能实现许许多多的效果，比如网页翻译、网页截图、网页二维码生成等等。</p>
-<p>每个功能都无需下载、即用即走，且没有平台限制，pc、android、ios等都可使用。</p>
-<p>另外，在万能命令网站里，还收录了很多高质量的工具，大家感兴趣的话，也可以直接收藏这个地址。</p>
-<p>鉴于这个工具比较敏感，如果大家有需要的话，就赶紧试试吧！</p>
+<h5 id="柔性事务-TCC-事务补偿型方案"><a href="#柔性事务-TCC-事务补偿型方案" class="headerlink" title="柔性事务 TCC 事务补偿型方案"></a>柔性事务 TCC <strong>事务补偿型方案</strong></h5><p>刚性事务：遵循 ACID 原则，强一致性。 </p>
+<p>柔性事务：遵循 BASE 理论，最终一致性； </p>
+<p>与刚性事务不同，柔性事务允许一定时间内，不同节点的数据不一致，但要求最终一致。</p>
+<h5 id="柔性事务-最大努力通知方案"><a href="#柔性事务-最大努力通知方案" class="headerlink" title="柔性事务 最大努力通知方案"></a>柔性事务 最大努力通知方案</h5><p>按规律进行通知，<strong>不保证数据一定能通知成功，但会提供可查询操作接口进行核对</strong>。这种 </p>
+<p>方案主要用在与第三方系统通讯时，比如：调用微信或支付宝支付后的支付结果通知。这种 </p>
+<p>方案也是结合 MQ 进行实现，例如：通过 MQ 发送 http 请求，设置最大通知次数。达到通 </p>
+<p>知次数后即不再通知。 </p>
+<p>案例：银行通知、商户通知等（各大交易业务平台间的商户通知：多次通知、查询校对、对 </p>
+<p>账文件），支付宝的支付成功异步回调</p>
+<h5 id="柔性事务-可靠消息-最终一致性"><a href="#柔性事务-可靠消息-最终一致性" class="headerlink" title="柔性事务 + 可靠消息 + 最终一致性"></a>柔性事务 + 可靠消息 + 最终一致性</h5><p>实现：业务处理服务在业务事务提交之前，向实时消息服务请求发送消息，实时消息服务只 </p>
+<p>记录消息数据，而不是真正的发送。业务处理服务在业务事务提交之后，向实时消息服务确 </p>
+<p>认发送。只有在得到确认发送指令后，实时消息服务才会真正发送。</p>
 
       
     </div>
@@ -460,7 +479,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://duanyushuai.github.io/2022/07/29/%E7%99%BD%E5%AB%96/" title="白嫖" target="_blank" rel="external">http://duanyushuai.github.io/2022/07/29/白嫖/</a>
+      <a href="http://duanyushuai.github.io/2022/08/14/%E4%BA%8B%E5%8A%A1/" title="分布式事务" target="_blank" rel="external">http://duanyushuai.github.io/2022/08/14/事务/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -506,13 +525,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/" title="接口幂等性"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2022/07/11/redis%20%E7%BC%93%E5%AD%98/" title="redis 缓存"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/" title="接口幂等性"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
