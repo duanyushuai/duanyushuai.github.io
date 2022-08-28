@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2022-08-19T14:13:16.002Z</updated>
+  <updated>2022-08-28T06:31:55.451Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringSecurity</title>
+    <link href="http://duanyushuai.github.io/2022/08/27/SpringSecuity/"/>
+    <id>http://duanyushuai.github.io/2022/08/27/SpringSecuity/</id>
+    <published>2022-08-27T07:58:07.374Z</published>
+    <updated>2022-08-28T06:31:55.451Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SpringSecuity"><a href="#SpringSecuity" class="headerlink" title="SpringSecuity"></a>SpringSecuity</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p>SpringSecurity是一个过滤器链</p><p>UsernamePasswordAuthenticationFilter: 负责填写用户名密码后的登陆请求</p><p>ExceptionTranslationFilter: 处理过滤器链中跑出的任何AccessDeniedException和AuthenticationException</p><p>FilterSecurityInterceptor: 负责权限校验的过滤器</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;SpringSecuity&quot;&gt;&lt;a href=&quot;#SpringSecuity&quot; class=&quot;headerlink&quot; title=&quot;SpringSecuity&quot;&gt;&lt;/a&gt;SpringSecuity&lt;/h1&gt;&lt;figure class=&quot;highlight xml&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JWT理解</title>
+    <link href="http://duanyushuai.github.io/2022/08/18/Jwt%E7%90%86%E8%A7%A3/"/>
+    <id>http://duanyushuai.github.io/2022/08/18/Jwt%E7%90%86%E8%A7%A3/</id>
+    <published>2022-08-18T02:00:00.000Z</published>
+    <updated>2022-08-28T06:35:00.527Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JWT理解"><a href="#JWT理解" class="headerlink" title="JWT理解"></a>JWT理解</h1><h4 id="jwt组成"><a href="#jwt组成" class="headerlink" title="jwt组成"></a>jwt组成</h4><ol><li>标头（Header）</li><li>有效载荷（Payload）</li><li>签名（ Signature）</li></ol><p>格式 xxx.yyy.zzz</p><h5 id="标头"><a href="#标头" class="headerlink" title="标头"></a>标头</h5><p>令牌类型和所属签名 base64 编码</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;alg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HS256&quot;</span></span><br><span class="line">    <span class="attr">&quot;typ&quot;</span><span class="punctuation">:</span> <span class="string">&quot;jwt&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h5 id="有效载荷"><a href="#有效载荷" class="headerlink" title="有效载荷"></a>有效载荷</h5><p>声明的实体。base64编码</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;sub&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2123&quot;</span></span><br><span class="line">   <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;dd&quot;</span></span><br><span class="line">   <span class="attr">&quot;admin&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h5 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h5><p>使用密钥对header和payload进行签名，防止被容被篡改</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HMACSHA256(BASE64UrlEncode(header)+.+BASE64UrlEncode(payload),secret);</span><br></pre></td></tr></table></figure><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test1</span><span class="params">()</span>&#123;</span><br><span class="line">      HashMap&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">     <span class="type">Calendar</span> <span class="variable">instance</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line">     instance.add(Calendar.SECOND,<span class="number">20</span> );</span><br><span class="line">     <span class="keyword">final</span> <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> JWT.create().withHeader(map)</span><br><span class="line">             .withClaim(<span class="string">&quot;username&quot;</span>, <span class="string">&quot;123&quot;</span>)</span><br><span class="line">             .withExpiresAt(instance.getTime())</span><br><span class="line">             .sign(Algorithm.HMAC256(<span class="string">&quot;123&quot;</span>));</span><br><span class="line"></span><br><span class="line">     System.out.println(username );</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="meta">@Test</span></span><br><span class="line"> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Test2</span><span class="params">()</span>&#123;</span><br><span class="line">     <span class="keyword">final</span> <span class="type">JWTVerifier</span> <span class="variable">jwtVerifier</span> <span class="operator">=</span> JWT.require(Algorithm.HMAC256(<span class="string">&quot;123&quot;</span>)).build();</span><br><span class="line">     <span class="type">DecodedJWT</span> <span class="variable">verify</span> <span class="operator">=</span> jwtVerifier.verify(<span class="string">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjE1ODI2NDcsInVzZXJuYW1lIjoiMTIzIn0.b45eaJCa5uzUdGIfXfrjhw73AdzH-MXgkAI8hOY6wYU&quot;</span>);</span><br><span class="line">     System.out.println(verify);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;JWT理解&quot;&gt;&lt;a href=&quot;#JWT理解&quot; class=&quot;headerlink&quot; title=&quot;JWT理解&quot;&gt;&lt;/a&gt;JWT理解&lt;/h1&gt;&lt;h4 id=&quot;jwt组成&quot;&gt;&lt;a href=&quot;#jwt组成&quot; class=&quot;headerlink&quot; title=&quot;jwt</summary>
+      
+    
+    
+    
+    <category term="java web" scheme="http://duanyushuai.github.io/categories/java-web/"/>
+    
+    
+    <category term="java web" scheme="http://duanyushuai.github.io/tags/java-web/"/>
+    
+  </entry>
   
   <entry>
     <title>分布式事务</title>
@@ -65,11 +109,11 @@
   </entry>
   
   <entry>
-    <title>白嫖</title>
+    <title>视频工具</title>
     <link href="http://duanyushuai.github.io/2022/07/29/%E5%B7%A5%E5%85%B7/"/>
     <id>http://duanyushuai.github.io/2022/07/29/%E5%B7%A5%E5%85%B7/</id>
     <published>2022-07-29T06:11:08.153Z</published>
-    <updated>2022-08-17T13:49:46.599Z</updated>
+    <updated>2022-08-27T02:26:36.524Z</updated>
     
     <content type="html"><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？</p><p>无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。</p><ul><li><strong>视频解析</strong></li></ul><p>找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。</p><p>不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。</p><p>注意：一定要在http或https前面添加。</p><p><img src="/../img/gongju1.png" alt="图片"></p><p>然后按下回车，就会跳转至一个名为万能命令的新页面。</p><p>在下方【相关视频播放】这一栏里，就是你想观看的视频的解析结果。</p><p><img src="/../img/gongju2.png" alt="图片"></p><p>任选一个解析网站打开，就可以全屏观看该视频了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>文库下载</strong></li></ul><p>对于工作党和学生党来说，最痛苦的事情，莫过于找到了急需的资料，却没有文库VIP了。</p><p>在某度文库上，如果没有开通VIP的话，既无法复制文字，也无法下载文档，几乎是寸步难行。</p><p>这时候，我们只需要在所需文档地址前加上wn.run&#x2F;前缀。</p><p>按下回车，就可以找到文库在线下载的解析结果了。</p><p>点击上述结果，即会自动跳转至一个名为网页转换助手的页面。</p><p>在这里，你可以选择【转为Word】或【转为PDF】。</p><p>然后点击【下载】按钮，就能成功下载该会员文档的源文件了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>音乐下载</strong></li></ul><p>如果想要下载网易云音乐、QQ音乐、酷狗音乐上的歌曲，只需在播放地址前加上wn.run&#x2F;。</p><p>然后选择其中一个解析源，就能下载歌曲了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>视频下载</strong></li></ul><p>当然，这个小技巧不仅能用于下载音乐，同时也可以用来下载各个视频网站上的视频。</p><p>以B站为例，在网址前输入wn.run&#x2F;。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><p>然后回车，选择其中一个解析结果，就可以成功下载该视频了。</p><p>除了上面介绍的功能，通过wn.run&#x2F;这个命令还能实现许许多多的效果，比如网页翻译、网页截图、网页二维码生成等等。</p><p>每个功能都无需下载、即用即走，且没有平台限制，pc、android、ios等都可使用。</p><p>另外，在万能命令网站里，还收录了很多高质量的工具，大家感兴趣的话，也可以直接收藏这个地址。</p><p>鉴于这个工具比较敏感，如果大家有需要的话，就赶紧试试吧！</p>]]></content>
     
@@ -436,58 +480,6 @@
     
     
     <category term="java" scheme="http://duanyushuai.github.io/categories/java/"/>
-    
-    
-    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CompletableFuture</title>
-    <link href="http://duanyushuai.github.io/2021/04/05/CompletableFuture/"/>
-    <id>http://duanyushuai.github.io/2021/04/05/CompletableFuture/</id>
-    <published>2021-04-05T03:00:23.000Z</published>
-    <updated>2022-06-13T03:02:59.980Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="CompletableFuture"><a href="#CompletableFuture" class="headerlink" title="CompletableFuture"></a>CompletableFuture</h1><h3 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;U&gt; CompletableFuture&lt;U&gt; <span class="title function_">supplyAsync</span><span class="params">(Supplier&lt;U&gt; supplier)</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;U&gt; CompletableFuture&lt;U&gt; <span class="title function_">supplyAsync</span><span class="params">(Supplier&lt;U&gt; supplier, Executor executor)</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> CompletableFuture&lt;Void&gt; <span class="title function_">runAsync</span><span class="params">(Runnable runnable)</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> CompletableFuture&lt;Void&gt; <span class="title function_">runAsync</span><span class="params">(Runnable runnable, Executor executor)</span>;</span><br></pre></td></tr></table></figure><p>supply:有返回结果</p><p>run：无返回结果</p><h3 id="获取结果"><a href="#获取结果" class="headerlink" title="获取结果"></a>获取结果</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> T    <span class="title function_">get</span><span class="params">()</span></span><br><span class="line"><span class="keyword">public</span> T    <span class="title function_">get</span><span class="params">(<span class="type">long</span> timeout, TimeUnit unit)</span></span><br><span class="line"><span class="keyword">public</span> T    <span class="title function_">getNow</span><span class="params">(T valueIfAbsent)</span></span><br><span class="line"><span class="keyword">public</span> T    <span class="title function_">join</span><span class="params">()</span></span><br></pre></td></tr></table></figure><h3 id="计算完成后续操作1——complete"><a href="#计算完成后续操作1——complete" class="headerlink" title="计算完成后续操作1——complete"></a>计算完成后续操作1——complete</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> CompletableFuture&lt;T&gt;     <span class="title function_">whenComplete</span><span class="params">(BiConsumer&lt;? <span class="built_in">super</span> T,? <span class="built_in">super</span> Throwable&gt; action)</span></span><br><span class="line"><span class="keyword">public</span> CompletableFuture&lt;T&gt;     <span class="title function_">whenCompleteAsync</span><span class="params">(BiConsumer&lt;? <span class="built_in">super</span> T,? <span class="built_in">super</span> Throwable&gt; action)</span></span><br><span class="line"><span class="keyword">public</span> CompletableFuture&lt;T&gt;     <span class="title function_">whenCompleteAsync</span><span class="params">(BiConsumer&lt;? <span class="built_in">super</span> T,? <span class="built_in">super</span> Throwable&gt; action, Executor executor)</span></span><br><span class="line"><span class="keyword">public</span> CompletableFuture&lt;T&gt;     <span class="title function_">exceptionally</span><span class="params">(Function&lt;Throwable,? extends T&gt; fn)</span></span><br></pre></td></tr></table></figure><p>方法1和2的区别在于是否使用异步处理，2和3的区别在于是否使用自定义的线程池，前三个方法都会提供<strong>一个返回结果和可抛出异常</strong>，我们可以使用lambda表达式的来接收这两个参数，然后自己处理。 方法4，接收一个可抛出的异常，且必须return一个返回值，类型与钻石表达式种的类型一样，详见下文的<strong>exceptionally()</strong> </p><h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CompletableFuture&lt;Integer&gt; future = CompletableFuture.supplyAsync(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">10086</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">        future.whenComplete((result, error) -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;拨打&quot;</span>+result);</span><br><span class="line">            error.printStackTrace();</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure><p>whenCompleteAsync  与  whenComplete 区别</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    CompletableFuture&lt;Integer&gt; f = <span class="keyword">new</span> <span class="title class_">CompletableFuture</span>&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; &#123;</span><br><span class="line">        <span class="comment">// 子线程A启动</span></span><br><span class="line">        logger.info(<span class="string">&quot;子线程A启动&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            logger.info(<span class="string">&quot;子线程A沉睡5s&quot;</span>);</span><br><span class="line">            Thread.sleep(<span class="number">5000l</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        logger.info(<span class="string">&quot;子线程A令future完成&quot;</span>);</span><br><span class="line">        f.complete(<span class="number">100</span>);  <span class="comment">// 当子线程A执行到f.complete的时候，会去看是否有注册好的f的then或者when（非async的），如果有的话，会顺次去执行。</span></span><br><span class="line">        logger.info(<span class="string">&quot;子线程A结束&quot;</span>);</span><br><span class="line">    &#125;).start();;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当前线程（主线程）执行到这里的时候，如果子线程还没有执行到f.complete(100)，</span></span><br><span class="line">    <span class="comment">// 那么当前线程会把whenComplete事件注册起来，并且说好哪个线程执行了f.complete(100)，</span></span><br><span class="line">    <span class="comment">// 哪个线程就负责执行whenComplete的内容。</span></span><br><span class="line">    <span class="comment">// 如果当前线程（主线程）执行到这里的时候，f.complete(100)已经被其他线程执行完毕了。</span></span><br><span class="line">    <span class="comment">// 那么只有当前线程自己来执行whenComplete里面的内容了。</span></span><br><span class="line">    f.whenCompleteAsync((i, ex) -&gt; &#123;</span><br><span class="line">        <span class="comment">// 这个场景下，whenComplete的回调的执行线程会是子线程A</span></span><br><span class="line">        logger.info(<span class="string">&quot;do something after complete begin&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            logger.info(<span class="string">&quot;沉睡10s&quot;</span>);</span><br><span class="line">            Thread.sleep(<span class="number">10000l</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        logger.info(<span class="string">&quot;do something after complete end&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    logger.info(<span class="string">&quot;main over&quot;</span>);</span><br><span class="line">    System.in.read();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="计算完成后续操作2——handle"><a href="#计算完成后续操作2——handle" class="headerlink" title="计算完成后续操作2——handle"></a>计算完成后续操作2——handle</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;U&gt; CompletableFuture&lt;U&gt;     <span class="title function_">handle</span><span class="params">(BiFunction&lt;? <span class="built_in">super</span> T,Throwable,? extends U&gt; fn)</span></span><br><span class="line"><span class="keyword">public</span> &lt;U&gt; CompletableFuture&lt;U&gt;     <span class="title function_">handleAsync</span><span class="params">(BiFunction&lt;? <span class="built_in">super</span> T,Throwable,? extends U&gt; fn)</span></span><br><span class="line"><span class="keyword">public</span> &lt;U&gt; CompletableFuture&lt;U&gt;     <span class="title function_">handleAsync</span><span class="params">(BiFunction&lt;? <span class="built_in">super</span> T,Throwable,? extends U&gt; fn, Executor executor)</span></span><br></pre></td></tr></table></figure><p>方法返回类型可以自定义</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;CompletableFuture&quot;&gt;&lt;a href=&quot;#CompletableFuture&quot; class=&quot;headerlink&quot; title=&quot;CompletableFuture&quot;&gt;&lt;/a&gt;CompletableFuture&lt;/h1&gt;&lt;h3 id=&quot;实例化&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="java" scheme="http://duanyushuai.github.io/categories/java/"/>
-    
-    
-    <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
-    
-    <category term="CompletableFuture" scheme="http://duanyushuai.github.io/tags/CompletableFuture/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jvisualvm</title>
-    <link href="http://duanyushuai.github.io/2021/03/10/Jvisualvm/"/>
-    <id>http://duanyushuai.github.io/2021/03/10/Jvisualvm/</id>
-    <published>2021-03-10T02:00:00.000Z</published>
-    <updated>2022-07-24T13:18:06.389Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Jvisualvm"><a href="#Jvisualvm" class="headerlink" title="Jvisualvm"></a>Jvisualvm</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://visualvm.github.io/download.html">https://visualvm.github.io/download.html</a></p><h3 id="打开扩大字体"><a href="#打开扩大字体" class="headerlink" title="打开扩大字体"></a>打开扩大字体</h3><p>打开bin</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visualvm.exe --fontsize 20</span><br></pre></td></tr></table></figure><p>下载</p><p>visual GC</p><p><img src="/../img/jvisualvm1.jpg"></p><p>在GC开始的时候，对象只会存在于Eden区和名为“From”的Survivor区，Survivor区“To”是空的。紧接着进行GC，Eden区中所有存活的对象都会被复制到“To”，而在“From”区中，仍存活的对象会根据他们的年龄值来决定去向。年龄达到一定值(年龄阈值，可以通过-XX:MaxTenuringThreshold来设置)的对象会被移动到年老代中，没有达到阈值的对象会被复制到“To”区域。经过这次GC后，Eden区和From区已经被清空。这个时候，“From”和“To”会交换他们的角色，也就是新的“To”就是上次GC前的“From”，新的“From”就是上次GC前的“To”。不管怎样，都会保证名为To的Survivor区域是空的。Minor GC会一直重复这样的过程，直到“To”区被填满，“To”区被填满之后，会将所有对象移动到年老代中。</p><p><img src="/../img/jvisualvm2.jpg"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Jvisualvm&quot;&gt;&lt;a href=&quot;#Jvisualvm&quot; class=&quot;headerlink&quot; title=&quot;Jvisualvm&quot;&gt;&lt;/a&gt;Jvisualvm&lt;/h2&gt;&lt;h3 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    <category term="java" scheme="http://duanyushuai.github.io/categories/java/"/>
-    
-    <category term="Jvisualvm" scheme="http://duanyushuai.github.io/categories/java/Jvisualvm/"/>
     
     
     <category term="java" scheme="http://duanyushuai.github.io/tags/java/"/>
