@@ -109,31 +109,6 @@
   </entry>
   
   <entry>
-    <title>视频工具</title>
-    <link href="http://duanyushuai.github.io/2022/07/29/%E5%B7%A5%E5%85%B7/"/>
-    <id>http://duanyushuai.github.io/2022/07/29/%E5%B7%A5%E5%85%B7/</id>
-    <published>2022-07-29T06:11:08.153Z</published>
-    <updated>2022-08-27T02:26:36.524Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？</p><p>无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。</p><ul><li><strong>视频解析</strong></li></ul><p>找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。</p><p>不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。</p><p>注意：一定要在http或https前面添加。</p><p><img src="/../img/gongju1.png" alt="图片"></p><p>然后按下回车，就会跳转至一个名为万能命令的新页面。</p><p>在下方【相关视频播放】这一栏里，就是你想观看的视频的解析结果。</p><p><img src="/../img/gongju2.png" alt="图片"></p><p>任选一个解析网站打开，就可以全屏观看该视频了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>文库下载</strong></li></ul><p>对于工作党和学生党来说，最痛苦的事情，莫过于找到了急需的资料，却没有文库VIP了。</p><p>在某度文库上，如果没有开通VIP的话，既无法复制文字，也无法下载文档，几乎是寸步难行。</p><p>这时候，我们只需要在所需文档地址前加上wn.run&#x2F;前缀。</p><p>按下回车，就可以找到文库在线下载的解析结果了。</p><p>点击上述结果，即会自动跳转至一个名为网页转换助手的页面。</p><p>在这里，你可以选择【转为Word】或【转为PDF】。</p><p>然后点击【下载】按钮，就能成功下载该会员文档的源文件了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>音乐下载</strong></li></ul><p>如果想要下载网易云音乐、QQ音乐、酷狗音乐上的歌曲，只需在播放地址前加上wn.run&#x2F;。</p><p>然后选择其中一个解析源，就能下载歌曲了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>视频下载</strong></li></ul><p>当然，这个小技巧不仅能用于下载音乐，同时也可以用来下载各个视频网站上的视频。</p><p>以B站为例，在网址前输入wn.run&#x2F;。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><p>然后回车，选择其中一个解析结果，就可以成功下载该视频了。</p><p>除了上面介绍的功能，通过wn.run&#x2F;这个命令还能实现许许多多的效果，比如网页翻译、网页截图、网页二维码生成等等。</p><p>每个功能都无需下载、即用即走，且没有平台限制，pc、android、ios等都可使用。</p><p>另外，在万能命令网站里，还收录了很多高质量的工具，大家感兴趣的话，也可以直接收藏这个地址。</p><p>鉴于这个工具比较敏感，如果大家有需要的话，就赶紧试试吧！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;p&gt;你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？&lt;/p&gt;
-&lt;p&gt;无需安装任何软件，就能解析视频、下载音乐、复制文库</summary>
-      
-    
-    
-    
-    <category term="工具" scheme="http://duanyushuai.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="工具" scheme="http://duanyushuai.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>redis 缓存</title>
     <link href="http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/"/>
     <id>http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/</id>
@@ -336,6 +311,31 @@
     
     
     <category term="docker" scheme="http://duanyushuai.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>视频工具</title>
+    <link href="http://duanyushuai.github.io/2022/02/22/%E5%B7%A5%E5%85%B7/"/>
+    <id>http://duanyushuai.github.io/2022/02/22/%E5%B7%A5%E5%85%B7/</id>
+    <published>2022-02-22T02:00:00.000Z</published>
+    <updated>2022-08-28T06:39:49.980Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？</p><p>无需安装任何软件，就能解析视频、下载音乐、复制文库……是的你没看错，只需要简单地添加一个前缀，就能解决。</p><ul><li><strong>视频解析</strong></li></ul><p>找到你喜欢的电影&#x2F;电视剧，打开它所在当前网页。</p><p>不论是爱奇艺，腾讯视频还是其他视频网站，只需要在网站前加上wn.run&#x2F;这串字符。</p><p>注意：一定要在http或https前面添加。</p><p><img src="/../img/gongju1.png" alt="图片"></p><p>然后按下回车，就会跳转至一个名为万能命令的新页面。</p><p>在下方【相关视频播放】这一栏里，就是你想观看的视频的解析结果。</p><p><img src="/../img/gongju2.png" alt="图片"></p><p>任选一个解析网站打开，就可以全屏观看该视频了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>文库下载</strong></li></ul><p>对于工作党和学生党来说，最痛苦的事情，莫过于找到了急需的资料，却没有文库VIP了。</p><p>在某度文库上，如果没有开通VIP的话，既无法复制文字，也无法下载文档，几乎是寸步难行。</p><p>这时候，我们只需要在所需文档地址前加上wn.run&#x2F;前缀。</p><p>按下回车，就可以找到文库在线下载的解析结果了。</p><p>点击上述结果，即会自动跳转至一个名为网页转换助手的页面。</p><p>在这里，你可以选择【转为Word】或【转为PDF】。</p><p>然后点击【下载】按钮，就能成功下载该会员文档的源文件了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>音乐下载</strong></li></ul><p>如果想要下载网易云音乐、QQ音乐、酷狗音乐上的歌曲，只需在播放地址前加上wn.run&#x2F;。</p><p>然后选择其中一个解析源，就能下载歌曲了。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><ul><li><strong>视频下载</strong></li></ul><p>当然，这个小技巧不仅能用于下载音乐，同时也可以用来下载各个视频网站上的视频。</p><p>以B站为例，在网址前输入wn.run&#x2F;。</p><p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="图片"></p><p>然后回车，选择其中一个解析结果，就可以成功下载该视频了。</p><p>除了上面介绍的功能，通过wn.run&#x2F;这个命令还能实现许许多多的效果，比如网页翻译、网页截图、网页二维码生成等等。</p><p>每个功能都无需下载、即用即走，且没有平台限制，pc、android、ios等都可使用。</p><p>另外，在万能命令网站里，还收录了很多高质量的工具，大家感兴趣的话，也可以直接收藏这个地址。</p><p>鉴于这个工具比较敏感，如果大家有需要的话，就赶紧试试吧！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h1&gt;&lt;p&gt;你有没有想过，在自己常用的网站地址前加几个字符，就可以实现各种各样的效果？&lt;/p&gt;
+&lt;p&gt;无需安装任何软件，就能解析视频、下载音乐、复制文库</summary>
+      
+    
+    
+    
+    <category term="工具" scheme="http://duanyushuai.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="工具" scheme="http://duanyushuai.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
