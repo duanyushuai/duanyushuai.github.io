@@ -6,7 +6,7 @@
   <link href="http://duanyushuai.github.io/atom.xml" rel="self"/>
   
   <link href="http://duanyushuai.github.io/"/>
-  <updated>2023-01-11T01:23:04.959Z</updated>
+  <updated>2023-02-22T06:15:53.972Z</updated>
   <id>http://duanyushuai.github.io/</id>
   
   <author>
@@ -15,6 +15,147 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>k8s</title>
+    <link href="http://duanyushuai.github.io/2023/02/22/k8s/"/>
+    <id>http://duanyushuai.github.io/2023/02/22/k8s/</id>
+    <published>2023-02-22T06:14:11.674Z</published>
+    <updated>2023-02-22T06:15:53.972Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://duanyushuai.github.io/2023/02/17/webflux/"/>
+    <id>http://duanyushuai.github.io/2023/02/17/webflux/</id>
+    <published>2023-02-17T01:28:57.564Z</published>
+    <updated>2023-02-17T01:29:24.355Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://duanyushuai.github.io/2023/02/10/linux/"/>
+    <id>http://duanyushuai.github.io/2023/02/10/linux/</id>
+    <published>2023-02-10T01:50:08.054Z</published>
+    <updated>2023-02-10T02:47:18.258Z</updated>
+    
+    <content type="html"><![CDATA[<hr><hr><p><strong>查找文件名中包含某字符（如”elm”）的文件</strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /home/lijiajia/ -name <span class="string">&#x27;*elm*&#x27;</span></span><br></pre></td></tr></table></figure><p><strong>删除目录</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /root/logs/game </span><br></pre></td></tr></table></figure><p><strong>删除文件夹</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f /root/logs/game </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;查找文件名中包含某字符（如”elm”）的文件&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>netty学习</title>
+    <link href="http://duanyushuai.github.io/2023/01/30/netty%E7%AC%94%E8%AE%B0/"/>
+    <id>http://duanyushuai.github.io/2023/01/30/netty%E7%AC%94%E8%AE%B0/</id>
+    <published>2023-01-30T13:33:46.509Z</published>
+    <updated>2023-02-05T13:55:27.744Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="netty-笔记"><a href="#netty-笔记" class="headerlink" title="netty 笔记"></a>netty 笔记</h1><h4 id="零拷贝"><a href="#零拷贝" class="headerlink" title="零拷贝"></a>零拷贝</h4><p>传统IO，从直接内存DMA 拷贝到内核 在用CPU拷贝到用户态进行修改，在用cpu拷贝内核，在DMA拷贝到协议栈</p><p>mmap优化</p><p>通过内存映射，用户空间可以共享内核空间数据。</p><p>零拷贝指没有cpu拷贝   </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;netty-笔记&quot;&gt;&lt;a href=&quot;#netty-笔记&quot; class=&quot;headerlink&quot; title=&quot;netty 笔记&quot;&gt;&lt;/a&gt;netty 笔记&lt;/h1&gt;&lt;h4 id=&quot;零拷贝&quot;&gt;&lt;a href=&quot;#零拷贝&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>若依框架学习</title>
+    <link href="http://duanyushuai.github.io/2023/01/22/%E8%8B%A5%E4%BE%9D%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://duanyushuai.github.io/2023/01/22/%E8%8B%A5%E4%BE%9D%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-01-22T02:00:00.000Z</published>
+    <updated>2023-02-12T14:09:52.050Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="若依框架学习"><a href="#若依框架学习" class="headerlink" title="若依框架学习"></a>若依框架学习</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.profiles.active = prod</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;若依框架学习&quot;&gt;&lt;a href=&quot;#若依框架学习&quot; class=&quot;headerlink&quot; title=&quot;若依框架学习&quot;&gt;&lt;/a&gt;若依框架学习&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=</summary>
+      
+    
+    
+    
+    <category term="框架学习" scheme="http://duanyushuai.github.io/categories/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="框架学习" scheme="http://duanyushuai.github.io/tags/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态线程池</title>
+    <link href="http://duanyushuai.github.io/2023/01/13/%E5%8A%A8%E6%80%81%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+    <id>http://duanyushuai.github.io/2023/01/13/%E5%8A%A8%E6%80%81%E7%BA%BF%E7%A8%8B%E6%B1%A0/</id>
+    <published>2023-01-13T02:00:00.000Z</published>
+    <updated>2023-03-01T02:12:27.913Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="动态线程池"><a href="#动态线程池" class="headerlink" title="动态线程池"></a>动态线程池</h1><p><a href="https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html">https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html</a></p><p><a href="https://mp.weixin.qq.com/s/leoP_3uOtXsE55PMmSAVTg">https://mp.weixin.qq.com/s/leoP_3uOtXsE55PMmSAVTg</a></p><p><a href="https://mp.weixin.qq.com/s/4kir2LfMnyuApKwulnRAmA">https://mp.weixin.qq.com/s/4kir2LfMnyuApKwulnRAmA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;动态线程池&quot;&gt;&lt;a href=&quot;#动态线程池&quot; class=&quot;headerlink&quot; title=&quot;动态线程池&quot;&gt;&lt;/a&gt;动态线程池&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://tech.meituan.com/2020/04/02/java-pooling-</summary>
+      
+    
+    
+    
+    <category term="线程" scheme="http://duanyushuai.github.io/categories/%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+    <category term="多线程" scheme="http://duanyushuai.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>springboot源码</title>
+    <link href="http://duanyushuai.github.io/2023/01/10/springboot%E6%BA%90%E7%A0%81/"/>
+    <id>http://duanyushuai.github.io/2023/01/10/springboot%E6%BA%90%E7%A0%81/</id>
+    <published>2023-01-10T12:00:00.000Z</published>
+    <updated>2023-01-11T08:39:23.484Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Springboot源码"><a href="#Springboot源码" class="headerlink" title="Springboot源码"></a>Springboot源码</h1><p><code>@springbootApplication</code>注解包括</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="comment">//@AutoConfigurationPackage</span></span><br><span class="line"><span class="meta">@Import(&#123;Registrar.class&#125;)</span></span><br><span class="line"><span class="meta">@Import(&#123;AutoConfigurationImportSelector.class&#125;)</span></span><br><span class="line"><span class="meta">@ComponentScan(</span></span><br><span class="line"><span class="meta">    excludeFilters = &#123;@Filter(</span></span><br><span class="line"><span class="meta">    type = FilterType.CUSTOM,</span></span><br><span class="line"><span class="meta">    classes = &#123;TypeExcludeFilter.class&#125;</span></span><br><span class="line"><span class="meta">), @Filter(</span></span><br><span class="line"><span class="meta">    type = FilterType.CUSTOM,</span></span><br><span class="line"><span class="meta">    classes = &#123;AutoConfigurationExcludeFilter.class&#125;</span></span><br><span class="line"><span class="meta">)&#125;</span></span><br></pre></td></tr></table></figure><p><code>@Import(&#123;Registrar.class&#125;) </code>指定我们要扫描哪些包下组件</p><p><code>AutoConfigurationPackages</code>怎么创建对象的，就是<code>controller</code>等对象创建</p><p><code>@Import(&#123;AutoConfigurationImportSelector.class&#125;) </code> 中加载<code>classLoader.getResources(&quot;META-INF/spring.factories&quot;)</code></p><p>SPI机制 找到<code>@EnableAutoConfiguration</code>中全类名对应的值</p><p><img src="/../img/springboot%E6%BA%90%E7%A0%811.jpg"></p><p>有过滤组件，引入了包，自动配置才生效</p><p><code>Spring</code> 启动器 <code>springmvc</code>启动器</p><p>1.首先先启动<code>ServletWebServerFactoryAutoConfiguration</code>   servlet容器</p><p>2.在启动<code>DispatcherServletAutoConfiguration</code></p><h5 id="1-ServletWebServerFactoryAutoConfiguration"><a href="#1-ServletWebServerFactoryAutoConfiguration" class="headerlink" title="1. ServletWebServerFactoryAutoConfiguration"></a>1. ServletWebServerFactoryAutoConfiguration</h5><p><code>@EnableConfigurationProperties(ServlerProperties.class)</code>   </p><p>配置tomcat参数</p><p><code>@Import   WebServerFactoryCustomizerBeanPostProcessor</code></p><p>导入三种服务器 Tomcat 、jetty、Undertow 默认是Tomcat生效  </p><p>给容器中放入<code>TomcatServeletWebServerFactory </code>      </p><p><code>@ConditionalOnMissingBean(ServletWebServerFactory) </code>我们也可以自己放一个<code>ServletWebServerFactory</code></p><p>TomcatServeletWebServerFactory 里的getWebServer 创建new Tomcat() </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Springboot源码&quot;&gt;&lt;a href=&quot;#Springboot源码&quot; class=&quot;headerlink&quot; title=&quot;Springboot源码&quot;&gt;&lt;/a&gt;Springboot源码&lt;/h1&gt;&lt;p&gt;&lt;code&gt;@springbootApplication&lt;/</summary>
+      
+    
+    
+    
+    <category term="springboot" scheme="http://duanyushuai.github.io/categories/springboot/"/>
+    
+    
+    <category term="源码" scheme="http://duanyushuai.github.io/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>caffeine 本地缓存</title>
@@ -85,24 +226,26 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://duanyushuai.github.io/2023/01/04/springboot%E6%BA%90%E7%A0%81/"/>
-    <id>http://duanyushuai.github.io/2023/01/04/springboot%E6%BA%90%E7%A0%81/</id>
-    <published>2023-01-04T02:54:07.240Z</published>
-    <updated>2023-01-06T02:03:28.150Z</updated>
+    <title>dockerfile 编写</title>
+    <link href="http://duanyushuai.github.io/2023/01/03/dockerfile%E7%BC%96%E5%86%99/"/>
+    <id>http://duanyushuai.github.io/2023/01/03/dockerfile%E7%BC%96%E5%86%99/</id>
+    <published>2023-01-03T03:00:23.000Z</published>
+    <updated>2023-03-02T09:18:47.061Z</updated>
     
-    <content type="html"><![CDATA[<hr><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="dockerfile-编写"><a href="#dockerfile-编写" class="headerlink" title="dockerfile 编写"></a>dockerfile 编写</h1><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> alpine</span><br><span class="line"><span class="keyword">LABEL</span><span class="language-bash"> maintainer=<span class="string">&#x27;duanyushuai&#x27;</span> \</span></span><br><span class="line"><span class="language-bash">adv=dev\</span></span><br><span class="line"><span class="language-bash">aab=fff</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#运行的命令，安装了软件，修改了文件，默认用id=0 也就是root</span></span><br><span class="line"><span class="comment">#镜像构建运行的命令</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> 111</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> ping baidu.com </span></span><br></pre></td></tr></table></figure><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span><span class="language-bash"> 命令</span></span><br><span class="line"><span class="comment"># shell 形式 bash -c &quot;echo 111&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> 1111</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> [<span class="string">&quot;echo&quot;</span>,<span class="string">&quot;2222&quot;</span>]</span></span><br></pre></td></tr></table></figure><h3 id="ARG-和-ENV"><a href="#ARG-和-ENV" class="headerlink" title="ARG 和 ENV"></a>ARG 和 ENV</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定构建参数有效</span></span><br><span class="line"><span class="keyword">ARG</span> aaa =aaa</span><br><span class="line"><span class="comment"># 指定环境变量[为RUN以及CMD指定环境变量的]</span></span><br><span class="line"><span class="keyword">ENV</span> parm=<span class="number">1111</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> <span class="variable">$parm</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> [<span class="string">&quot;echo&quot;</span>,<span class="string">&quot;<span class="variable">$parm</span>&quot;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> <span class="built_in">sleep</span> 10; <span class="built_in">echo</span> <span class="variable">$parm</span></span></span><br></pre></td></tr></table></figure><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ARG</span> version=<span class="number">1.3</span>.<span class="number">0</span></span><br><span class="line"><span class="keyword">FROM</span> alpine:$version</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以用命令替换参数</span></span><br><span class="line">docker build --no-cache  --build-<span class="keyword">arg</span> version=<span class="string">&quot;1.55.4&quot;</span>  -t  [镜像名]：[镜像版本]  -f dockerfile .</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> app=duan</span><br><span class="line"></span><br><span class="line"><span class="comment">#构建期和运行期都可以生效，但只能在运行期修改</span></span><br><span class="line"></span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -e app=haha </span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"><span class="keyword">ENV</span> 的坑</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> msg1=hello</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> msg2=$&#123;msg1&#125;</span><br><span class="line"></span><br><span class="line">echo $&#123;msg1&#125;</span><br><span class="line">echo $&#123;msg2&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;/bin/sh&quot;</span>,<span class="string">&quot;-c&quot;</span>,<span class="string">&quot;echo <span class="variable">$&#123;msg1&#125;</span>;echo <span class="variable">$&#123;msg2&#125;</span>&quot;</span>]</span></span><br><span class="line"></span><br><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -it e msg1=666 </span></span><br><span class="line"><span class="comment">#输出的是666 hello </span></span><br><span class="line"><span class="comment">#原因是docker build 的时候，env的指已经写好了 msg1=hello。msg2 = hello</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="ADD-和COPY"><a href="#ADD-和COPY" class="headerlink" title="ADD 和COPY"></a>ADD 和COPY</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 把上下文的内容复制到镜像中，如果是压缩包自动解压，如果是远程自动下载</span></span><br><span class="line"><span class="comment">#自动下载</span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"> https://download.redis.io/releases/redis-6.2.1.tar.gz  /dest/    <span class="comment">#不加最后斜杠变为dest文件</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">#RUN指令并没有上下文关系 不能RUN cd /dest RUN ls -l</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">cd</span> /dest &amp;&amp; <span class="built_in">ls</span> -l</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#宿主机到镜像 自动解压 </span></span><br><span class="line"><span class="keyword">ADD</span><span class="language-bash"> *.tar.gz  /app/ </span></span><br><span class="line"></span><br><span class="line">不自动解压</span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash">  </span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="WORKDIR-和VOLUME"><a href="#WORKDIR-和VOLUME" class="headerlink" title="WORKDIR 和VOLUME"></a>WORKDIR 和VOLUME</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 为一下所有的命令运行指定了基础目录</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">WORKDIR</span><span class="language-bash"> abc 可以嵌套</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment"># pwd &amp;&amp; ls -l</span></span><br><span class="line"> <span class="keyword">RUN</span><span class="language-bash">  <span class="built_in">pwd</span> &amp;&amp; <span class="built_in">ls</span> -l</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">#-----------------------------</span></span><br><span class="line"> <span class="comment">#挂载容器内文件 ，没有就创建</span></span><br><span class="line"> <span class="comment">#指定了VOLUME，即使启动容器没有指定 -v 参数，我们也会自动进行匿名卷挂载</span></span><br><span class="line"> VOLUM [<span class="string">&quot;/hello&quot;</span>,<span class="string">&quot;/app&quot;</span>]</span><br><span class="line"> </span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mkdir</span> /hello &amp;&amp; <span class="built_in">mkdir</span> /app</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> 111 &gt; /hello/a.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> 222 &gt; /app/b.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#挂载之后</span></span><br><span class="line"><span class="comment"># 1）但是docker commit 提交当前容器的所有变化为镜像的时候，就会丢弃</span></span><br><span class="line"><span class="comment"># 2）VOLUME [&quot;/hello&quot;,&quot;/app&quot;] 容器以后自动挂载，在dockerfile中对VOLUME的所有修改都不生效</span></span><br><span class="line"><span class="comment"># 3）建议VOLUME 写在最后面</span></span><br><span class="line">VOUME [<span class="string">&quot;/hello&quot;</span>,<span class="string">&quot;/app&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这两句话没有生效</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> 4444 &gt;&gt; /hello/a.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">echo</span> 4444 &gt;&gt; /app/b.txt</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure><h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#暴露，只是一个声明，给程序员看的</span></span><br><span class="line"><span class="comment"># 给docker 看的 -d -P（随机分配端口）</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure><h3 id="CMD-和-ENTRYPOINT"><a href="#CMD-和-ENTRYPOINT" class="headerlink" title="CMD 和 ENTRYPOINT"></a>CMD 和 ENTRYPOINT</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;hr&gt;
-&lt;hr&gt;
-</summary>
+    <summary type="html">&lt;h1 id=&quot;dockerfile-编写&quot;&gt;&lt;a href=&quot;#dockerfile-编写&quot; class=&quot;headerlink&quot; title=&quot;dockerfile 编写&quot;&gt;&lt;/a&gt;dockerfile 编写&lt;/h1&gt;&lt;figure class=&quot;highlight dock</summary>
       
     
     
     
+    <category term="docker" scheme="http://duanyushuai.github.io/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="http://duanyushuai.github.io/tags/docker/"/>
     
   </entry>
   
@@ -307,162 +450,6 @@
     
     
     <category term="java web" scheme="http://duanyushuai.github.io/tags/java-web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>分布式事务</title>
-    <link href="http://duanyushuai.github.io/2022/08/14/%E4%BA%8B%E5%8A%A1/"/>
-    <id>http://duanyushuai.github.io/2022/08/14/%E4%BA%8B%E5%8A%A1/</id>
-    <published>2022-08-14T09:48:41.791Z</published>
-    <updated>2022-10-09T11:15:33.189Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h3 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h3><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><p>原子性 一致性 隔离性 持久性</p><h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><ol><li><strong>Read uncommitted</strong></li></ol><p>读未提交读 ，读到其他事务未提交的数据，脏读</p><ol start="2"><li><strong>Read committed</strong></li></ol><p>读提交读，读到另一个事务的提交数据，在一个事务中，读取的数据不一样，形成不可重复读</p><ol start="3"><li><p><strong>Repeatable read</strong></p><p>mysql 默认的隔离级别，在同一个事务里，select 的结果是事务开始时时间点的状态，因此，同样的 select 操作读到的结果会是一致的，但是，会有幻读现象。MySQL 的 InnoDB 引擎可以通过 next-key locks 机制来避免幻读。</p></li><li><p><strong>Serializable</strong></p></li></ol><p>序列化</p><h4 id="事务的传播行为"><a href="#事务的传播行为" class="headerlink" title="事务的传播行为"></a>事务的传播行为</h4><p><strong>1</strong>、<strong>PROPAGATION_REQUIRED</strong>：如果当前没有事务，就创建一个新事务，如果当前存在事务， </p><p>就加入该事务，该设置是最常用的设置。 </p><p><strong>2</strong>、<strong>PROPAGATION_SUPPORTS</strong>：支持当前事务，如果当前存在事务，就加入该事务，如果当 </p><p>前不存在事务，就以非事务执行。 </p><p><strong>3</strong>、<strong>PROPAGATION_MANDATORY</strong>：支持当前事务，如果当前存在事务，就加入该事务，如果 </p><p>当前不存在事务，就抛出异常。 </p><p><strong>4</strong>、<strong>PROPAGATION_REQUIRES_NEW</strong>：创建新事务，无论当前存不存在事务，都创建新事务。 </p><p><strong>5</strong>、<strong>PROPAGATION_NOT_SUPPORTED</strong>：以非事务方式执行操作，如果当前存在事务，就把当 </p><p>前事务挂起。 </p><p><strong>6</strong>、<strong>PROPAGATION_NEVER</strong>：以非事务方式执行，如果当前存在事务，则抛出异常。 </p><p><strong>7</strong>、<strong>PROPAGATION_NESTED</strong>：如果当前存在事务，则在嵌套事务内执行。如果当前没有事务， </p><p>则执行与 PROPAGATION_REQUIRED 类似的操作。</p><p><strong>同一个对象内事务方法互相调失效，原因绕过了代理对象</strong></p><p>解决：使用代理对象来调用事务方法</p><p> 1）、引入aop-starter;spring-boot-starter-aop; 引入aspectj</p><p> 2）、@EnableAspectJAutoProxy; 开启 aspectj 动态代理功能，以后的代理对象都是aspectj </p><p>0）、导入 spring-boot-starter-aop </p><p>1）、@EnableTransactionManagement(proxyTargetClass &#x3D; true) </p><p>2）、@EnableAspectJAutoProxy(exposeProxy&#x3D;true) </p><p>3）、AopContext.currentProxy() 调用方法 </p><h3 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h3><h4 id="CAP-原理"><a href="#CAP-原理" class="headerlink" title="CAP 原理"></a>CAP 原理</h4><p>CAP 原则又称 CAP 定理，指的是在一个分布式系统中 </p><p>一致性（Consistency）： </p><p>在分布式系统中的所有数据备份，在同一时刻是否同样的值。（等同于所有节点访问同一份最新的数据副本） </p><p>可用性（Availability） </p><p>在集群中一部分节点故障后，集群整体是否还能响应客户端的读写请求。（对数据 更新具备高可用性） </p><p>分区容错性（Partition tolerance） </p><p>大多数分布式系统都分布在多个子网络。每个子网络就叫做一个区（</p><p>partition）。 分区容错的意思是，区间通信可能失败。比如，一台服务器放在中国，另一台服务器放在美国，这就是两个区，它们之间可能无法通信。 </p><p>CAP 原则指的是，这三个要素最多只能同时实现两点，<strong>不可能三者兼顾</strong>。</p><p>一般来说，分区容错无法避免，因此可以认为 CAP 的 P 总是成立。CAP 定理告诉我们， </p><p>剩下的 C 和 A 无法同时做到。</p><p>分布式系统中实现一致性的 raft 算法、paxos </p><p><a href="http://thesecretlivesofdata.com/raft/">http://thesecretlivesofdata.com/raft/</a></p><h3 id="分布式事务解决方案"><a href="#分布式事务解决方案" class="headerlink" title="分布式事务解决方案"></a>分布式事务解决方案</h3><h5 id="2PC模式"><a href="#2PC模式" class="headerlink" title="2PC模式"></a>2PC模式</h5><p>数据库支持的 2PC【2 phase commit 二阶提交】，又叫做 XA Transactions。 </p><p>MySQL 从 5.5 版本开始支持，SQL Server 2005 开始支持，Oracle 7 开始支持。 </p><p>其中，XA 是一个两阶段提交协议，该协议分为以下两个阶段： </p><p>第一阶段：事务协调器要求每个涉及到事务的数据库预提交(precommit)此操作，并反映是 </p><p>否可以提交. </p><p>第二阶段：事务协调器要求每个数据库提交数据。 </p><p>其中，如果有任何一个数据库否决此次提交，那么所有数据库都会被要求回滚它们在此事务 </p><p>中的那部分信息。</p><ul><li>XA 协议比较简单，而且一旦商业数据库实现了 XA 协议，使用分布式事务的成本也比较</li></ul><p>低。 </p><ul><li><strong>XA</strong> <strong>性能不理想</strong>，特别是在交易下单链路，往往并发量很高，XA 无法满足高并发场景 </li><li>XA 目前在商业数据库支持的比较理想，<strong>在</strong> <strong>mysql</strong> <strong>数据库中支持的不太理想</strong>，mysql 的 XA 实现，没有记录 prepare 阶段日志，主备切换回导致主库与备库数据不一致。 许多 nosql 也没有支持 XA，这让 XA 的应用场景变得非常狭隘。 </li><li>也有 3PC，引入了超时机制（无论协调者还是参与者，在向对方发送请求后，若长时间 未收到回应则做出相应处理）</li></ul><h5 id="柔性事务-TCC-事务补偿型方案"><a href="#柔性事务-TCC-事务补偿型方案" class="headerlink" title="柔性事务 TCC 事务补偿型方案"></a>柔性事务 TCC <strong>事务补偿型方案</strong></h5><p>刚性事务：遵循 ACID 原则，强一致性。 </p><p>柔性事务：遵循 BASE 理论，最终一致性； </p><p>与刚性事务不同，柔性事务允许一定时间内，不同节点的数据不一致，但要求最终一致。</p><h5 id="柔性事务-最大努力通知方案"><a href="#柔性事务-最大努力通知方案" class="headerlink" title="柔性事务 最大努力通知方案"></a>柔性事务 最大努力通知方案</h5><p>按规律进行通知，<strong>不保证数据一定能通知成功，但会提供可查询操作接口进行核对</strong>。这种 </p><p>方案主要用在与第三方系统通讯时，比如：调用微信或支付宝支付后的支付结果通知。这种 </p><p>方案也是结合 MQ 进行实现，例如：通过 MQ 发送 http 请求，设置最大通知次数。达到通 </p><p>知次数后即不再通知。 </p><p>案例：银行通知、商户通知等（各大交易业务平台间的商户通知：多次通知、查询校对、对 </p><p>账文件），支付宝的支付成功异步回调</p><h5 id="柔性事务-可靠消息-最终一致性"><a href="#柔性事务-可靠消息-最终一致性" class="headerlink" title="柔性事务 + 可靠消息 + 最终一致性"></a>柔性事务 + 可靠消息 + 最终一致性</h5><p>实现：业务处理服务在业务事务提交之前，向实时消息服务请求发送消息，实时消息服务只 </p><p>记录消息数据，而不是真正的发送。业务处理服务在业务事务提交之后，向实时消息服务确 </p><p>认发送。只有在得到确认发送指令后，实时消息服务才会真正发送。</p><h3 id="seata"><a href="#seata" class="headerlink" title="seata"></a>seata</h3><hr><ol><li><p>每一个服务创建数据表 undo_log</p></li><li><p>安装事务协调器：seata-server : <a href="http://github.com/seata/seata/releases">http://github.com/seata/seata/releases</a></p></li><li><p>整合</p><p>1）导入依赖 spring-cloud-starter-alibaba-seata </p><p>2）解压并启动seata-server：</p><p>​      Registry.conf: 注册中心配置 </p><p> 3）配置代理数据源</p><p> 4）每个微服务导入</p><p> registry.conf</p><p>  file.conf</p></li></ol><p>  vgroup_mapping.{application.name}-fescar-service-group &#x3D; “default”</p><p>​      5)  加globaTransactional</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot; title=&quot;事务&quot;&gt;&lt;/a&gt;事务&lt;/h1&gt;&lt;h3 id=&quot;数据库事务&quot;&gt;&lt;a href=&quot;#数据库事务&quot; class=&quot;headerlink&quot; title=&quot;数据库事务&quot;&gt;&lt;/a&gt;数据库事</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>接口幂等性</title>
-    <link href="http://duanyushuai.github.io/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/"/>
-    <id>http://duanyushuai.github.io/2022/08/10/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/</id>
-    <published>2022-08-10T02:00:00.000Z</published>
-    <updated>2022-08-11T14:06:32.123Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="接口幂等性"><a href="#接口幂等性" class="headerlink" title="接口幂等性"></a>接口幂等性</h1><p>问题出现</p><ol><li>用户多次点击</li><li>用户回退在提交</li><li>feign触发重试</li></ol><h3 id="1-token"><a href="#1-token" class="headerlink" title="1.token"></a>1.token</h3><p> token 的获取、比较和删除必须是原子性的</p><p>使用redis和lua脚本</p><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> redis.call(<span class="string">&#x27;get&#x27;</span>,KEYS[<span class="number">1</span>]==ARGV[<span class="number">1</span>] <span class="keyword">then</span> <span class="keyword">return</span> is.call(<span class="string">&#x27;del&#x27;</span>,KEYS[<span class="number">1</span>])) <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span> <span class="keyword">end</span></span><br></pre></td></tr></table></figure><h3 id="2-各种锁机制"><a href="#2-各种锁机制" class="headerlink" title="2. 各种锁机制"></a>2. 各种锁机制</h3><h4 id="1-数据库悲观锁"><a href="#1-数据库悲观锁" class="headerlink" title="1. 数据库悲观锁"></a>1. 数据库悲观锁</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from xxxx where id=1 for update</span><br></pre></td></tr></table></figure><p>id一定是主键和唯一索引，不然可能造成锁表</p><h4 id="2-数据库乐观锁"><a href="#2-数据库乐观锁" class="headerlink" title="2. 数据库乐观锁"></a>2. 数据库乐观锁</h4><p>首先获取这条数据的版本号version，然后操作的时候带上版本号</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update goods <span class="type">set</span> <span class="variable">count</span> <span class="operator">=</span> count -<span class="number">1</span> ,version = version + <span class="number">1</span> <span class="type">where</span> <span class="variable">id</span> <span class="operator">=</span> <span class="number">2</span> <span class="type">and</span> <span class="variable">version</span> <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure><p>乐观锁处理读多写少问题</p><h3 id="3-业务分布式锁"><a href="#3-业务分布式锁" class="headerlink" title="3. 业务分布式锁"></a>3. 业务分布式锁</h3><h3 id="4-各种唯一索引"><a href="#4-各种唯一索引" class="headerlink" title="4. 各种唯一索引"></a>4. 各种唯一索引</h3><h4 id="数据库的唯一约束"><a href="#数据库的唯一约束" class="headerlink" title="数据库的唯一约束"></a>数据库的唯一约束</h4><p>插入数据按照唯一索引，比如订单号，相同的订单号就不能重复插入。需要不是自增主键，代码生成全局唯一id。</p><p>在分库分表下，根据路由规则，要路由到同一张表，才能是唯一索引有意义。</p><h4 id="redis防重"><a href="#redis防重" class="headerlink" title="redis防重"></a>redis防重</h4><p>我们可以计算上传数据的MD5值，存到redis set，每次处理数据，去和redis进行匹配</p><h4 id="防重表"><a href="#防重表" class="headerlink" title="防重表"></a>防重表</h4><p>把orderNo作为去重表的唯一索引插入mysql，去重表和业务表处在同一数据库，处于同一事务，方便回滚</p><h3 id="5-全局请求唯一id"><a href="#5-全局请求唯一id" class="headerlink" title="5.全局请求唯一id"></a>5.全局请求唯一id</h3><p>调用接口生成唯一id，保存在redis的集合中。</p><p>可以使用nginx设置请求的唯一id</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxy_set_header  X-Request-Id $request_id;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;接口幂等性&quot;&gt;&lt;a href=&quot;#接口幂等性&quot; class=&quot;headerlink&quot; title=&quot;接口幂等性&quot;&gt;&lt;/a&gt;接口幂等性&lt;/h1&gt;&lt;p&gt;问题出现&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;用户多次点击&lt;/li&gt;
-&lt;li&gt;用户回退在提交&lt;/li&gt;
-&lt;li&gt;feign触发</summary>
-      
-    
-    
-    
-    <category term="java web" scheme="http://duanyushuai.github.io/categories/java-web/"/>
-    
-    
-    <category term="java web" scheme="http://duanyushuai.github.io/tags/java-web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>redis 缓存</title>
-    <link href="http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/"/>
-    <id>http://duanyushuai.github.io/2022/07/11/redis%20%E7%BC%93%E5%AD%98/</id>
-    <published>2022-07-11T13:46:55.260Z</published>
-    <updated>2022-07-12T13:52:10.751Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="redis-缓存"><a href="#redis-缓存" class="headerlink" title="redis 缓存"></a>redis 缓存</h1><h4 id="那些数据适合缓存"><a href="#那些数据适合缓存" class="headerlink" title="那些数据适合缓存"></a>那些数据适合缓存</h4><ol><li><p>即时性和数据一致性要求不高的</p></li><li><p>读多写少</p></li></ol><p>使用redis</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line"> &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line"> &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><p>简单的分布式锁</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Map&lt;String, List&lt;Catelog2Vo&gt;&gt; <span class="title function_">getCatalogJsonFromDbWithRedislock</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1 占分布式锁，去redis占坑</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">uuid</span> <span class="operator">=</span> UUID.randomUUID().toString();</span><br><span class="line">        <span class="type">Boolean</span> <span class="variable">lock</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(<span class="string">&quot;lock&quot;</span>, uuid, <span class="number">300</span>, TimeUnit.SECONDS);</span><br><span class="line">        <span class="keyword">if</span> (lock) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;获取分布式锁成功&quot;</span>);</span><br><span class="line">            <span class="comment">// 加锁成功...执行业务</span></span><br><span class="line">            <span class="comment">// 2 设置过期时间</span></span><br><span class="line"><span class="comment">//            redisTemplate.expire(&quot;lock&quot;, 30, TimeUnit.SECONDS);</span></span><br><span class="line">            Map&lt;String, List&lt;Catelog2Vo&gt;&gt; dataFromDB;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                dataFromDB = getDataFromDB();</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">script</span> <span class="operator">=</span> <span class="string">&quot;if redis.call(&#x27;get&#x27;, KEYS[1]) == ARGV[1] then return redis.call(&#x27;del&#x27;, KEYS[1]) else return 0 end&quot;</span>;</span><br><span class="line">                <span class="comment">// 删除锁</span></span><br><span class="line">                <span class="type">Long</span> <span class="variable">lock1</span> <span class="operator">=</span> redisTemplate.execute(<span class="keyword">new</span> <span class="title class_">DefaultRedisScript</span>&lt;Long&gt;(script, Long.class), Arrays.asList(<span class="string">&quot;lock&quot;</span>), uuid);</span><br><span class="line">            &#125;</span><br><span class="line"><span class="comment">//            redisTemplate.delete(&quot;lock&quot;);</span></span><br><span class="line">            <span class="comment">// 获取值对比 + 对比成功删除 = 原子操作  lua脚本解锁</span></span><br><span class="line"><span class="comment">//            String lockValue = redisTemplate.opsForValue().get(&quot;lock&quot;);</span></span><br><span class="line"><span class="comment">//            if (uuid.equals(lockValue)) &#123;</span></span><br><span class="line"><span class="comment">//                // 删除我自己的锁</span></span><br><span class="line"><span class="comment">//                redisTemplate.delete(&quot;lock&quot;);</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> dataFromDB;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 加锁失败</span></span><br><span class="line">            <span class="comment">// 休眠100ms重试</span></span><br><span class="line">            System.out.println(<span class="string">&quot;获取分布式锁失败...等待重试&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">200</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> getCatalogJsonFromDbWithRedislock(); <span class="comment">// 自旋的方式</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;redis-缓存&quot;&gt;&lt;a href=&quot;#redis-缓存&quot; class=&quot;headerlink&quot; title=&quot;redis 缓存&quot;&gt;&lt;/a&gt;redis 缓存&lt;/h1&gt;&lt;h4 id=&quot;那些数据适合缓存&quot;&gt;&lt;a href=&quot;#那些数据适合缓存&quot; class=&quot;head</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>nginx使用</title>
-    <link href="http://duanyushuai.github.io/2022/07/02/nginx%E4%BD%BF%E7%94%A8/"/>
-    <id>http://duanyushuai.github.io/2022/07/02/nginx%E4%BD%BF%E7%94%A8/</id>
-    <published>2022-07-02T10:30:26.308Z</published>
-    <updated>2022-07-02T10:34:50.961Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="nginx使用"><a href="#nginx使用" class="headerlink" title="nginx使用"></a>nginx使用</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;nginx使用&quot;&gt;&lt;a href=&quot;#nginx使用&quot; class=&quot;headerlink&quot; title=&quot;nginx使用&quot;&gt;&lt;/a&gt;nginx使用&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sku和spu数据库设计</title>
-    <link href="http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://duanyushuai.github.io/2022/06/26/sku%E5%92%8Cspu%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</id>
-    <published>2022-06-26T10:50:48.206Z</published>
-    <updated>2022-07-03T02:56:31.206Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="sku和spu数据库设计"><a href="#sku和spu数据库设计" class="headerlink" title="sku和spu数据库设计"></a>sku和spu数据库设计</h2><p><img src="/../img/skuspu1.png"></p><p><img src="/../img/skuspu2.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;sku和spu数据库设计&quot;&gt;&lt;a href=&quot;#sku和spu数据库设计&quot; class=&quot;headerlink&quot; title=&quot;sku和spu数据库设计&quot;&gt;&lt;/a&gt;sku和spu数据库设计&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/../img/skuspu1.png&quot;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>自定义注解</title>
-    <link href="http://duanyushuai.github.io/2022/06/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%EF%BC%88%E6%A0%A1%E9%AA%8C%E5%92%8C%E6%97%A5%E5%BF%97%EF%BC%89/"/>
-    <id>http://duanyushuai.github.io/2022/06/26/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%EF%BC%88%E6%A0%A1%E9%AA%8C%E5%92%8C%E6%97%A5%E5%BF%97%EF%BC%89/</id>
-    <published>2022-06-26T03:34:51.020Z</published>
-    <updated>2022-07-02T07:51:02.580Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="自定义注解（校验和日志）"><a href="#自定义注解（校验和日志）" class="headerlink" title="自定义注解（校验和日志）"></a>自定义注解（校验和日志）</h2><h2 id="JSR303-自定义校验"><a href="#JSR303-自定义校验" class="headerlink" title="JSR303 自定义校验"></a>JSR303 自定义校验</h2><h4 id="创建ListValue校验注解"><a href="#创建ListValue校验注解" class="headerlink" title="创建ListValue校验注解"></a>创建ListValue校验注解</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yxj.gulimall.common.valid;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.validation.Constraint;</span><br><span class="line"><span class="keyword">import</span> javax.validation.Payload;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 自定义校验注解</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Constraint(</span></span><br><span class="line"><span class="meta">        validatedBy = &#123;ListValueConstraintValidator.class&#125;</span></span><br><span class="line"><span class="meta">)</span></span><br><span class="line"><span class="meta">@Target(&#123;ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> ListValue &#123;</span><br><span class="line">    String <span class="title function_">message</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;&#123;com.chenxin.gulimail.common.valid.ListValue.message&#125;&quot;</span>;</span><br><span class="line"></span><br><span class="line">    Class&lt;?&gt;[] groups() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    Class&lt;? <span class="keyword">extends</span> <span class="title class_">Payload</span>&gt;[] payload() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span>[] vals() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="ListValueConstraintValidator校验器"><a href="#ListValueConstraintValidator校验器" class="headerlink" title="ListValueConstraintValidator校验器"></a>ListValueConstraintValidator校验器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    Set&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 初始化</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> constraintAnnotation</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">initialize</span><span class="params">(ListValue constraintAnnotation)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] vals = constraintAnnotation.vals();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> val : vals) &#123;</span><br><span class="line">            set.add(val);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 真正的校验规则</span></span><br><span class="line"><span class="comment">     * 判断是否校验成功</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> integer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> constraintValidatorContext</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(Integer integer, ConstraintValidatorContext constraintValidatorContext)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> set.contains(integer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;自定义注解（校验和日志）&quot;&gt;&lt;a href=&quot;#自定义注解（校验和日志）&quot; class=&quot;headerlink&quot; title=&quot;自定义注解（校验和日志）&quot;&gt;&lt;/a&gt;自定义注解（校验和日志）&lt;/h2&gt;&lt;h2 id=&quot;JSR303-自定义校验&quot;&gt;&lt;a href=&quot;#J</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>redis Guava 缓存</title>
-    <link href="http://duanyushuai.github.io/2022/06/26/redis-Guava-%E7%BC%93%E5%AD%98/"/>
-    <id>http://duanyushuai.github.io/2022/06/26/redis-Guava-%E7%BC%93%E5%AD%98/</id>
-    <published>2022-06-26T02:00:00.000Z</published>
-    <updated>2022-07-24T13:18:01.257Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="redis-Guava-缓存"><a href="#redis-Guava-缓存" class="headerlink" title="redis Guava 缓存"></a>redis Guava 缓存</h2><h3 id="redis-懒加载"><a href="#redis-懒加载" class="headerlink" title="redis 懒加载"></a>redis 懒加载</h3><p>数据在新增到 MySQL 不进行缓存，在精确查找进行缓存，做到查询即缓存，不查询不缓存。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 伪代码示例 Xx代表你的的业务对象 如User Goods等等</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">XxLazyCache</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedisTemplate&lt;String, Xx&gt; redisTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> XxService xxService;<span class="comment">// 你的业务service</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 查询 通过查询缓存是否存在驱动缓存加载 建议在前置业务保证id对应数据是绝对存在于数据库中的</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> Xx <span class="title function_">getXx</span><span class="params">(<span class="type">int</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 1.查询缓存里面有没有数据</span></span><br><span class="line">        <span class="type">Xx</span> <span class="variable">xxCache</span> <span class="operator">=</span> getXxFromCache(id);</span><br><span class="line">        <span class="keyword">if</span>(xxCache != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> xxCache;<span class="comment">// 卫语句使代码更有利于阅读</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 2.查询数据库获取数据 我们假定到业务这一步，传过来的id都在数据库中有对应数据</span></span><br><span class="line">        <span class="type">Xx</span> <span class="variable">xx</span> <span class="operator">=</span> xxService.getXxById(id);</span><br><span class="line">        <span class="comment">// 3.设置缓存、这一步相当于Redis缓存懒加载，下次再查询此id，则会走缓存</span></span><br><span class="line">        setXxFromCache(xx);</span><br><span class="line">        <span class="keyword">return</span> xx;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 对xx数据进行修改或者删除操作 操作数据库成功后 删除缓存</span></span><br><span class="line"><span class="comment">     * 删除请求 - 删除数据库数据 删除缓存</span></span><br><span class="line"><span class="comment">     * 修改请求 - 更新数据库数据 删除缓存 下次在查询时候就会从数据库拉取新的数据到缓存中</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteXxFromCache</span><span class="params">(<span class="type">long</span> id)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;Xx:&quot;</span> + xx.getId();</span><br><span class="line">        redisTemplate.delete(key);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">setXxFromCache</span><span class="params">(Xx xx)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;Xx:&quot;</span> + xx.getId();</span><br><span class="line">        redisTemplate.opsForValue().set(key, xx);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Xx <span class="title function_">getXxFromCache</span><span class="params">(<span class="type">int</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 通过缓存前缀拼装唯一主键作为缓存Key 如Xxx信息 就是Xxx:id</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;Xx:&quot;</span> + id;</span><br><span class="line">        <span class="keyword">return</span> redisTemplate.opsForValue().get(key);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 业务类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">XxServie</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> XxLazyCache xxLazyCache;</span><br><span class="line">    <span class="comment">// 查询数据库</span></span><br><span class="line">    <span class="keyword">public</span> Xx <span class="title function_">getXxById</span><span class="params">(<span class="type">long</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 省略实现</span></span><br><span class="line">        <span class="keyword">return</span> xx;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">updateXx</span><span class="params">(Xx xx)</span> &#123;</span><br><span class="line">        <span class="comment">// 更新MySQL数据 省略</span></span><br><span class="line">        <span class="comment">// 删除缓存</span></span><br><span class="line">        xxLazyCache.deleteXxFromCache(xx.getId());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteXx</span><span class="params">(<span class="type">long</span> id)</span> &#123;</span><br><span class="line">        <span class="comment">// 删除MySQL数据 省略</span></span><br><span class="line">        <span class="comment">// 删除缓存</span></span><br><span class="line">        xxLazyCache.deleteXxFromCache(xx.getId());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 实体类</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Xx</span> &#123;</span><br><span class="line">    <span class="comment">// 业务主键</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="comment">// ...省略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;redis-Guava-缓存&quot;&gt;&lt;a href=&quot;#redis-Guava-缓存&quot; class=&quot;headerlink&quot; title=&quot;redis Guava 缓存&quot;&gt;&lt;/a&gt;redis Guava 缓存&lt;/h2&gt;&lt;h3 id=&quot;redis-懒加载&quot;&gt;&lt;a hre</summary>
-      
-    
-    
-    
-    <category term="Guava" scheme="http://duanyushuai.github.io/categories/Guava/"/>
-    
-    <category term="redis" scheme="http://duanyushuai.github.io/categories/Guava/redis/"/>
-    
-    
-    <category term="Guava" scheme="http://duanyushuai.github.io/tags/Guava/"/>
-    
-    <category term="redis" scheme="http://duanyushuai.github.io/tags/redis/"/>
     
   </entry>
   
