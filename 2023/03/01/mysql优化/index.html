@@ -25,11 +25,15 @@
 <meta property="og:site_name" content="Duan">
 <meta property="og:description" content="msyql性能优化1.系统配置优化1.1  内存读取数据1调大 innodb_buffer_pool_size  1.2 数据预热默认情况，仅仅有某条数据被读取一次，才会缓存在 innodb_buffer_pool。所以，数据库刚刚启动，须要进行数据预热，将磁盘上的全部数据缓存到内存中。数据预热能够提高读取速度。 1.3降低磁盘写入1.增大redolog，减少落盘次数 innodb_log_fil">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://duanyushuai.github.io/img/mysql%E4%BC%98%E5%8C%961.jpeg">
+<meta property="og:image" content="http://duanyushuai.github.io/img/mysql%E4%BC%98%E5%8C%962.jpeg">
+<meta property="og:image" content="http://duanyushuai.github.io/img/mysql%E4%BC%98%E5%8C%963.jpeg">
 <meta property="article:published_time" content="2023-03-01T02:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-25T06:22:50.349Z">
+<meta property="article:modified_time" content="2023-03-31T07:35:51.971Z">
 <meta property="article:author" content="小段">
 <meta property="article:tag" content="msyql">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://duanyushuai.github.io/img/mysql%E4%BC%98%E5%8C%961.jpeg">
   <!-- Canonical links -->
   <link rel="canonical" href="http://duanyushuai.github.io/2023/03/01/mysql%E4%BC%98%E5%8C%96/index.html">
   
@@ -219,7 +223,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Guava/">Guava</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Guava/redis/">redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/">谷粒商城</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/Jvisualvm/">Jvisualvm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java-web/">java web</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/">java各种变量</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/msyql/">msyql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rabbitMQ/">rabbitMQ</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/springboot/">springboot</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/">框架学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BA%BF%E7%A8%8B/">线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Guava/">Guava</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Guava/redis/">redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/">谷粒商城</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/Jvisualvm/">Jvisualvm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java-web/">java web</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/">java各种变量</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/msyql/">msyql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rabbitMQ/">rabbitMQ</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/springboot/">springboot</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/">框架学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BA%BF%E7%A8%8B/">线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -229,7 +233,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CompletableFuture/" rel="tag">CompletableFuture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Guava/" rel="tag">Guava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-web/" rel="tag">java web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/" rel="tag">java各种变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/msyql/" rel="tag">msyql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rabbitMQ/" rel="tag">rabbitMQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/" rel="tag">redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" rel="tag">框架学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%93%E5%AD%98/" rel="tag">缓存</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%90%E6%B5%81/" rel="tag">限流</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CompletableFuture/" rel="tag">CompletableFuture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Guava/" rel="tag">Guava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-web/" rel="tag">java web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/" rel="tag">java各种变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/msyql/" rel="tag">msyql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rabbitMQ/" rel="tag">rabbitMQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/" rel="tag">redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" rel="tag">框架学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B4%A2%E5%BC%95/" rel="tag">索引</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%93%E5%AD%98/" rel="tag">缓存</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%90%E6%B5%81/" rel="tag">限流</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -239,7 +243,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/CompletableFuture/" style="font-size: 13px;">CompletableFuture</a> <a href="/tags/Guava/" style="font-size: 13px;">Guava</a> <a href="/tags/HashMap/" style="font-size: 13px;">HashMap</a> <a href="/tags/docker/" style="font-size: 13.25px;">docker</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/java-web/" style="font-size: 13.75px;">java web</a> <a href="/tags/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/" style="font-size: 13px;">java各种变量</a> <a href="/tags/maven/" style="font-size: 13px;">maven</a> <a href="/tags/msyql/" style="font-size: 13px;">msyql</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/rabbitMQ/" style="font-size: 13px;">rabbitMQ</a> <a href="/tags/redis/" style="font-size: 13px;">redis</a> <a href="/tags/springboot/" style="font-size: 13.5px;">springboot</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13px;">多线程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13px;">工具</a> <a href="/tags/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" style="font-size: 13px;">框架学习</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 13px;">深度学习</a> <a href="/tags/%E6%BA%90%E7%A0%81/" style="font-size: 13px;">源码</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.25px;">算法</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 13px;">缓存</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 13px;">读书</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 13px;">链表</a> <a href="/tags/%E9%99%90%E6%B5%81/" style="font-size: 13px;">限流</a>
+      <a href="/tags/CompletableFuture/" style="font-size: 13px;">CompletableFuture</a> <a href="/tags/Guava/" style="font-size: 13px;">Guava</a> <a href="/tags/HashMap/" style="font-size: 13px;">HashMap</a> <a href="/tags/docker/" style="font-size: 13.25px;">docker</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/java-web/" style="font-size: 13.75px;">java web</a> <a href="/tags/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/" style="font-size: 13px;">java各种变量</a> <a href="/tags/maven/" style="font-size: 13px;">maven</a> <a href="/tags/msyql/" style="font-size: 13px;">msyql</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/rabbitMQ/" style="font-size: 13px;">rabbitMQ</a> <a href="/tags/redis/" style="font-size: 13px;">redis</a> <a href="/tags/springboot/" style="font-size: 13.5px;">springboot</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13px;">多线程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13px;">工具</a> <a href="/tags/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" style="font-size: 13px;">框架学习</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 13px;">深度学习</a> <a href="/tags/%E6%BA%90%E7%A0%81/" style="font-size: 13px;">源码</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.25px;">算法</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 13px;">索引</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 13px;">缓存</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 13px;">读书</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 13px;">链表</a> <a href="/tags/%E9%99%90%E6%B5%81/" style="font-size: 13px;">限流</a>
     </div>
   </div>
 
@@ -248,7 +252,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -260,6 +264,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/03/29/mysql%E7%B4%A2%E5%BC%95/" class="title">msyql索引</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-29T02:00:00.000Z" itemprop="datePublished">2023-03-29</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -316,21 +335,6 @@
               </p>
               <p class="item-date">
                 <time datetime="2023-02-22T06:14:11.674Z" itemprop="datePublished">2023-02-22</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2023/02/10/linux/" class="title">常用linux命令</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2023-02-10T01:50:08.054Z" itemprop="datePublished">2023-02-10</time>
               </p>
             </div>
           </li>
@@ -392,10 +396,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/03/01/mysql%E4%BC%98%E5%8C%96/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 321(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.5k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5(分)</span>
 	
 
       </div>
@@ -411,7 +415,96 @@
 <p>生产中不开通用查询日志，遇到性能问题开慢查询日志</p>
 <h2 id="2-表结构优化"><a href="#2-表结构优化" class="headerlink" title="2. 表结构优化"></a>2. 表结构优化</h2><h4 id="2-1-设计中间表"><a href="#2-1-设计中间表" class="headerlink" title="2.1 设计中间表"></a>2.1 设计中间表</h4><h4 id="2-2-设计冗余字段"><a href="#2-2-设计冗余字段" class="headerlink" title="2.2 设计冗余字段"></a>2.2 设计冗余字段</h4><h4 id="2-3拆表"><a href="#2-3拆表" class="headerlink" title="2.3拆表"></a>2.3拆表</h4><p>对于表中经常不被使用的字段或者存储数据比较多的字段，考虑拆表</p>
 <h4 id="2-5-字段的设计"><a href="#2-5-字段的设计" class="headerlink" title="2.5 字段的设计"></a><strong>2.5</strong> 字段的设计</h4><p>字段宽度尽可能小，尽量把字段设置为NOTNULL，能用数字的用数值类型</p>
-<h2 id="3-sql语句，索引优化"><a href="#3-sql语句，索引优化" class="headerlink" title="3. sql语句，索引优化"></a>3. sql语句，索引优化</h2><h4 id="3-1-EXPLAIN-查看索引使用情况"><a href="#3-1-EXPLAIN-查看索引使用情况" class="headerlink" title="3.1 EXPLAIN 查看索引使用情况"></a>3.1 EXPLAIN 查看索引使用情况</h4><h4 id="3-2-SQL语句中-IN-包含的值不应过多"><a href="#3-2-SQL语句中-IN-包含的值不应过多" class="headerlink" title="3.2 SQL语句中 IN 包含的值不应过多"></a>3.2 SQL语句中 IN 包含的值不应过多</h4><h4 id="3-3-SELECT-语句务必指明字段名称"><a href="#3-3-SELECT-语句务必指明字段名称" class="headerlink" title="3.3 SELECT 语句务必指明字段名称"></a>3.3 SELECT 语句务必指明字段名称</h4><h4 id="3-4-当只需要一条数据的时候，使用-limit-1"><a href="#3-4-当只需要一条数据的时候，使用-limit-1" class="headerlink" title="3.4 当只需要一条数据的时候，使用  limit 1"></a><strong>3.4</strong> 当只需要一条数据的时候，使用  limit 1</h4><h4 id="3-5-排序字段加索引"><a href="#3-5-排序字段加索引" class="headerlink" title="3.5  排序字段加索引"></a>3.5  排序字段加索引</h4>
+<h2 id="3-sql语句，索引优化"><a href="#3-sql语句，索引优化" class="headerlink" title="3. sql语句，索引优化"></a>3. sql语句，索引优化</h2><h4 id="3-1-EXPLAIN-查看索引使用情况"><a href="#3-1-EXPLAIN-查看索引使用情况" class="headerlink" title="3.1 EXPLAIN 查看索引使用情况"></a>3.1 EXPLAIN 查看索引使用情况</h4><h4 id="3-2-SQL语句中-IN-包含的值不应过多"><a href="#3-2-SQL语句中-IN-包含的值不应过多" class="headerlink" title="3.2 SQL语句中 IN 包含的值不应过多"></a>3.2 SQL语句中 IN 包含的值不应过多</h4><h4 id="3-3-SELECT-语句务必指明字段名称"><a href="#3-3-SELECT-语句务必指明字段名称" class="headerlink" title="3.3 SELECT 语句务必指明字段名称"></a>3.3 SELECT 语句务必指明字段名称</h4><h4 id="3-4-当只需要一条数据的时候，使用-limit-1"><a href="#3-4-当只需要一条数据的时候，使用-limit-1" class="headerlink" title="3.4 当只需要一条数据的时候，使用  limit 1"></a><strong>3.4</strong> 当只需要一条数据的时候，使用  limit 1</h4><h4 id="3-5-排序字段加索引"><a href="#3-5-排序字段加索引" class="headerlink" title="3.5  排序字段加索引"></a>3.5  排序字段加索引</h4><h4 id="3-6-不使用ORDER-BY-RAND"><a href="#3-6-不使用ORDER-BY-RAND" class="headerlink" title="3.6 不使用ORDER BY RAND()"></a>3.6 不使用ORDER BY RAND()</h4><h4 id="3-7-如果限制条件中其他字段没有索引，尽量少用-or"><a href="#3-7-如果限制条件中其他字段没有索引，尽量少用-or" class="headerlink" title="3.7 如果限制条件中其他字段没有索引，尽量少用 or"></a>3.7 如果限制条件中其他字段没有索引，尽量少用 or</h4><h4 id="3-8-区分in-和exists、not-in和not-exists"><a href="#3-8-区分in-和exists、not-in和not-exists" class="headerlink" title="3.8 区分in 和exists、not in和not exists"></a>3.8 区分in 和exists、not in和not exists</h4><p>区分in和exists主要是造成了驱动顺序的改变（这是性能变化的关键），如果是exists，那么以外层表为</p>
+<p>驱动表，先被访问，如果是IN，那么先执行子查询。所以IN适合于外表大而内表小的情况；EXISTS适合</p>
+<p>于外表小而内表大的情况。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from tbiguser limit 9999998, 2;</span><br><span class="line">select * from tbiguser where id&gt;9999998 limit 2;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-9不建议使用-前缀模糊查询"><a href="#3-9不建议使用-前缀模糊查询" class="headerlink" title="3.9不建议使用%前缀模糊查询"></a>3.9不建议使用%前缀模糊查询</h4><h4 id="3-10避免在where子句中对字段进行表达式操作"><a href="#3-10避免在where子句中对字段进行表达式操作" class="headerlink" title="3.10避免在where子句中对字段进行表达式操作"></a>3.10避免在where子句中对字段进行表达式操作</h4><h4 id="3-11避免隐式类型转换"><a href="#3-11避免隐式类型转换" class="headerlink" title="3.11避免隐式类型转换"></a>3.11避免隐式类型转换</h4><h4 id="3-12对于联合索引来说，要遵守最左前缀法则"><a href="#3-12对于联合索引来说，要遵守最左前缀法则" class="headerlink" title="3.12对于联合索引来说，要遵守最左前缀法则"></a>3.12对于联合索引来说，要遵守最左前缀法则</h4><h4 id="3-13-使用JOIN-优化，尽量选择少表作为驱动表"><a href="#3-13-使用JOIN-优化，尽量选择少表作为驱动表" class="headerlink" title="3.13 使用JOIN 优化，尽量选择少表作为驱动表"></a>3.13 使用JOIN 优化，尽量选择少表作为驱动表</h4><h2 id="4-explain使用"><a href="#4-explain使用" class="headerlink" title="4.explain使用"></a>4.explain使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">----+-------------+----------+------+---------------+------+---------+------+------+-------+</span><br><span class="line">| id | select_type | table    | type | possible_keys | key  | key_len | ref  | rows | Extra |</span><br><span class="line">+----+-------------+----------+------+---------------+------+---------+------+------+-------+</span><br><span class="line">|  1 | SIMPLE      | zz_users | ALL  | NULL          | NULL | NULL    | NULL |    3 |       |</span><br><span class="line">+----+-------------+----------+------+---------------+------+---------+------+------+-------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>id</code>：这是执行计划的<code>ID</code>值，这个值越大，表示执行的优先级越高。</p>
+<p><code>select_type</code>：当前查询语句的类型，有如下几个值：</p>
+<ul>
+<li><code>simple</code>：简单查询。</li>
+<li><code>primary</code>：复杂查询的外层查询。</li>
+<li><code>subquery</code>：包含在查询语句中的子查询。</li>
+<li><code>derived</code>：包含在<code>FROM</code>中的子查询。</li>
+</ul>
+<p><code>table</code>：表示当前这个执行计划是基于那张表执行的。</p>
+<p><code>type</code>：当前执行计划查询的类型，有几种情况：</p>
+<ul>
+<li><code>all</code>：表示走了全表查询，未命中索引或索引失效。</li>
+<li><code>system</code>：表示要查询的表中仅有一条数据。</li>
+<li><code>const</code>：表示当前<code>SQL</code>语句的查询条件中，可以命中索引查询。</li>
+<li><code>range</code>：表示当前查询操作是查某个区间。</li>
+<li><code>eq_ref</code>：表示目前在做多表关联查询。</li>
+<li><code>ref</code>：表示目前使用了普通索引查询。</li>
+<li><code>index</code>：表示目前<code>SQL</code>使用了辅助索引查询。</li>
+</ul>
+<p><code>possible_keys</code>：执行<code>SQL</code>时，优化器可能会选择的索引（最后执行不一定用）。</p>
+<p><code>key</code>：查询语句执行时，用到的索引名字。</p>
+<p><code>key_len</code>：这里表示索引字段使用的字节数。</p>
+<p><code>ref</code>：这里显示使用了那种查询的类型。</p>
+<p><code>rows</code>：当前查询语句可能会扫描多少行数据才能检索出结果。</p>
+<p><code>Extra</code>：这里是记录着额外的一些索引使用信息，有几种状态：</p>
+<ul>
+<li><code>using index</code>：表示目前使用了覆盖索引查询（稍后讲）。</li>
+<li><code>using where</code>：表示使用了<code>where</code>子句查询，通常表示没使用索引。</li>
+<li><code>using index condition</code>：表示查询条件使用到了联合索引的前面几个字段。</li>
+<li><code>using temporary</code>：表示使用了临时表处理查询结果。</li>
+<li><code>using filesort</code>：表示以索引字段之外的方式进行排序，效率较低。</li>
+<li><code>select tables optimized away</code>：表示在索引字段上使用了聚合函数。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">create table tbiguser(</span><br><span class="line">  id int primary key auto_increment, </span><br><span class="line">  nickname varchar(255), </span><br><span class="line">  loginname varchar(255), </span><br><span class="line">  age int, </span><br><span class="line">  sex char(1), </span><br><span class="line">  status int, </span><br><span class="line">  address varchar(255)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table tuser2( id int primary key auto_increment, name varchar(255), address varchar(255) );</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="1-无变化"><a href="#1-无变化" class="headerlink" title="1.无变化"></a>1.无变化</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">EXPLAIN SELECT</span><br><span class="line">	count( id ) num,</span><br><span class="line">	address </span><br><span class="line">FROM</span><br><span class="line">	tbiguser </span><br><span class="line">WHERE</span><br><span class="line">	address IN ( SELECT DISTINCT address FROM tuser1 ) </span><br><span class="line">GROUP BY</span><br><span class="line">	address </span><br><span class="line">UNION</span><br><span class="line">SELECT</span><br><span class="line">	count( id ) num,</span><br><span class="line">	address </span><br><span class="line">FROM</span><br><span class="line">	tbiguser </span><br><span class="line">WHERE</span><br><span class="line">	address IN ( SELECT DISTINCT address FROM tuser2 ) </span><br><span class="line">GROUP BY</span><br><span class="line">	address</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2	dongbei</span><br><span class="line">1	xianggang</span><br><span class="line">1	shanghai</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/../img/mysql%E4%BC%98%E5%8C%961.jpeg"></p>
+<h5 id="2-给address加索引"><a href="#2-给address加索引" class="headerlink" title="2. 给address加索引"></a>2. 给address加索引</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table tbiguser add index idx_addr(address);</span><br><span class="line">alter table tuser1 add index idx_addr(address); </span><br><span class="line">alter table tuser2 add index idx_addr(address);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/../img/mysql%E4%BC%98%E5%8C%962.jpeg"></p>
+<h5 id="3-修改sql"><a href="#3-修改sql" class="headerlink" title="3. 修改sql"></a>3. 修改sql</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">EXPLAIN SELECT</span><br><span class="line">	count( id ) num,</span><br><span class="line">	address </span><br><span class="line">FROM</span><br><span class="line">	tbiguser </span><br><span class="line">WHERE</span><br><span class="line">	address IN ( SELECT DISTINCT address FROM tuser1 ) </span><br><span class="line">	OR address IN ( SELECT DISTINCT address FROM tuser2 ) </span><br><span class="line">GROUP BY</span><br><span class="line">	address </span><br><span class="line">ORDER BY</span><br><span class="line">	address;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/../img/mysql%E4%BC%98%E5%8C%963.jpeg"></p>
+<p>4. </p>
+<p>从前面的执行计划可以看出，索引只是使用了覆盖索引，rows&#x3D;9754360， 说明还是几乎扫描了全表的</p>
+<p>行</p>
+<p>利用address索引，先过滤数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select distinct b.* from tuser2 a,tbiguser b where a.address=b.address;</span><br><span class="line">select distinct b.* from tuser1 a,tbiguser b where a.address=b.address;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>创建视图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create view v_tuser as select distinct b.* from tuser1 a,tbiguser b where a.address=b.address union all select distinct b.* from tuser2 a,tbiguser b where a.address=b.address;</span><br><span class="line">--执行SQL </span><br><span class="line">select count(id) cont ,address from v_tuser group by address order by address;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="优化总结"><a href="#优化总结" class="headerlink" title="优化总结"></a>优化总结</h3><p>开启慢查询日志，定位运行慢的SQL语句</p>
+<p>利用explain执行计划，查看SQL执行情况</p>
+<p>关注索引使用情况：type</p>
+<p>关注Rows：行扫描</p>
+<p>关注Extra：没有信息最好</p>
+<p>加索引后，查看索引使用情况，index只是覆盖索引，并不算很好的使用索引</p>
+<p>如果有关联尽量将索引用到<strong>eq_ref</strong>或<strong>ref</strong>级别</p>
+<p>复杂SQL可以做成视图，视图在MySQL内部有优化，而且开发也比较友好</p>
+<p>对于复杂的SQL要逐一分析，找到比较费时的SQL语句片段进行优化</p>
+
       
     </div>
     <div class="article-footer">
