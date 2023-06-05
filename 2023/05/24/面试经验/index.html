@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Duan</title>
+  <meta name="description" content="[toc] Mysql1. 聚簇索引和普通索引区别​        聚簇索引就是按照每张表的主键构造一颗B+树，同时叶子节点中存放的就是整张表的行记录数据，也将聚集索引的叶子节点称为数据页。 在聚簇索引之上创建的索引称之为辅助索引，辅助索引访问数据总是需要二次查找。 2. 如果聚簇索引的数据更新，它的存储要不要变化​       聚族索引使用一般适用自增id，聚簇索引的数据的物理存放顺序是索引顺序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Duan">
+<meta property="og:url" content="http://duanyushuai.github.io/2023/05/24/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/index.html">
+<meta property="og:site_name" content="Duan">
+<meta property="og:description" content="[toc] Mysql1. 聚簇索引和普通索引区别​        聚簇索引就是按照每张表的主键构造一颗B+树，同时叶子节点中存放的就是整张表的行记录数据，也将聚集索引的叶子节点称为数据页。 在聚簇索引之上创建的索引称之为辅助索引，辅助索引访问数据总是需要二次查找。 2. 如果聚簇索引的数据更新，它的存储要不要变化​       聚族索引使用一般适用自增id，聚簇索引的数据的物理存放顺序是索引顺序">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-24T08:07:47.377Z">
+<meta property="article:modified_time" content="2023-05-31T03:41:03.111Z">
+<meta property="article:author" content="小段">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://duanyushuai.github.io/2023/05/24/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Duan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/cofess" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">小段</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">独当一面</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> hangzhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Guava/">Guava</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Guava/redis/">redis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/JVM%E8%B0%83%E4%BC%98/">JVM调优</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/docker/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E/">谷粒商城</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/Jvisualvm/">Jvisualvm</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java-web/">java web</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/">java各种变量</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/maven/">maven</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/msyql/">msyql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/rabbitMQ/">rabbitMQ</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/redis/">redis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/springboot/">springboot</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/">开源框架学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BA%BF%E7%A8%8B/">线程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CompletableFuture/" rel="tag">CompletableFuture</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Guava/" rel="tag">Guava</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM%E8%B0%83%E4%BC%98/" rel="tag">JVM调优</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-web/" rel="tag">java web</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/" rel="tag">java各种变量</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/" rel="tag">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/msyql/" rel="tag">msyql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rabbitMQ/" rel="tag">rabbitMQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/" rel="tag">redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="tag">多线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" rel="tag">开源框架学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag">深度学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BA%90%E7%A0%81/" rel="tag">源码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B4%A2%E5%BC%95/" rel="tag">索引</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BC%93%E5%AD%98/" rel="tag">缓存</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%90%E6%B5%81/" rel="tag">限流</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/CompletableFuture/" style="font-size: 13px;">CompletableFuture</a> <a href="/tags/Guava/" style="font-size: 13px;">Guava</a> <a href="/tags/HashMap/" style="font-size: 13px;">HashMap</a> <a href="/tags/JVM%E8%B0%83%E4%BC%98/" style="font-size: 13.25px;">JVM调优</a> <a href="/tags/docker/" style="font-size: 13.25px;">docker</a> <a href="/tags/java/" style="font-size: 14px;">java</a> <a href="/tags/java-web/" style="font-size: 13.75px;">java web</a> <a href="/tags/java%E5%90%84%E7%A7%8D%E5%8F%98%E9%87%8F/" style="font-size: 13px;">java各种变量</a> <a href="/tags/maven/" style="font-size: 13px;">maven</a> <a href="/tags/msyql/" style="font-size: 13px;">msyql</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/rabbitMQ/" style="font-size: 13px;">rabbitMQ</a> <a href="/tags/redis/" style="font-size: 13px;">redis</a> <a href="/tags/springboot/" style="font-size: 13.5px;">springboot</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 13px;">多线程</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13px;">工具</a> <a href="/tags/%E5%BC%80%E6%BA%90%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" style="font-size: 13px;">开源框架学习</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 13px;">深度学习</a> <a href="/tags/%E6%BA%90%E7%A0%81/" style="font-size: 13px;">源码</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13.25px;">算法</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 13px;">索引</a> <a href="/tags/%E7%BC%93%E5%AD%98/" style="font-size: 13px;">缓存</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 13px;">读书</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 13px;">链表</a> <a href="/tags/%E9%99%90%E6%B5%81/" style="font-size: 13px;">限流</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/JVM%E8%B0%83%E4%BC%98/">JVM调优</a>
+              </p>
+              <p class="item-title">
+                <a href="/2023/10/18/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/" class="title">垃圾回收器</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-10-18T02:00:00.000Z" itemprop="datePublished">2023-10-18</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2023/05/24/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-24T08:07:47.377Z" itemprop="datePublished">2023-05-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2023/05/22/%E5%AD%A6%E4%B9%A0%E4%BB%BB%E5%8A%A1/" class="title">学习任务</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-22T02:34:27.067Z" itemprop="datePublished">2023-05-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2023/05/05/OSS%E5%92%8COAuth2.0/" class="title">(no title)</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-05-05T13:14:41.991Z" itemprop="datePublished">2023-05-05</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2023/04/22/nacos/" class="title">nacos</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-04-22T09:56:04.485Z" itemprop="datePublished">2023-04-22</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-面试经验" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/05/24/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" class="article-date">
+	  <time datetime="2023-05-24T08:07:47.377Z" itemprop="datePublished">2023-05-24</time>
+	</a>
+</span>
+        
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/05/24/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.6k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><h4 id="1-聚簇索引和普通索引区别"><a href="#1-聚簇索引和普通索引区别" class="headerlink" title="1. 聚簇索引和普通索引区别"></a>1. 聚簇索引和普通索引区别</h4><p>​        聚簇索引就是按照每张表的主键构造一颗B+树，同时叶子节点中存放的就是整张表的行记录数据，也将聚集索引的叶子节点称为数据页。</p>
+<p>在聚簇索引之上创建的索引称之为辅助索引，辅助索引访问数据总是需要二次查找。</p>
+<h4 id="2-如果聚簇索引的数据更新，它的存储要不要变化"><a href="#2-如果聚簇索引的数据更新，它的存储要不要变化" class="headerlink" title="2. 如果聚簇索引的数据更新，它的存储要不要变化"></a>2. 如果聚簇索引的数据更新，它的存储要不要变化</h4><p>​       聚族索引使用一般适用自增id，聚簇索引的数据的物理存放顺序是索引顺序是一致的，即使：只要索引是相邻的，那么对应的数据一定也是相邻的存储在物理磁盘上的。如果主键不是自增ID，那么可以想象，它会干些什么，不断地调整数据的物理地址，分页，当然也有一些措施来减少这些操作，但是却无法彻底避免。但是，如果是自增的，那就简单了，它只需要一页一页的写，索引结构相对紧凑，磁盘碎片少，效率也高。</p>
+<p>​      因此MyISAM的主索引并非聚簇索引，那么它的物理地址必然是凌乱的，拿到这些物理地址，按照合适的ID算法进行读取，于是开始不同的不停的旋转。聚簇索引则只需一次I&#x2F;O。</p>
+<h4 id="3-事务隔离级别"><a href="#3-事务隔离级别" class="headerlink" title="3.事务隔离级别"></a>3.事务隔离级别</h4><p>为Read uncommitted 、Read committed 、Repeatable read 、Serializable 。</p>
+<p>ACID  Atomicity Consistency  Isolation  Durability</p>
+<p>**什么是幻读 **</p>
+<ul>
+<li>T1时刻 读取年龄为20的数据， Session1拿到了2条记录。</li>
+<li>T2时刻 另一个进程Session2插入了一条新的记录，年龄也为20</li>
+<li>T3时刻，Session1再次读取年龄为20的数据，发现还是2条数据，貌似 Session2新插入的数据并未影响到Session1的事务读取。</li>
+</ul>
+<blockquote>
+<p>对于T1 – T3 时刻的情形，从结果来看，在可重复度读隔离级别下似乎解决了幻读的问题。</p>
+</blockquote>
+<ul>
+<li>T4时刻，Session1 修改年龄为20的数据， 发现影响行数为3条。 为什么T3时候只能查到2条数据，但现在修改确修改了3条数据？</li>
+<li>T5时刻，Session1 再次读取年龄为20的数据，发现结果变成了3条,我们知道被修改的第三条就是Session2在T2时刻新增的一条。</li>
+</ul>
+<blockquote>
+<p>T4,T5 的结果来看，Session1 读到了 Session2 新插入的数据。产生了幻读现象</p>
+</blockquote>
+<p>​       了解过MVCC的同学，肯定知道或听说过当前读，和快照读。（不知道的同学，可以查找相关资料了解下，当然后续我也会有文章专门介绍MVCC)。首先要知道的是MVCC 就InnoDB 秒级建立数据快照的能力。 快照读就是读取数据的时候会根据一定规则读取事务可见版本的数据。 而当前读就是读取最新版本的数据。什么情况下使用的是快照读：（快照读，不会加锁）</p>
+<blockquote>
+<p>一般的 select * from …. where … 语句都是快照读</p>
+</blockquote>
+<p>什么情况下使用的是当前读：（当前读，会在搜索的时候加锁）</p>
+<blockquote>
+<p>select * from …. where … for update select * from …. where … lock in share mode update …. set .. where … delete from. . where ..</p>
+</blockquote>
+<p>如果事务中都使用快照读，那么就不会产生幻读现象，但是快照读和当前读混用就会产生幻读。</p>
+<h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2><h4 id="1-缓存"><a href="#1-缓存" class="headerlink" title="1. 缓存"></a>1. 缓存</h4><p>如果实现强一致性，不能使用缓存，我们说的这个，只是说降低概率发生，而不能完全的避免。</p>
+<p><strong>延时双删策略</strong></p>
+<p>在写库前后都进行 Redis 的删除操作，并且第二次删除通过延迟的方式进行</p>
+<p>那么应该是什么样子的实现逻辑呢？</p>
+<ul>
+<li>第一步：先删除缓存</li>
+<li>第二步：再写入数据库</li>
+<li>第三步：休眠xxx毫秒（根据具体的业务时间来定）</li>
+<li>第四步：再次删除缓存。</li>
+</ul>
+<p>保证缓存和数据最终一致性</p>
+<p>**利用cannal订阅 实现 redis和mysql的数据一致性 ** </p>
+<p>利用mysql的binlog日志，比延时双删策略要好</p>
+<h4 id="2-分布式锁"><a href="#2-分布式锁" class="headerlink" title="2. 分布式锁"></a>2. 分布式锁</h4><p>限流  setNX</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; SETNX test &#x27;try&#x27;</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; get test</span><br><span class="line">&quot;try&quot;</span><br><span class="line">127.0.0.1:6379&gt; SETNX test &#x27;tryAgain&#x27;</span><br><span class="line">(integer) 0</span><br><span class="line">127.0.0.1:6379&gt; get test</span><br><span class="line">&quot;try&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-redis慢了怎么排查"><a href="#3-redis慢了怎么排查" class="headerlink" title="3. redis慢了怎么排查"></a>3. redis慢了怎么排查</h4><p>首先看基准运行速度，和配置相同，两台机器差值2倍以上，则是redis慢了</p>
+<ol>
+<li>查看redis是否使用复杂命令，Redis 提供了慢日志命令的统计功能，它记录了有哪些命令在执行时耗时比较久。</li>
+</ol>
+<p>可设置阈值</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">命令执行耗时超过 5 毫秒，记录慢日志</span></span><br><span class="line">CONFIG SET slowlog-log-slower-than 5000</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">只保留最近 500 条慢日志</span></span><br><span class="line">CONFIG SET slowlog-max-len 500</span><br></pre></td></tr></table></figure>
+
+<p>如果你的应用程序执行的 Redis 命令有以下特点，那么有可能会导致操作延迟变大： </p>
+<ul>
+<li>经常使用 O(N) 以上复杂度的命令，例如 SORT、SUNION、ZUNIONSTORE 聚合类命令 <strong>(建议放在客户端做)</strong></li>
+<li>使用 O(N) 复杂度的命令，但 N 的值非常大<strong>（分批次执行）</strong></li>
+</ul>
+<ol start="2">
+<li>业务避免写入bigkey</li>
+<li></li>
+</ol>
+<h2 id="JAVA基础知识"><a href="#JAVA基础知识" class="headerlink" title="JAVA基础知识"></a>JAVA基础知识</h2><h4 id="1-volatile和synchronized的区别，-问的比较细"><a href="#1-volatile和synchronized的区别，-问的比较细" class="headerlink" title="1. volatile和synchronized的区别， 问的比较细"></a>1. volatile和synchronized的区别， 问的比较细</h4><p>Volatile 实现共享变量的可见性</p>
+<p>synchronized 还实现了原子性</p>
+<ol>
+<li>获得互斥锁</li>
+<li>清空工作内存</li>
+<li>从主内存拷贝变量的最新副本到工作的内存</li>
+<li>执行代码</li>
+<li>将更改后的共享变量的值刷新到主内存</li>
+<li>释放互斥锁</li>
+</ol>
+<p>区别</p>
+<ul>
+<li>volatile不需要加锁，比synchronized更轻量级，不会阻塞线程；</li>
+<li>从内存可见性角度，volatile读相当于加锁，volatile写相当于解锁；</li>
+<li>synchronized既能够保证可见性，又能保证原子性，而volatile只能保证可见性，无法保证原子性。</li>
+</ul>
+<h4 id="2-线程池参数"><a href="#2-线程池参数" class="headerlink" title="2.线程池参数"></a>2.线程池参数</h4><p>核心线程数、最大线程数、空闲线程存活时间、时间单位、等待队列、拒绝策略、线程工厂</p>
+<h4 id="3-线程安全容器有哪些"><a href="#3-线程安全容器有哪些" class="headerlink" title="3. 线程安全容器有哪些"></a>3. 线程安全容器有哪些</h4><p>HashTable<br>ConcurrentHashMap:分段<br>ArrayBlockingQueue：基于数组的有界阻塞队列</p>
+<p>LinkedBlockingQueue：基于链表的有界阻塞队列。</p>
+<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><h4 id="1-Spring容器中的Bean是否线程安全"><a href="#1-Spring容器中的Bean是否线程安全" class="headerlink" title="1. Spring容器中的Bean是否线程安全"></a>1. Spring容器中的Bean是否线程安全</h4><p>容器本身并没有提供Bean的线程安全策略，因此可以说Spring容器中的Bean本身不具备线程安全的特性，但是具体还是要结合具体scope的Bean去研究。无状态的单例线程安全。</p>
+<p><a target="_blank" rel="noopener" href="https://repo.trojan-cdn.com/browser/spectre-whitelist.conf">https://repo.trojan-cdn.com/browser/spectre-whitelist.conf</a></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://duanyushuai.github.io/2023/05/24/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" title="" target="_blank" rel="external">http://duanyushuai.github.io/2023/05/24/面试经验/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">小段</span><small class="ml-1x">独当一面</small></a></h3>
+        <div>希望有意义。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2023/10/18/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/" title="垃圾回收器"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2023/05/22/%E5%AD%A6%E4%B9%A0%E4%BB%BB%E5%8A%A1/" title="学习任务"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.jpeg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.jpeg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
